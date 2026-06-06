@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Návykovník & receptář</title>
+</head>
+<body style="margin:0;background:#f4efe6;">
+<!-- ============================================================
+     RECEPTÁŘ — členská sekce
+     Data se načítají ze souboru recepty.json (vedle tohoto HTML).
+     Obrázky: u každého receptu je pole "img". Až nahraješ fotky
+     na Cloudflare, doplň do recepty.json k danému receptu odkaz,
+     např. "img": "https://tvuj-bucket.r2.dev/photo_9@...jpg"
+     Dokud je "img" prázdné, zobrazí se barevný placeholder.
+     ============================================================ -->
+<div id="receptar-app">
+  <noscript style="display:block;text-align:center;padding:40px;font-family:sans-serif;color:#6b5d4c">
+    Pro zobrazení receptáře je potřeba povolit JavaScript.
+  </noscript>
+  <div id="receptar-loading" style="text-align:center;padding:50px 20px;font-family:sans-serif;color:#6b5d4c">
+    Načítám receptář…
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&display=swap');
+
+  #receptar-app {
+    --bg: #f4efe6;
+    --panel: #fffdf8;
+    --ink: #2c2117;
+    --ink-soft: #6b5d4c;
+    --line: #e2d7c5;
+    --accent: #b5462f;
+    --accent2: #5a7a3f;
+    --accent3: #c98a1e;
+    --shadow: 0 2px 14px rgba(60,40,20,.10);
+    --radius: 16px;
+    font-family: 'Albert Sans', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+    box-sizing: border-box;
+  }
+  #receptar-app *, #receptar-app *::before, #receptar-app *::after { box-sizing: border-box; }
+  #receptar-app h1, #receptar-app h2, #receptar-app h3 { font-family: 'Fraunces', serif; font-weight: 600; margin: 0; line-height: 1.1; }
+
+  #receptar-app .hdr { text-align: center; padding: 34px 20px 8px; }
+  #receptar-app .hdr h1 { font-size: clamp(30px, 5vw, 46px); letter-spacing: -.5px; }
+  #receptar-app .hdr h1 span { color: var(--accent); font-style: italic; }
+  #receptar-app .hdr p { color: var(--ink-soft); margin-top: 8px; font-size: 15px; }
+
+  #receptar-app .hdr-video {
+    max-width: 640px; margin: 22px auto 0; aspect-ratio: 16 / 9;
+    border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #000;
+  }
+  #receptar-app .hdr-video iframe { width: 100%; height: 100%; display: block; border: 0; }
+
+  #receptar-app .tabs {
+    display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; padding: 22px 16px 8px;
+    position: sticky; top: 0; z-index: 20; background: linear-gradient(var(--bg) 70%, transparent);
+  }
+  #receptar-app .tab {
+    border: 1px solid var(--line); background: var(--panel); padding: 10px 18px; border-radius: 999px;
+    cursor: pointer; font-family: 'Albert Sans'; font-size: 15px; font-weight: 600; color: var(--ink-soft); transition: all .18s ease;
+  }
+  #receptar-app .tab:hover { border-color: var(--accent); color: var(--accent); }
+  #receptar-app .tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  #receptar-app .view { padding: 18px 16px 0; animation: fade .35s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  #receptar-app .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; align-items: center; }
+  #receptar-app .search {
+    flex: 1 1 220px; min-width: 180px; border: 1px solid var(--line); background: var(--panel);
+    border-radius: 999px; padding: 11px 18px; font-family: 'Albert Sans'; font-size: 15px; color: var(--ink);
+  }
+  #receptar-app .search:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  #receptar-app .chip {
+    border: 1px solid var(--line); background: var(--panel); padding: 8px 15px; border-radius: 999px;
+    cursor: pointer; font-size: 14px; font-weight: 600; color: var(--ink-soft); transition: all .15s;
+  }
+  #receptar-app .chip:hover { border-color: var(--accent); }
+  #receptar-app .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  #receptar-app .count { color: var(--ink-soft); font-size: 13px; margin-left: auto; }
+
+  #receptar-app .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  #receptar-app .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    cursor: pointer; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; display: flex; flex-direction: column;
+  }
+  #receptar-app .card:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(60,40,20,.16); }
+  #receptar-app .card .ph { aspect-ratio: 4/3; background-size: cover; background-position: center; position: relative; }
+  #receptar-app .card .num {
+    position: absolute; top: 10px; left: 10px; background: rgba(44,33,23,.82); color: #fff;
+    font-weight: 700; font-size: 12px; padding: 3px 9px; border-radius: 999px;
+  }
+  #receptar-app .card .body { padding: 13px 15px 16px; }
+  #receptar-app .card .body h3 { font-size: 18px; }
+  #receptar-app .card .meta { color: var(--ink-soft); font-size: 13px; margin-top: 6px; display: flex; gap: 10px; flex-wrap: wrap; }
+  #receptar-app .card .tag {
+    display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700;
+    color: var(--accent2); text-transform: uppercase; letter-spacing: .5px;
+  }
+
+  #receptar-app .modal-bg {
+    position: fixed; inset: 0; background: rgba(30,20,10,.55); display: none; align-items: flex-start;
+    justify-content: center; padding: 30px 16px; z-index: 100; overflow-y: auto; backdrop-filter: blur(3px);
+  }
+  #receptar-app .modal-bg.open { display: flex; }
+  #receptar-app .modal {
+    background: var(--panel); border-radius: 20px; max-width: 640px; width: 100%;
+    box-shadow: 0 30px 60px rgba(0,0,0,.3); animation: pop .3s ease; overflow: hidden;
+  }
+  @keyframes pop { from { transform: scale(.95); opacity: 0; } to { transform: none; opacity: 1; } }
+  #receptar-app .modal .hero { aspect-ratio: 16/9; background-size: cover; background-position: center; }
+  #receptar-app .modal .inner { padding: 24px 26px 30px; }
+  #receptar-app .modal h2 { font-size: 26px; }
+  #receptar-app .modal .sub { color: var(--ink-soft); margin: 8px 0 18px; font-size: 14px; }
+  #receptar-app .modal h4 { font-family: 'Fraunces'; font-size: 18px; margin: 20px 0 8px; color: var(--accent); }
+  #receptar-app .modal ul, #receptar-app .modal ol { margin: 0; padding-left: 20px; }
+  #receptar-app .modal li { margin-bottom: 6px; }
+  #receptar-app .modal .label-row { display: block; font-weight: 700; color: var(--ink); margin: 4px 0 2px; list-style: none; }
+  #receptar-app .close {
+    position: absolute; top: 16px; right: 18px; background: rgba(255,255,255,.9); border: none;
+    width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--ink); box-shadow: var(--shadow);
+  }
+  #receptar-app .orig-toggle {
+    margin-top: 22px; background: none; border: 1px solid var(--line); color: var(--ink-soft);
+    font-family: 'Albert Sans'; font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  }
+  #receptar-app .orig-toggle:hover { border-color: var(--accent); color: var(--accent); }
+  #receptar-app .orig-text {
+    display: none; white-space: pre-wrap; background: var(--bg); border: 1px solid var(--line);
+    border-radius: 12px; padding: 14px 16px; margin-top: 12px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6;
+  }
+  #receptar-app .orig-text.open { display: block; }
+
+  #receptar-app .month-bar { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 18px; }
+  #receptar-app .m {
+    flex: 0 0 auto; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--panel); cursor: pointer; font-weight: 600; font-size: 14px; color: var(--ink-soft);
+  }
+  #receptar-app .m.active { background: var(--accent3); color: #fff; border-color: var(--accent3); }
+  #receptar-app .task-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); }
+
+  #receptar-app .tip-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); }
+  #receptar-app .tip {
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--shadow); border-left: 5px solid var(--accent2); display: flex; flex-direction: column;
+  }
+  #receptar-app .tip .ph { aspect-ratio: 3/2; background-size: cover; background-position: center; }
+  #receptar-app .tip .b { padding: 14px 18px 18px; }
+  #receptar-app .tip h3 { font-size: 18px; margin-bottom: 8px; }
+  #receptar-app .tip p { font-size: 13.5px; color: var(--ink-soft); margin: 0; white-space: pre-wrap; line-height: 1.55; }
+  #receptar-app .tip .date { font-size: 12px; color: var(--accent2); font-weight: 700; margin-bottom: 4px; }
+
+  #receptar-app .empty { text-align: center; color: var(--ink-soft); padding: 50px 0; font-size: 16px; }
+  #receptar-app .foot { text-align: center; color: var(--ink-soft); font-size: 12px; margin-top: 40px; opacity: .7; }
+  #receptar-app .err { background:#fff;border:1px solid var(--accent);color:var(--accent);padding:18px;border-radius:12px;margin:20px;font-size:14px; }
+</style>
+
+<script>
+(function () {
+  function boot() {
+  var app = document.getElementById('receptar-app');
+  if (!app) { return; }
+
+  /* ====== NAČTENÍ DAT ====== */
+  // Data jsou v recepty.json vedle tohoto souboru.
+  fetch('recepty.json')
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function (data) { init(data.recipes || [], data.tips || []); })
+    .catch(function (e) {
+      app.innerHTML = '<div class="err"><b>Nepodařilo se načíst recepty.json</b><br>' +
+        'Zkontroluj, že soubor <code>recepty.json</code> leží ve stejné složce jako tato stránka ' +
+        'a že stránku spouštíš přes web/server (ne dvojklikem z disku — prohlížeč pak fetch blokuje).<br>' +
+        '<small>Detail: ' + e.message + '</small></div>';
+    });
+
+  /* ====== APLIKACE ====== */
+  function init(recipes, tips) {
+    var ph = function (c) {
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(
+        "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='400' height='300' fill='" +
+        c + "'/><text x='50%' y='50%' font-family='sans-serif' font-size='20' fill='rgba(255,255,255,.85)' text-anchor='middle' dominant-baseline='middle'>foto receptu</text></svg>");
+    };
+    // bezpečně zakóduje cestu k fotce (znaky jako @ -> %40), zachová lomítka
+    var encPath = function (p) {
+      return p.split('/').map(function (seg) { return encodeURIComponent(seg); }).join('/');
+    };
+    // vrátí obrázek receptu/tipu: pokud má vyplněné img -> použij (zakódované), jinak placeholder
+    var imgOf = function (o) { return (o.img && o.img.trim()) ? encPath(o.img) : ph(o.color || '#5a7a3f'); };
+
+    var catLabels = { jidla: 'Běžné jídlo', dezerty: 'Dezert', sklad: 'Skladování & zavařování' };
+    var months = ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'];
+
+    var tab = 'jidla', catFilter = 'vse', searchTxt = '';
+
+    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function render() {
+      app.innerHTML =
+        '<div class="hdr">' +
+          '<h1>Návykovník <span>&amp; receptář</span></h1>' +
+          '<p>Vaření jednoduše, lokálně a podle ročního období</p>' +
+          '<div class="hdr-video"><iframe src="https://www.youtube.com/embed/ActrTrc-QHM" title="Úvodní video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>' +
+        '</div>' +
+        '<div class="tabs">' +
+          '<button class="tab ' + (tab==='jidla'?'active':'') + '" data-tab="jidla">🍲 Příprava jídel</button>' +
+          '<button class="tab ' + (tab==='tipy'?'active':'') + '" data-tab="tipy">🌿 Tipy &amp; byliny</button>' +
+        '</div>' +
+        '<div class="view" id="view"></div>' +
+        '<div class="foot">Členská sekce · ' + recipes.length + ' receptů · ' + tips.length + ' tipů</div>' +
+        '<div class="modal-bg" id="modalbg"></div>';
+      var tabs = app.querySelectorAll('.tab');
+      for (var i=0;i<tabs.length;i++) tabs[i].onclick = (function(b){ return function(){ tab=b.dataset.tab; render(); }; })(tabs[i]);
+      var v = document.getElementById('view');
+      if (tab === 'jidla') renderJidla(v);
+      if (tab === 'tipy') renderTipy(v);
+    }
+
+    function cardHTML(r) {
+      return '<div class="card" data-n="' + r.n + '">' +
+        '<div class="ph" style="background-image:url(\'' + imgOf(r) + '\')"><span class="num">#' + r.n + '</span></div>' +
+        '<div class="body"><h3>' + esc(r.name) + '</h3>' +
+        '<div class="meta"><span>📅 ' + esc(r.date||'') + '</span>' + (r.time && r.time!=='—' ? '<span>· ⏱ ' + esc(r.time) + '</span>' : '') + '</div>' +
+        '<span class="tag">' + (catLabels[r.cat]||'') + '</span></div></div>';
+    }
+
+    function filtered() {
+      var q = searchTxt.toLowerCase();
+      return recipes.filter(function (r) {
+        var inCat = (catFilter==='vse' || r.cat===catFilter);
+        var hay = (r.name + ' ' + (r.ing||[]).join(' ') + ' ' + (r.fullText||'')).toLowerCase();
+        return inCat && hay.indexOf(q) !== -1;
+      });
+    }
+
+    function renderJidla(v) {
+      var cats = [['vse','Vše'],['jidla','Běžná jídla'],['dezerty','Dezerty'],['sklad','Skladování & zavařování']];
+      var chips = cats.map(function(c){ return '<button class="chip ' + (catFilter===c[0]?'active':'') + '" data-cat="' + c[0] + '">' + c[1] + '</button>'; }).join('');
+      v.innerHTML =
+        '<div class="filters"><input class="search" id="srch" placeholder="🔍 Hledat recept nebo surovinu…" value="' + esc(searchTxt) + '">' +
+        chips + '<span class="count" id="cnt"></span></div><div class="grid" id="grid"></div>';
+      var grid = document.getElementById('grid');
+      function paint() {
+        var list = filtered();
+        document.getElementById('cnt').textContent = list.length + ' receptů';
+        grid.innerHTML = list.length ? list.map(cardHTML).join('') : '<div class="empty">Nic nenalezeno 🍂</div>';
+        bindCards();
+      }
+      var srch = document.getElementById('srch');
+      srch.oninput = function (e) { searchTxt = e.target.value; paint(); };
+      var chipsEl = v.querySelectorAll('.chip');
+      for (var i=0;i<chipsEl.length;i++) chipsEl[i].onclick = (function(c){ return function(){ catFilter=c.dataset.cat; renderJidla(v); }; })(chipsEl[i]);
+      paint();
+    }
+
+    function bindCards() {
+      var cards = app.querySelectorAll('.card');
+      for (var i=0;i<cards.length;i++) cards[i].onclick = (function(c){ return function(){ openRecipe(+c.dataset.n); }; })(cards[i]);
+    }
+
+    function openRecipe(n) {
+      var r = recipes.find(function (x) { return x.n === n; });
+      if (!r) return;
+      var mb = document.getElementById('modalbg');
+      var ingHTML = (r.ing||[]).map(function (i) {
+        // řádky končící ':' bereme jako mezinadpis (Těsto:, Drobenka:)
+        if (/:\s*$/.test(i)) return '<li class="label-row">' + esc(i) + '</li>';
+        return '<li>' + esc(i) + '</li>';
+      }).join('');
+      var stepsHTML = (r.steps||[]).map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('');
+      mb.innerHTML =
+        '<div class="modal" style="position:relative">' +
+          '<button class="close" id="cls">×</button>' +
+          '<div class="hero" style="background-image:url(\'' + imgOf(r) + '\')"></div>' +
+          '<div class="inner">' +
+            '<h2>#' + r.n + ' · ' + esc(r.name) + '</h2>' +
+            '<div class="sub">📅 ' + esc(r.date||'') + (r.time && r.time!=='—' ? ' &nbsp;·&nbsp; ⏱ ' + esc(r.time) : '') + ' &nbsp;·&nbsp; ' + (catLabels[r.cat]||'') + '</div>' +
+            (ingHTML ? '<h4>Ingredience</h4><ul>' + ingHTML + '</ul>' : '') +
+            (stepsHTML ? '<h4>Postup</h4><ol>' + stepsHTML + '</ol>' : '') +
+            '<button class="orig-toggle" id="origbtn">📄 Zobrazit původní znění receptu</button>' +
+            '<div class="orig-text" id="origtxt">' + esc(r.fullText||'') + '</div>' +
+          '</div>' +
+        '</div>';
+      mb.classList.add('open');
+      document.getElementById('cls').onclick = function () { mb.classList.remove('open'); };
+      mb.onclick = function (e) { if (e.target === mb) mb.classList.remove('open'); };
+      document.getElementById('origbtn').onclick = function () {
+        document.getElementById('origtxt').classList.toggle('open');
+      };
+    }
+
+    function renderTipy(v) {
+      if (!tips.length) { v.innerHTML = '<div class="empty">Zatím žádné tipy 🌱</div>'; return; }
+      v.innerHTML = '<div class="tip-grid">' + tips.map(function (t) {
+        var img = (t.img && t.img.trim()) ? encPath(t.img) : ph('#5a7a3f');
+        var hasImg = (t.img && t.img.trim());
+        return '<div class="tip">' +
+          (hasImg ? '<div class="ph" style="background-image:url(\'' + img + '\')"></div>' : '') +
+          '<div class="b"><div class="date">🌿 ' + esc(t.date||'') + '</div>' +
+          '<h3>' + esc(t.title) + '</h3><p>' + esc(t.text) + '</p></div></div>';
+      }).join('') + '</div>';
+    }
+
+    render();
+  }
+  } // konec boot()
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+
+</body>
+</html>
