@@ -61,30 +61,42 @@
   }
   #app .topbar .code:hover { filter: brightness(1.08); }
 
-  #app .hero { text-align: center; padding: 34px 0 6px; }
-  #app .hero .eyebrow { color: var(--accent2); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
-  #app .hero h1 { font-size: clamp(32px, 5.5vw, 52px); letter-spacing: -.5px; margin-top: 6px; }
-  #app .hero h1 em { color: var(--accent); font-style: italic; }
-  #app .hero .date { color: var(--ink-soft); margin-top: 10px; font-size: 15px; }
-  #app .hero-video { max-width: 660px; margin: 20px auto 0; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); background:#000; }
-  #app .hero-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+  #app .hello { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 26px 0 4px; }
+  #app .hello .eyebrow { color: var(--accent2); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 11.5px; }
+  #app .hello h1 { font-size: clamp(28px, 4.2vw, 40px); letter-spacing: -.5px; margin-top: 4px; }
+  #app .hello h1 em { color: var(--accent); font-style: italic; }
+  #app .hello .date { color: var(--ink-soft); font-size: 15px; font-weight: 600; }
 
-  #app .sec-h { display: flex; align-items: baseline; gap: 12px; margin: 38px 0 16px; }
-  #app .sec-h h2 { font-size: 26px; }
+  #app .sec-h { display: flex; align-items: baseline; gap: 12px; margin: 36px 0 16px; }
+  #app .sec-h h2 { font-size: 27px; }
   #app .sec-h .line { flex: 1; height: 1px; background: var(--line); }
   #app .sec-h .more { font-size: 14px; font-weight: 600; color: var(--accent); cursor: pointer; background: none; border: none; font-family: 'Albert Sans'; }
 
-  #app .meals { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-  #app .meal { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; position: relative; }
-  #app .meal .mtag { position: absolute; top: 10px; left: 10px; background: rgba(44,33,23,.85); color:#fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .5px; }
-  #app .meal .mimg { aspect-ratio: 16/10; background-size: cover; background-position: center; cursor: pointer; }
-  #app .meal .mbody { padding: 12px 14px 14px; flex: 1; display: flex; flex-direction: column; }
-  #app .meal .mbody h3 { font-size: 17px; cursor: pointer; }
+  #app .today { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; }
+  @media (max-width: 880px) { #app .today { grid-template-columns: 1fr; } }
+  #app .today-meals { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 620px) { #app .today-meals { grid-template-columns: 1fr; } }
+  #app .dessert-row { margin-top: 14px; }
+  #app .side-video .sv-label { font-family: 'Fraunces'; font-size: 16px; color: var(--ink-soft); margin-bottom: 8px; }
+  #app .side-video .frame { aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-lg); background: #000; }
+  #app .side-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  #app .meal { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; position: relative; transition: transform .18s ease, box-shadow .18s ease; }
+  #app .meal:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  #app .meal .mtag { position: absolute; top: 11px; left: 11px; background: rgba(44,33,23,.85); color:#fff; font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 999px; text-transform: uppercase; letter-spacing: .6px; }
+  #app .meal .mimg { aspect-ratio: 4/3; background-size: cover; background-position: center; cursor: pointer; }
+  #app .meal .mbody { padding: 13px 15px 15px; flex: 1; display: flex; flex-direction: column; }
+  #app .meal .mbody h3 { font-size: 18px; cursor: pointer; line-height: 1.2; }
   #app .meal .mbody h3:hover { color: var(--accent); }
-  #app .meal .mmeta { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
-  #app .meal .swap { margin-top: auto; padding-top: 10px; display: flex; gap: 6px; }
-  #app .meal .swap button { flex: 1; border: 1px solid var(--line); background: var(--bg); color: var(--ink-soft); border-radius: 9px; padding: 7px; font-family: 'Albert Sans'; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+  #app .meal .mmeta { font-size: 12.5px; color: var(--ink-soft); margin-top: 5px; }
+  #app .meal .swap { margin-top: auto; padding-top: 12px; }
+  #app .meal .swap button { width: 100%; border: 1px solid var(--line); background: var(--bg); color: var(--ink-soft); border-radius: 9px; padding: 8px; font-family: 'Albert Sans'; font-size: 12.5px; font-weight: 600; cursor: pointer; }
   #app .meal .swap button:hover { border-color: var(--accent); color: var(--accent); }
+  #app .meal.wide { flex-direction: row; }
+  #app .meal.wide .mimg { aspect-ratio: auto; width: 220px; flex: 0 0 220px; }
+  @media (max-width: 620px) { #app .meal.wide { flex-direction: column; } #app .meal.wide .mimg { width: 100%; aspect-ratio: 4/3; } }
+  #app .meal.wide .mbody { justify-content: center; }
+  #app .meal.wide .swap { padding-top: 12px; max-width: 240px; }
 
   #app .pantry { background: var(--bg2); border: 1px dashed var(--line); border-radius: 14px; padding: 12px 14px; margin-top: 14px; font-size: 13.5px; }
   #app .pantry label { font-weight: 600; color: var(--ink); }
@@ -95,31 +107,34 @@
   #app .pantry .matches { margin-top: 10px; }
 
   #app .tiles { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); }
-  #app .tile { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 16px; background: var(--panel); cursor: pointer; box-shadow: var(--shadow); position: relative; transition: transform .18s ease, box-shadow .18s ease; min-height: 120px; display: flex; flex-direction: column; gap: 6px; overflow: hidden; }
-  #app .tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-  #app .tile .ico { font-size: 26px; }
-  #app .tile h3 { font-size: 17px; }
-  #app .tile p { font-size: 12.5px; color: var(--ink-soft); margin: 0; }
+  #app .tiles { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important; }
+  #app .tile { border: 1px solid var(--line); border-radius: 14px; padding: 14px 15px; background: var(--panel); cursor: pointer; box-shadow: var(--shadow); position: relative; transition: transform .15s ease, box-shadow .15s ease; display: flex; align-items: center; gap: 12px; overflow: hidden; }
+  #app .tile:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  #app .tile .ico { font-size: 24px; flex: 0 0 auto; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; background: var(--bg2); }
+  #app .tile .tx { min-width: 0; }
+  #app .tile h3 { font-size: 15.5px; line-height: 1.15; }
+  #app .tile p { font-size: 11.5px; color: var(--ink-soft); margin: 2px 0 0; }
   #app .tile.locked { background: #ece5d8; cursor: not-allowed; box-shadow: none; }
   #app .tile.locked:hover { transform: none; }
   #app .tile.locked h3, #app .tile.locked p { color: #a99e8b; }
-  #app .tile .lock { position: absolute; top: 12px; right: 12px; font-size: 16px; opacity: .55; }
-  #app .tile .soon { position: absolute; bottom: 10px; right: 12px; font-size: 10.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #a99e8b; }
-  #app .tile.accent { border-left: 5px solid var(--accent); }
-  #app .tile.accent2 { border-left: 5px solid var(--accent2); }
-  #app .tile.accent3 { border-left: 5px solid var(--accent3); }
+  #app .tile.locked .ico { background: #e0d8c9; }
+  #app .tile .lock { position: absolute; top: 10px; right: 11px; font-size: 14px; opacity: .55; }
+  #app .tile .soon { position: absolute; bottom: 8px; right: 11px; font-size: 9.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #a99e8b; }
+  #app .tile.accent .ico { background: #f5dfd7; }
+  #app .tile.accent2 .ico { background: #e3ebda; }
+  #app .tile.accent3 .ico { background: #f6e8cf; }
 
   #app .strip { position: relative; }
-  #app .strip-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+  #app .strip-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 720px) { #app .strip-grid { grid-template-columns: 1fr; } }
   #app .rcard { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); cursor: pointer; display: flex; flex-direction: column; transition: transform .18s ease, box-shadow .18s ease; }
-  #app .rcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  #app .rcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
   #app .rcard .rimg { aspect-ratio: 4/3; background-size: cover; background-position: center; position: relative; }
-  #app .rcard .rnum { position: absolute; top: 10px; left: 10px; background: rgba(44,33,23,.82); color: #fff; font-weight: 700; font-size: 12px; padding: 3px 9px; border-radius: 999px; }
-  #app .rcard .rb { padding: 12px 14px 15px; }
-  #app .rcard .rb h3 { font-size: 17px; }
-  #app .rcard .rb .rmeta { font-size: 12.5px; color: var(--ink-soft); margin-top: 5px; }
-  #app .rcard .rb .rtag { display: inline-block; margin-top: 9px; font-size: 11px; font-weight: 700; color: var(--accent2); text-transform: uppercase; letter-spacing: .5px; }
+  #app .rcard .rnum { position: absolute; top: 11px; left: 11px; background: rgba(44,33,23,.82); color: #fff; font-weight: 700; font-size: 12px; padding: 4px 11px; border-radius: 999px; }
+  #app .rcard .rb { padding: 15px 17px 18px; }
+  #app .rcard .rb h3 { font-size: 20px; line-height: 1.2; }
+  #app .rcard .rb .rmeta { font-size: 13px; color: var(--ink-soft); margin-top: 7px; }
+  #app .rcard .rb .rtag { display: inline-block; margin-top: 11px; font-size: 11px; font-weight: 700; color: var(--accent2); text-transform: uppercase; letter-spacing: .5px; }
   #app .strip-nav { display: flex; gap: 8px; justify-content: center; margin-top: 14px; }
   #app .strip-nav button { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 8px 18px; font-family: 'Albert Sans'; font-weight: 600; font-size: 14px; cursor: pointer; color: var(--ink-soft); }
   #app .strip-nav button:hover { border-color: var(--accent); color: var(--accent); }
@@ -282,27 +297,38 @@
         ];
 
         var html = topbar() + '<div class="wrap">' +
-          '<div class="hero">' +
-            '<div class="eyebrow">Členská sekce · Sezónník</div>' +
-            '<h1>Vítej zpět, <em>'+esc(member.name.split(' ')[0])+'</em></h1>' +
-            '<div class="date">📅 Dnes je ' + dateStr + '</div>' +
-            '<div class="hero-video"><iframe src="https://www.youtube.com/embed/ActrTrc-QHM" title="Úvodní video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>' +
+          '<div class="hello">' +
+            '<div><div class="eyebrow">Členská sekce · Sezónník</div>' +
+            '<h1>Vítej zpět, <em>'+esc(member.name.split(' ')[0])+'</em></h1></div>' +
+            '<div class="date">📅 ' + dateStr + '</div>' +
           '</div>';
 
-        html += '<div class="sec-h"><h2>Dnešní talíř</h2><div class="line"></div></div>';
-        html += '<div class="meals">' + mealCard('Snídaně','breakfast',m.breakfast) + mealCard('Oběd','lunch',m.lunch) + mealCard('Večeře','dinner',m.dinner) + mealCard('Dezert','dessert',m.dessert) + '</div>';
+        // dnešní talíř (3 jídla) + video vedle
+        html += '<div class="sec-h"><h2>Dnešní jídelníček</h2><div class="line"></div></div>';
+        html += '<div class="today">' +
+            '<div><div class="today-meals">' +
+              mealCard('Snídaně','breakfast',m.breakfast) +
+              mealCard('Oběd','lunch',m.lunch) +
+              mealCard('Večeře','dinner',m.dinner) +
+            '</div>' +
+            '<div class="dessert-row">' + mealCard('Dezert','dessert',m.dessert, true) + '</div></div>' +
+            '<div class="side-video"><div class="sv-label">▶ Úvodem od nás</div>' +
+              '<div class="frame"><iframe src="https://www.youtube.com/embed/ActrTrc-QHM" title="Úvodní video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>' +
+        '</div>';
 
         html += '<div class="pantry"><label>🧺 Co máš doma?</label>' +
           '<div class="row"><input id="pantryIn" placeholder="napiš suroviny oddělené čárkou, např. vejce, mrkev, jogurt"><button id="pantryBtn">Najdi recepty</button></div>' +
           '<div class="hint">Najdu recepty, které tyhle suroviny obsahují.</div><div class="matches" id="pantryMatches"></div></div>';
 
-        html += '<div class="sec-h"><h2>Objevuj a rosti</h2><div class="line"></div></div><div class="tiles">';
-        tiles.forEach(function(t){ html += '<div class="tile '+t.cls+'" data-sec="'+t.k+'"><div class="ico">'+t.ico+'</div><h3>'+esc(t.h)+'</h3><p>'+esc(t.p)+'</p></div>'; });
-        locked.forEach(function(t){ html += '<div class="tile locked"><div class="ico">'+t.ico+'</div><h3>'+esc(t.h)+'</h3><p>'+esc(t.p)+'</p><span class="lock">🔒</span><span class="soon">brzy</span></div>'; });
-        html += '</div>';
-
+        // recepty (velké karty)
         html += '<div class="sec-h"><h2>Recepty</h2><div class="line"></div><button class="more" data-go="recipes">Všechny recepty →</button></div>';
         html += '<div class="strip"><div class="strip-grid" id="stripGrid"></div><div class="strip-nav"><button id="stripPrev">← Předchozí</button><button id="stripNext">Další →</button></div></div>';
+
+        // dlaždice (menší)
+        html += '<div class="sec-h"><h2>Objevuj a rosti</h2><div class="line"></div></div><div class="tiles">';
+        tiles.forEach(function(t){ html += '<div class="tile '+t.cls+'" data-sec="'+t.k+'"><div class="ico">'+t.ico+'</div><div class="tx"><h3>'+esc(t.h)+'</h3><p>'+esc(t.p)+'</p></div></div>'; });
+        locked.forEach(function(t){ html += '<div class="tile locked"><div class="ico">'+t.ico+'</div><div class="tx"><h3>'+esc(t.h)+'</h3><p>'+esc(t.p)+'</p></div><span class="lock">🔒</span><span class="soon">brzy</span></div>'; });
+        html += '</div>';
 
         html += '<div class="sec-h"><h2>Z bylináře</h2><div class="line"></div><button class="more" data-sec="byliny">Celý bylinář →</button></div>';
         html += '<div class="herb-strip" id="herbStrip"></div>';
@@ -315,9 +341,9 @@
         bindDashboard();
       }
 
-      function mealCard(label, key, r) {
+      function mealCard(label, key, r, wide) {
         if (!r) return '';
-        return '<div class="meal"><span class="mtag">'+label+'</span>' +
+        return '<div class="meal'+(wide?' wide':'')+'"><span class="mtag">'+label+'</span>' +
           '<div class="mimg" style="background-image:url(\''+imgOf(r)+'\')" data-open="'+r.n+'"></div>' +
           '<div class="mbody"><h3 data-open="'+r.n+'">'+esc(r.name)+'</h3>' +
           '<div class="mmeta">'+(r.time&&r.time!=='—'?'⏱ '+esc(r.time):'')+'</div>' +
@@ -373,11 +399,13 @@
       }
 
       function refreshMeals(m) {
-        var cont = app.querySelector('.meals');
-        if (!cont) return;
-        cont.innerHTML = mealCard('Snídaně','breakfast',m.breakfast)+mealCard('Oběd','lunch',m.lunch)+mealCard('Večeře','dinner',m.dinner)+mealCard('Dezert','dessert',m.dessert);
-        cont.querySelectorAll('[data-open]').forEach(function(el){ el.onclick=function(){ openRecipe(+el.dataset.open); }; });
-        cont.querySelectorAll('[data-swap]').forEach(function(b){ b.onclick=function(){ swapState[b.dataset.swap]++; refreshMeals(todayMeals()); }; });
+        var meals = app.querySelector('.today-meals');
+        var dessert = app.querySelector('.dessert-row');
+        if (!meals) return;
+        meals.innerHTML = mealCard('Snídaně','breakfast',m.breakfast)+mealCard('Oběd','lunch',m.lunch)+mealCard('Večeře','dinner',m.dinner);
+        if (dessert) dessert.innerHTML = mealCard('Dezert','dessert',m.dessert, true);
+        app.querySelectorAll('.meal [data-open]').forEach(function(el){ el.onclick=function(){ openRecipe(+el.dataset.open); }; });
+        app.querySelectorAll('.meal [data-swap]').forEach(function(b){ b.onclick=function(){ swapState[b.dataset.swap]++; refreshMeals(todayMeals()); }; });
       }
 
       function runPantry(val) {
