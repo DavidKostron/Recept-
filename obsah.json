@@ -1,0 +1,221 @@
+{
+  "nadobi": {
+    "title": "Bezpečné materiály nádobí",
+    "intro": "I v nádobí na nás může čekat spousta nástrah pro zdraví — toxické látky, které se teplem uvolňují do jídla a v těle se kumulují. Pojďme si projít, čemu se vyhnout a co naopak volit.",
+    "blocks": [
+      {
+        "h": "Těžké kovy v barvách a glazuře",
+        "t": "V barvách nádobí mohou být olovo či kadmium — patří k nejnebezpečnějším těžkým kovům, zvlášť pro děti a těhotné. Glazura (lesklá vrstva) může při prasklinách propouštět látky z barvy pod ní. Pozor na povrchově porušené kusy."
+      },
+      {
+        "h": "Potisky na skle",
+        "t": "Obrázky a „nálepky\" na skleničkách jsou zdrojem těžkých kovů. Takové nádobí by nemělo být v kontaktu s ústy při pití (dole, kde držíme rukou, to nevadí). Projděte si hrnečky a skleničky — narušená glazura, praskliny nebo potisk v místě pití = raději vyřadit."
+      },
+      {
+        "h": "Teflon a nepřilnavé povrchy",
+        "t": "Teflon je „neškodný\" jen dokud ho nepoškrábeme. Stačí jediný škrábanec a uvolňuje se kyselina perfluorooktanová (narušuje hormony štítné žlázy, je považována za karcinogen). Nejen teflon — počítejte s tím, že nepřilnavé povrchy obsahují PTFE/PFOA, než že ne."
+      },
+      {
+        "h": "Plast a silikon",
+        "t": "Plastové nádobí uvolňuje mikroplasty při ohřevu, ale i formaldehyd a melamin (toxický pro ledviny). Platí i pro silikonové pečicí formy. Nikdy v plastu neohřívejte! Pozor i na plastová sítka na čaj a cedníky na horkou rýži."
+      }
+    ],
+    "doporuceni": [
+      {
+        "co": "Pánve, hrnce, zapékací mísy — litina",
+        "znacka": "Skeppshult",
+        "url": "https://www.holybaby.cz/litinove-nadobi-skeppshult/",
+        "kod": "ZDRAVAMAMA"
+      },
+      {
+        "co": "Kvalitní nerez",
+        "znacka": "Fabini",
+        "url": "",
+        "kod": ""
+      },
+      {
+        "co": "Pánev",
+        "znacka": "Stoner z Orionu",
+        "url": "",
+        "kod": ""
+      },
+      {
+        "co": "Pomalý hrnec (nerezový)",
+        "znacka": "InstantPot",
+        "url": "",
+        "kod": ""
+      },
+      {
+        "co": "Netoxický pečicí papír",
+        "znacka": "If You Care",
+        "url": "",
+        "kod": ""
+      },
+      {
+        "co": "Nerezové boxy, lahve, brčka, cedníky",
+        "znacka": "Orion / Tescoma",
+        "url": "",
+        "kod": ""
+      },
+      {
+        "co": "Znovupoužitelný obal z biobavlny a vosku",
+        "znacka": "Pandoo",
+        "url": "https://www.holybaby.cz/pandoo-opakovane-pouzitelny-obal-s-vcelim-voskem-3-ks/",
+        "kod": "ZDRAVAMAMA"
+      }
+    ],
+    "zaver": "Hrnce: litina nebo kvalitní nerez. Na pečení skleněné formy. Skladujte ve skle nebo nerezu. Raději jednu kvalitní pánev než plnou skříňku těch nevhodných."
+  },
+  "semenareni": {
+    "title": "Semenaření",
+    "video": "https://www.youtube.com/watch?v=uKkJ1bbhUYM",
+    "video_label": "Důležitý rozhovor o semínkách — ať víš, co jíš a co pěstuješ",
+    "intro": "Udělejte si vlastní seznam semínek a objednejte — volte původní odrůdy, ne hybridy či GMO.",
+    "priority": {
+      "h": "Když začínáte, jděte podle priorit",
+      "items": [
+        "Mrkev",
+        "Cibule (top i na zimu)",
+        "Mrazuvzdorná zelenina",
+        "Ředkvičky v sezóně (vysévat stále = konzistentní přísun)",
+        "Dýně (dobré uskladnění)",
+        "Brambory (dobré uskladnění)"
+      ]
+    },
+    "seznam": [
+      {
+        "sk": "Kořenovka (využití i celou zimu při uskladnění)",
+        "v": "mrkev, petržel, pastiňák, celer, řepa"
+      },
+      {
+        "sk": "Saláty, ředkvičky, kedlubny",
+        "v": "za čerstva v sezóně není nic lepšího; ředkvičky lze i fermentovat = mňamka na celou zimu"
+      },
+      {
+        "sk": "Zelí",
+        "v": "pro pickles, super v mixu s řepou"
+      },
+      {
+        "sk": "Zimní zelenina (vydrží v záhonech i mrazy)",
+        "v": "všechny druhy kapusty a pórek"
+      },
+      {
+        "sk": "Dýně",
+        "v": "dají se uskladnit až do jara"
+      },
+      {
+        "sk": "Brambory",
+        "v": ""
+      },
+      {
+        "sk": "Rajčata, papriky, okurky",
+        "v": "pokud máte dost místa"
+      },
+      {
+        "sk": "Hrášek",
+        "v": "boží na zobání, ale loupání do mrazáku trvá věčnost"
+      }
+    ],
+    "unor": {
+      "okno": [
+        "od půlky února: papriky, celery",
+        "od konce února: zelí, kedlubny"
+      ],
+      "zahrada": [
+        "pokud není zmrzlá zem (dle lokality): špenát, ředkvičky, mrkev, petržel"
+      ]
+    }
+  },
+  "sobestacnost": {
+    "title": "Soběstačnost",
+    "video": "https://www.youtube.com/watch?v=pOH-SQN3-o0",
+    "video_label": "PROČ soběstačnost a JAK co nejjednodušeji",
+    "full": "Plánování jídla \n Určitě nejsem zastáncem striktního plánování jídla ve smyslu, že to, co není \nnaplánováno v jídelníčku, nemůžeme jíst (toxický vztah k jídlu). Plánování jídla mi však slouží \nk tomu, abych \n- vždy měla suroviny doma a nestalo se, že se něčím odbydu\n- vždy měla jídlo připravené, pokud máme nějaký program mimo domov (výlet, setkání s \nmaminkami a dětmi, pracovní cesta atd.), protože nikdy nevím, zda bude v dosahu něco \npřijatelného, co bych sama chtěla jíst, zde opět připomínám i určitou volnost, pokud \nnarazíme na bistro nebo restauraci, kde se nám líbí jídlo a koncept, rádi se tam najíme a \npodpoříme podnik, i když s sebou máme jídlo z domu\n- ušetřila čas i peníze, protože je lepší mít doma určité základní zásoby a max jednou týdně \nnakoupit, než každý den chodit/jezdit do obchodu kvůli pár surovinám, co mi zrovna \nchybí\n- jídlo nevyhazovala a mohla si něco připravit na více dní (opět tím šetřím čas i peníze), \nprotože dělám-li například nějakou přílohu, u které je mi jedno, zda jí udělám 100 nebo \n500g, mohu si naplánovat na více dnů, k čemu ji využiji.\nJak jídlo plánuji a nakupuji? \n1) spíž \n Doplňování trvanlivých/ suchých surovin dělám většinou 1x do měsíce (na začátku měsíce), \nprotože většinu z nich objednávám přes nějaký e-shop a nechci objednávat častěji z ekologických \ndůvodů, zároveň si vždy beru seznam i od sestry a mamky a děláme hromadnou objednávku \nprávě kvůli maximálnímu ušetření (obalový materiál + je rozdíl, zda jedou 3 auta na 3 různá místa \nnebo 1 auto atd…).\nJaké trvanlivé/ suché suroviny mám doma a pravidelně doplňuji? - když mi nějaká surovina dojde, \npíši si ji rovnou na seznam na lednici a dle toho pak dělám objednávku, díky tomu (většinou :D) na \nnic nezapomenu.\n\n- BIO Ghí ( https://www.holybaby.cz/ghi-prepustene-maslo-bio/ ZDRAVAMAMA) \n* využívám na pečení, lívance, vajíčka\n- BIO Kokosový olej (za mne není nutností) ( https://www.holybaby.cz/purity-vision-fair-trade-bio-\nkokosovy-olej-panensky/ ZDRAVAMAMA) \n* využívám na pečení, lívance\n- BIO Sádlo/lůj - SCUK nebo domácí\n- Kvalitní sůl ( https://www.holybaby.cz/jemne-mleta-morska-sul-z-utahu-redmond-real-salt/ \nZDRAVAMAMA)\n- BIO koření - bylinky ze zahrádky, ( https://www.holybaby.cz/koreni/ ZDRAVAMAMA) \n- BIO Mouky - volím přirozeně bezlepkové - pohanková, jáhlová, z jackfruitu ze zelených banánů, \nkokosová ( https://www.holybaby.cz/mouky/ ZDRAVAMAMA) \n*lívance, kaše, buchty,..\n- BIO kokos - strouhaný i plátky \n*do jogurtu, kaše, na pečení (na scuku značky Sense coco nebo probio - myslím vychází \nnejlevněji ve velkém balení)\n- BIO rýže, čočka, pohanka, quinoa = přirozeně bezlepkové obiloviny/luštěniny - na scuku vychází \nnejlevněji Probio ve velkém balení  \n*na přílohy a kaše\n- BIO žitné, pohankové vločky \n*na kaše nabo pečení\n- Kakaové boby, kvalitní kakao (holybaby nebo Scuk) \n*do jogurtu, kaše, na pečení\n- Něco do jogurtu, když není čerstvé ovoce - mám moc ráda tuhle směs https://\nwww.holybaby.cz/energy-mix-bio-vitalvibe/ , BIO sušené ovoce seženete jak na Holybaby tak \nna scuku, vždy koukejte, ať není doslazované a prioritně dávejte přednost čerstvému, tohle je \nspíš nouzovka nebo na cesty\n- Bezobilné krekry https://www.holybaby.cz/aip-chlebicky-a-krekry/  \n* na cesty, s máslem, paštikou,…\n- Kokosové máslo - jediné “ořechové” máslo, které u mne uvidíte - kokos není klasický ořech, má \nstabilní tuky (nasycené), tudíž neoxiduje a nemá nadbytek omega 6 NMK - na holybaby mají \npražené, které chutná více jako karamel, obyč má například značka Wild Coco \n*do jogurtu, kaše, na lívance, na pečení\n- Sušené maso ( https://www.holybaby.cz/susene-maso-jerky/ ZDRAVAMAMA) \n*na cesty a svačiny mimo domov\n- Bezořechové raw tyčinky ( https://www.holybaby.cz/aip-raw-tycinky/ ZDRAVAMAMA) \n*na cesty a svačiny mimo domov\n\n- Kvalitní čokoláda ( https://www.holybaby.cz/kakao--cokolada-a-alternativy/ ZDRAVAMAMA) \n*do jogurtu, kaše, na lívance, na pečení\n- brambory - máme domácí, BIO seženete na farmách nebo scuku\n- Ovoce a zelenina - tady dle sezóny, nyní využívám z 90% domácí zdroje, doporučuji se poptat v \nlokálních skupinkách MapyPropojení, kde je spousta lidí s přebytky, dále z farem a nebo scuk\n2) mrazák\n Za další bych chtěla zmínit mrazák, protože tam lze mít také spousta jídla do zásoby. Mrazák \nnedoplňuji až tak dle nějakého časového rozmezí, ale spíše dle příležitosti - například někdo mi \nnabídne maso ze zabíjačky, vnitřnosti z nedaleké obory, máme cestu někam, kde je v okolí \nbiofarma, jsou přebytky zeleniny atd… Mám již rozhozené sítě a to doporučuji i vám\n- bydlíte-li na vesnici, nebo třeba vaši rodiče, spousta lidí tam má domácí zvířata a stačí se jen \nnahlásit, až budou zabíjet, že byste rádi, pokud bude něco k mání, stejně tak znáte-li nějakého \nmyslivce, ohlašte se, že byste si rádi vzali maso, až bude něco k mání\n- podívejte se do mapy, zda v okolí nemáte nějakou oboru s divokou zvěří, my máme mu floní a \ndančí a dokud jsem je neoslovila, vnitřnosti dávali pejskařům, od té doby mi všechna játra \nschovávají a já si je pak ve větším množství odebírám a dělím se s mou okolní komunitou (spojte \nsíly :))\n- máte-li farmáře v okolí, projevte zájem o odběr většího množství masa, my máme takto \ndomluveno s jedním biofarmářem ob vesnici, který zabíjí býky vždy na podzim a rovnou se \nzazásobíme na velkou část zimy plným mrazákem\n- jedete -li na návštěvu nebo výlet rovnou koukejte do mapy farem https://\nwww.adresarfarmaru.cz/?zoom=8&lng=15.41656494140625&lat=49.80608653412716 , co \npotkáte po cestě, doma se podívejte, kolik místa máte v mrazáku a dle toho nakupte :)\n- chcete-li co nejvíce ušetřit, doporučuji si - na farmě nebo v oboře domluvit odběr celého zvířete \na sami si jej zpracovat a nabalíčkovat, toto vyjde opravdu nejlevněji a pokud nemáte tolik místa \nv mrazáku, tak se domluvte právě třeba s nejbližší komunitou, udělejte si společný čas při \nporcování zvířete a pak si vše rozdělte\n- máte-li přebytky zeleniny, nebo možnost zakoupení biozeleniny nějak výhodně (což je hlavně v \nsezóně), udělejte si balíčky do mrazáku - na vývar, pod maso atd., stejně tak s ovocem - do \nkaší, na lívance atd.\nCo máme vždy v mrazáku: \n- kosti/ maso s kostmi na vývar (co je zrovna k mání - hovězí, slepice, vepřové, divoké,…)\n\n- maso na dušení/ pečení (opět co je k mání - hovězí, kuřecí, vepřové, divoké, skopové, ryby, \nkrálík,..)\n- vnitřnosti - játra, srdce nejčastěji (z obory dančí, mu floní, od dědy myslivce někdy divočák, \nsrnčí, od farmáře hovězí)\n- ryby - jednou za čas dělám větší objednávku na https://www.boxxi.cz/ , kde si volím ryby z \nvolného moře a krevety - tyto “nelokální” se z důvodu vitamínů snažím zařazovat alespoň 3x do \nměsíce, jinak každý týden máme nějakou lokální - volně lovení pstruzi nebo sumeček z \nAquaponie (objednávám na scuku)\n- veškeré přebytky ovoce, zeleniny, ale i nepaster másla, kterého má paní někdy hodně a v lednici \nby nevydrželo\n3) lednice\nA jako poslední lednice, tam máme především suroviny na týden, dle naplánovaného jídelníčku (k \nčemuž využívám i zásoby z mrazáku a trvanlivé/sypké suroviny). V lednici si řadím dopředu \nsuroviny s nejnižší trvanlivostí a pokud vidím, že něco nestihnu zpracovat, dám to do mrazáku.. Do \nlednice právě doplňuji nákupem 1x týdně - většinou Scuk, ale nyní v sezóně hojnosti se mi \nzařadilo i po dvou týdnech, protože jsem měla dostatek domácích zdrojů + využívala jsem zásob z \nmrazáku.\nCo máme v lednici\n- mléko - odebíráme nepasterované Jersey od jedné paní z vedlejší vesnice, co má doma krávu \n1x týdně, něco nechávám na přímou spotřebu a z něčeho dělám kefír/jogurt (, dle toho, kolik \nmléka zrovna je (1-4l), A2 kravské mléko (jiné nedoporučuji) má na scuku farma Volavec, \ndoporučuji se však poohlédnout po svém okolí (v Pardubicích např. Farma Apolenka), a poptat i \nnepasterované do vlastních lahví \n*mléko využívám do kaší, výživných smoothie nebo skleničku jen tak k jídlu na chuť, protože \nnepaster má spoustu bene fitů\n\n- máslo - stejně tak jako mléko bereme nepaster, to vydrží v lednici max týden a pak je kyselé, \ntakže přebytky mrazím \n* máslo jíme s bezobilnými krekry ( https://www.holybaby.cz/aip-chlebicky-a-krekry/ \nZDRAVAMAMA, domácím pohankovým chlebem, dávám jej do kaší a pyré nebo na brambory)\n- Bio jablečný ocet - do vývaru nebo pro podporu trávení ( https://www.holybaby.cz/originalni-bio-\njablecny-ocet-bragg-usda-organic--raw--s-matecni-kulturou-473-ml/ ZDRAVAMAMA), letos \nchci zkusit i vlastní https://www.jimejinak.cz/domaci-jablecny-ocet-jak-ho-snadno-vyrobit-krok-\npo-kroku/ )\n\n- Sádlo, lůj - buď doma uškvařené z domácí zabíjačky nebo BIO mají na scuku - Biofarma Sasov, \nBiofarma Trněny Újezd, Biofarma Marek Častonín (ghí skladuji mimo lednici) \n* sádlo používám na tepelnou úpravu (maso, vejce,..)\n- Jogurt/kefír - buď domácí z tibetské houby nebo kupuji ovčí na scuku (biofarma košík, farma \nDržovice, farma Amálka) \n* jogurt/kefír dáváme na lívance nebo kaše, do výživných smoothies nebo na svačinu jen tak s \novocem a kokosem/kakaovými boby\n- Marmelády, povidla (načnuté, ty zavřené skladuji mimo lednici) - domácí ( https://\nwww.jimejinak.cz/marmelada-bez-cukru/) z kupovaných máme rádi např. Bioládu, ale není to \nnutnost, na lívance stačí udělat rozvor z mraženého ovoce nebo podusit jablíčka  \n*marmelády dáváme na lívance/kaše nebo na domácí chlebík z pohanky\n- Sýr - bio parmazán (zn. Reggiano), pak volím bio/ovčí/kozí, co se mi zrovna zalíbí na scuku, \nkdyž dělám objednávku \n* tvrdší sýry ráda strouhám na omeletu, krájím na talíř, když přijde návštěva nebo jím doplňuji \nnaše snídaně, případně svačiny, využívám i do salátů\n- Vajíčka - ta máme domácí nebo od známých, málokdy je nedostatek a nakupuji na scuku, vždy \nnakupujte vajíčka s označením 0,1 \n*vejce nejradši jíme na všechny možné způsoby na snídaně, syrové žloutky dávám do kaše \nnebo vývaru, bílky pak použiji na lívance nebo pečení\n- Paštika - domácí z bio jater, kvalitní jsem našla i na scuku (Probio a Biofarma sasov) \n*paštiku jíme nejradši s bezobilnými krekry nebo na pohankovém chlapíku, já jí mam ráda i na \nmrkvi :-)\n\n- Maso/ryby/vnitřnosti - ne moc, právě tak akorát dle naplánovaného jídelníčku, zásoby mám v \nmrazáku. Dělám-li zrovna objednávku na scuku, přihazuji rybu z Aquaponie a nějaké chlazené \nmaso (BIO - většinou co mají zrovna za dobrou cenu nebo ve slevě) a to se snažím v daný týden \nspotřebovat + to v tom týdnu doplňuji právě o zásoby z mrazáku \n*na hlavní jídla\n- Ovoce/ zelenina - (pozor, ne vše se má skladovat v lednici :-)) - dle sezóny  \n*do vývaru, jako příloha, k jogurtu nebo na lívance atd..\n- Ještě doplňky jako BIO olivy (kupuji na scuku Lifefood), balsamico  \n* do salátů\n- - občas BIO uzený losos, Kajka s dejme milují “bowl”, takže třeba 2x za měsíc ji dělám a mají \nvelkou radost :-), toho mají na Rohlíku (zn. Pappudia), tam ne tak ráda nakupuji kvůli celkovému \nkonceptu, distribuci, podpoře značek jako je Nestllé atd a nadbytku obalového materiálu, takže \ntam objednávám velmi výjimečně- snažím se max 1 do měsíce a právě se zase spojuji se \nsestrou a mamkou, abychom byli ekologičtější, na Rohlíku mají i zmiňovaný BIO parmazán\n- - - chybí-li vám tu nějaké uzeniny, tak ty jíme skutečně výjimečně a pouze tehdy, když jsme \nprávě na nějaké farmě a něco z místní produkce nás tam zaujme a má to vhodné složení (jen \nmaso, koření a sůl)\n+ v lednici mám např. zbytky jídla z předešlého dne nebo třeba vývar i na více dní\nPraxe:\n - Vždy určitý den v týdnu, nejčastěji v neděli, si udělám přehled o tom, jaké zásoby jídla \nmáme doma. Především v lednici, kde mám jídlo s nejmenší trvanlivostí, to je priorita sdělat a k \ntomu volím z dostupných zásob a dle sezóny přílohy, oblohy atd. \n - Dle těchto zásob si začnu psát jídelníček snídaně - oběd - večeře na další týden a nákupní \nseznam > rovnou objednávám na SCUKu\n + se řídím při plánování pravidlem minimálně 2x týdně vnitřnosti, minimálně 1x týdně ryba, \nkaždý den - obden vývar (samostatně nebo jako součást jídla)\n - Dále kontroluji zásoby ve spíži a mrazáku, dle toho chystám větší objednávku na e-shopu \n(suché/trvanlivé) nebo Boxxii (ryby), nebo cestu na farmu,…\n\nV mé objednávce na SCUKu se většinou nachází:\n- ovčí/kozí jogurty\n- Bio sýry - co se mi zrovna líbí\n- Vajíčka (pokud slepice nesou málo)\n- BIO ovoce/zelenina (pokud není sezóna, od cca června minimálně do teď jedu 90% domácí - \n10% jsou BIO banány, které dávám nejčastěji do pečení na oslazení a BIO citrony na adrenální \nkoktejl)\n- BIO maso - 1-2 balíčky něčeho, abych měla k dispozici i nemražené\n- Ryba z Aquaponie\n- Občas: čokoláda (čokoládovna troubelice, lifefood)\n- Dle potřeby: bezlepek obiloviny, luštěniny\nCo máme nyní domácí:\n- Vajíčka\n- králík\n- Skopové\n- Dýně, řepa, mrkev, rajčata, okurky, papriky, cukety, brambory\n- Jablka, hrušky, švestky, borůvky, ostružiny, jahody\nCo odebírám dále:\n- 1x týdně nepaster mléko + máslo\n- Dle potřeby maso z farmy nebo od konkrétních lidí, kteří zrovna mají k mání\n- Vnitřnosti z obory\n- Volně lovené ryby pokud někde máme cestu a prodávají tam"
+  },
+  "zahrada": {
+    "title": "Zahradničení & péče o záhony",
+    "video": "https://youtu.be/wnvhORiJ-pQ",
+    "video_label": "Jak si založit a opečovat záhony",
+    "sezona": [
+      {
+        "obdobi": "Zkraje března",
+        "text": "Zkraje března (dá se toho pěstovat více, vždy vám píši, co konkrétně dělám já, ne každou zeleninu / bylinky sama pěstuji :-))\n\nseju do záhonu:\nmrkev (stupická k rychlení)\nředkvičky\npastiňák\nsaláty (můžete část i předpěstovat za oknem)\nhrách\nheřmánek\nZa okna doma:\npór\nkedlubny\n- Sázím jahody\nOd poloviny března:\nDo záhonu: stejné, jako na začátku\nZa okna doma:\nrajčata\nOkurky (některé klidně až v dubnu)\nVyrostlé sazeničky mohou potřebovat rozsadit do větších nádob :)\nKoncem března:\nSazeničkám nezapomeňte dělat prostor a postupně je rozsazovat.\nZa okna i ven můžete vysévat i to, co v polovině března, stále je čas na mrkev, ředkvičky, pastiňák, hrách, saláty\ncibule sazečka\nza okny můžete vyset i vodní melouny, pokud máte v plánu"
+      },
+      {
+        "obdobi": "Duben",
+        "text": "V dubnu je čas na přesun některých větších sazenic ven.\nKedluby/ zelí (dle odrůdy), pokud jste předpěstovávali, tak saláty.\nRostliny potřebují adaptaci! Na noční chlad i přímé slunce, jsou 2 varianty, jak postupovat\ndáte sazenice rovnou do záhonu a přikryjete bílou netkanou textilií, postupně odhalujete na část dne - ideálně ranní/večerní slunce zpočátku, ne ostré z půlky dne.. Intervaly se postupně prodlužují, až necháte odkryté celý den..\nsazenice vyndáváte třeba na venkovní parapety v sadbovačích. Stejný postup - nejprve vyndáváte na ranní/ pozdní slunce, postupně prodlužujete, až necháte celý den a dáte do záhonu..\nSaláty se hodí k hrášku, ředkvičkám, jahodám.. nebo na záhony, kde budete později dávat třeba rajčata, do té doby saláty sklidíte. Já je rozhazuji do více záhonů po pár kouscích mezi další zeleninu - část mám mezi ředkvičkami, část u hrachu, část mezi jahodami, na větší kus najednou jsem je dala do místa, kde budu pak vysazovat pórek, do té doby tam saláty sklidím..\nKedlubny se hodí vedle salátu, hrášku či pórku, pokud máte rané, které budete dříve sklízet, mohou jít před rajčata.\nDalší sazenice budeme pikýrovat dle jejich potřeb do větších a vetších nádob - rajčata, okurky, papriky, celery,....\nKdo začal hned v počátku března, už bude sklízet v dubnu ředkvičky, ty se dají průběžně vysévat i nyní, mohou do meziřádku mezi jakoukoliv zeleninu, ředkvičku sklidíte vždy brzy od vysetí.\nKdyž mám ředkviček přebytky, tak je fermentuji - ukládám do složky dubnových receptů. Vydrží tak několik měsíců - rok.\nVen se dá dál vysévat mrkev, pastiňák, petržel, hrách, ředkvičky..\nPřímo do záhonu už i nějaké zelí, pór, růžičková kapusta nebo kedlubny.\nZa okny melouny, cukety, dýně, \nstejně také zelí, pórky, kapusty - pokud máte prostor a chcete si nejprve udělat sazenice..\nMulč: pokud dáte sazenice do zàhonu, doporučuji rovnou přihrnout např natrhanou trávou (ideál je i sláma, ale ne každý má). Mulč chrání zeminu před vysycháním a udržuje vlhkost. Malé sazenice přihrnujte jen malinko, jak budou růst, můžete vrstvit:)"
+      }
+    ]
+  },
+  "byliny": [
+    {
+      "name": "Plicník",
+      "img": "byliny/Plicník.png",
+      "use": "Dýchací cesty — kašel, zápal plic. Suším a míchám do zimní směsi „SOS PLÍCE PRŮDUŠKY\" (podběl/lípa/plicník/jitrocel), jen do lékárničky, ne na běžné pití.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Medvědí česnek",
+      "img": "byliny/Medvědí_česnek.png",
+      "use": "Do jídla jen tak nebo na pesto. Pesto: na 50–70 listů 400 ml bio olivového oleje, 50 g piniových/makadamových ořechů, sůl. Lze kombinovat s bršlicí. S ořechy spotřebovat do 3 týdnů, jen s olejem vydrží i 5.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Jahodník lesní",
+      "img": "byliny/Jahodník.png",
+      "use": "Čerstvý i sušený na čaj. Ženská bylina, podpora trávení.",
+      "kdy": "jaro–léto"
+    },
+    {
+      "name": "Svízel a ptačinec (žabinec)",
+      "img": "byliny/Svízel__ptačinec.png",
+      "use": "Bylinkové máslo: změklé máslo + kvalitní sůl + nasekané byliny. Sypat na polévku nebo vajíčka.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Divoká pažitka",
+      "img": "byliny/Pažitka_divoká.png",
+      "use": "Najdete v lesích v trsech mezi listím, poznáte podle vůně. Skvělá na jakékoliv jídlo.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Kopřivy a bršlice",
+      "img": "byliny/Kopřivy__bršlice.png",
+      "use": "Kopřivy: sušené i čerstvé na čaj, klidně jen tak — mladé jsou plné energie. Bršlice: zelenina jako salát, ke každému jídlu, přidává se do pesta.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Jehnědy (líska, olše, bříza)",
+      "img": "byliny/Jehnědy_-_líska__olše_-_1.png",
+      "use": "Čerstvé i sušené na čaj, specificky při kašlích a problémech s dýchacími cestami. Dezert: rozpustit kvalitní čokoládu, namočit jehnědy, dát do lednice.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Fialky, podběl, sedmikrásky",
+      "img": "byliny/Fialky__podběl__sedmikrásky.png",
+      "use": "Vše jedlé i pitelné jako čaj. Podběl: ne v těhotenství. Fialky: jedlé květy, výluh do kakaa. Sedmikráska: jedlý květ, všestranná léčivka — vnitřně kašel/bolesti, vně obklad na rány/akné.",
+      "kdy": "jaro"
+    }
+  ],
+  "healing": {
+    "title": "Healing tipy",
+    "full": "Jídlo pro nemocné dítě\ncíl: maximum živin\nžloutek + morek + med + sůl\nmorek + žloutek do jakékoliv (domácí, fermentované) kaše\nnepaster mléko, vývar se solí"
+  },
+  "kvaskovani": {
+    "title": "Kváskování",
+    "full": "Pokud máte přebytky kvásku nebo naopak byste jej rádi získali, můžete se propojit ve skupině “Poptávám Nabízím” v komunitě: https://silapropojeni.com/\nKváskový mazanec - zaujal mne tenhle recept a vše se vyvedlo do super struktury i chuti:\n kvásek jsem měla žitný a pak jsem používala bio špaldovou mouku, cukr jsem dala bio třtinový, vynechala rum, jinak jsem vše dělala dle postupu. \ntakové “buchty”, kde je v podstatě “jen” mouka, rovnou doplňuji o raw máslo/ mléko, ideálně jogurt/ tvaroh,.. pro servírování jako “plnohodnotné jídlo” na snídani/ snack..hlavně pro děti:)\nhttps://domekzalesem.cz/recepty/kvaskovy-mazanec/\nFrench toast ode mne znáte z Receptáře z Vánočky. \nSmíchám 2 vejce, mléko, 1 PL třtin.cukru a skořici/ vanilku dle chuti, nakrájený (sušší, tvrdší) mazanec/ Vánočku,.. namočím z obou stran a smažím na ghí na (netoxické https://www.holybaby.cz/litinova-panev-hlubsi-20cm/ ) pánvi"
+  },
+  "tipy_nakup": {
+    "title": "Aktuální tipy na nákup",
+    "full": "7.4. 2026\nPo delší době jsem objednávala na SCUKu, abych si zautomatizovala nějaký fixní větší nákup kvůli porodu a šestinedělí, tak sdílím nějaké tipy:\nBIO špekáčky s fajn složením, vzala jsem více balení i do mrazáku - na různá setkání, kdy se může rozdělat oheň,.kterých na jaře začíná být více…Špekáček s takovým složením s kvalitním kečupem, hořčicí bez rostlinných olejů a kváskovým chlebem, zeleninou, je fajn výživná večeře \nhttps://www.scuk.cz/veprove-spekacky/p/DY8ml5av\nVelké balení A2 jogurtu (je výborný, hodně smetanový) https://www.scuk.cz/bile-jogurty/p/bJPKpZdp\nVelké balení sýru, kt. dávám do různých jídeln nastrouhaný (rizoto, zapečený s vajíčky, zeleninou,... do salátu jen tak nastrouhaný…)\nhttps://www.scuk.cz/syrove-bochniky/p/eDRNPyqQ"
+  },
+  "zakladni_recepty": {
+    "title": "Základní recepty",
+    "full": "Základní recepty \nFermentovaný pohankový chleba \nSuroviny: \n- Pohanka loupaná 500g (můžou být jak kroupy, tak i lámanka) \n- Lněné semínko 50g \n- Dýňové semínko 50g (není nutné) \n- Psylium 1 lžička \n- Sůl, pepř, kmín \n- Filtrovaná voda \nPostup: \n• S přípravou začínáme 2 dny předem. \n• Pohanku zalijeme dvojnásobným množstvím filtrované vody a necháme ji namočenou 24 hodin. \n• Scedíme a můžeme propláchnout. \n• Přidáme lněné semínko, dýňové semínko, psylium, sůl, pepř, kmín a přilijeme sklenici vody. Vše rozmixujeme ponorným \nmixérem. \n• Zakryjeme utěrkou a necháme 24 hodin fermentovat. \n• Nalijeme do formy a pečeme na asi 220°C cca 40 minut. \nVývar \nSuroviny: \n- Maso/kosti/klouby/hlava/pařáty/kombinace \n- Filtrovaná voda dle velikosti hrnce \n- jablečný ocet 1 PL na 2l \n- Cibule \n- Bobkový list, nové koření \n- Volitelně: kořenová zelenina, zázvor, česnek \nPostup: \n• Do velkého hrnce nalijete filtrovanou vodu a přidáte všechny suroviny, zakryjete pokličkou, přivedete k varu a poté \nsnížíte teplotu na minimum a necháte vařit minimálně 6 hodin, ale můžete vařit i 24 hodin, v pomalém hrnci vařím 8 - 12 \nhodin. \n• Následně vyndám koření a zeleninu, oberu maso z kosa. \n• Postupně využívám ke spotřebě - čistý vývar mám v lednici vždy po ruce alespoň 1l- do kaší, vařím v něm rýži atd., ze \nzbytku většinou rovnou dělám polévku - do vývaru dám vařit zeleninu dle libosti, zásob a sezóny do změknutí a pak \nobrané maso, nezapomeňte na dostatek soli. \n• Zeleninu z vývaru můžete pokrájet do vývaru, dát do pyré k masu, …já ji dávám i slepičkám :). \nŘepný kvas \n- Ten si dávám 1-2 loky před jídlem. \n- https://www.janadellplotnarkova.cz/2019/02/13/repny-kvas/ \nDomácí kefír/jogurt \nZáklad pro kaše nebo přílohy z obilovin \n- Vždy volím přirozeně bezlepkové obiloviny \n- Před vařením daného pokrmu máčím a fermentuji pro lepší stravitelnost a zbavení se antinutričních látek = filtrovaná \nvoda + 1 PL jablečného octa, alespoň 12 hodin předem \n- Poté propláchnu filtrovanou vodou a vařím"
+  },
+  "slevovy_kod": {
+    "kod": "ZDRAVAMAMA",
+    "eshop": "holybaby.cz",
+    "url": "https://www.holybaby.cz"
+  }
+}
