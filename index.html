@@ -53,13 +53,6 @@
   }
   #app .topbar .member { display: flex; align-items: center; gap: 9px; }
   #app .topbar .avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--accent2); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 12px; }
-  #app .topbar .promo { display: flex; align-items: center; gap: 8px; }
-  #app .topbar .promo b { color: #fff; }
-  #app .topbar .code {
-    background: var(--accent3); color: #2c2117; font-weight: 700; padding: 2px 9px; border-radius: 6px;
-    letter-spacing: .5px; cursor: pointer; border: none; font-family: 'Albert Sans'; font-size: 13px;
-  }
-  #app .topbar .code:hover { filter: brightness(1.08); }
 
   #app .hello { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 26px 0 4px; }
   #app .hello .eyebrow { color: var(--accent2); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 11.5px; }
@@ -163,15 +156,10 @@
   #app .orig-toggle:hover { border-color: var(--accent); color: var(--accent); }
   #app .orig-text { display: none; white-space: pre-wrap; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 12px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
   #app .orig-text.open { display: block; }
-  #app .shopbox { margin-top: 20px; background: linear-gradient(135deg, #fbf3e3, #f6e8d0); border: 1px solid #e8d4ad; border-radius: 14px; padding: 14px 16px; }
-  #app .shopbox .sh-h { font-weight: 700; color: var(--accent); font-size: 13px; text-transform: uppercase; letter-spacing: .5px; }
-  #app .shopbox a { font-weight: 600; }
-  #app .shopbox .sh-code { display: inline-block; margin-top: 8px; background: var(--accent3); color: #2c2117; font-weight: 700; padding: 4px 12px; border-radius: 7px; letter-spacing: .5px; cursor: pointer; }
 
   #app .essence { margin: 4px 0 6px; background: linear-gradient(135deg,#eef3e8,#e6efdc); border: 1px solid #d5e2c5; border-radius: 14px; padding: 14px 16px; }
   #app .essence .ess-lead { font-family: 'Fraunces'; font-weight: 600; color: var(--accent2); font-size: 15px; margin-bottom: 8px; }
-  #app .essence .ess-tags { display: flex; flex-wrap: wrap; gap: 7px; }
-  #app .essence .ess-tag { background: #fff; border: 1px solid #d5e2c5; color: var(--ink); font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 999px; }
+  #app .essence .ess-quote { font-family: 'Fraunces'; font-style: italic; font-size: 15.5px; color: var(--ink); line-height: 1.4; }
   #app .essence .ess-link { margin-top: 11px; background: var(--accent2); color: #fff; border: none; border-radius: 9px; padding: 9px 14px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13px; cursor: pointer; }
   #app .essence .ess-link:hover { filter: brightness(1.06); }
 
@@ -201,12 +189,32 @@
   #app .dorow .dl span { font-size: 13px; color: var(--ink-soft); }
   #app .dorow .da { display: flex; align-items: center; gap: 8px; }
 
-  #app .edu-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); margin-bottom: 26px; }
-  #app .edu-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; box-shadow: var(--shadow); border-top: 4px solid var(--accent2); }
+  #app .edu-sub { color: var(--accent2); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; margin-bottom: 6px; }
+  #app .edu-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); margin-bottom: 26px; }
+  #app .edu-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; box-shadow: var(--shadow); border-top: 4px solid var(--accent2); display: flex; flex-direction: column; }
+  #app .edu-card .edu-top { display: flex; align-items: center; justify-content: space-between; }
   #app .edu-card .edu-ico { font-size: 30px; }
-  #app .edu-card h3 { font-size: 18px; margin: 8px 0 6px; }
-  #app .edu-card p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 10px; }
+  #app .edu-card .edu-badge { font-size: 11px; font-weight: 700; color: var(--accent2); background: #e9f0e0; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .5px; }
+  #app .edu-card h3 { font-size: 19px; margin: 8px 0 8px; }
+  #app .edu-card .edu-quote { font-family: 'Fraunces'; font-style: italic; font-size: 14.5px; color: var(--accent); line-height: 1.35; margin-bottom: 8px; }
+  #app .edu-card p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 12px; flex: 1; }
+  #app .edu-card .edu-open { display: inline-block; text-align: center; background: var(--accent2); color: #fff; text-decoration: none; border: none; border-radius: 9px; padding: 9px 14px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13.5px; cursor: pointer; }
+  #app .edu-card .edu-open:hover { filter: brightness(1.06); }
   #app .edu-card .edu-status { font-size: 12px; font-weight: 700; color: var(--accent3); }
+
+  #app .mod-head { display: flex; align-items: center; gap: 16px; margin-bottom: 6px; }
+  #app .mod-head .mod-ico { font-size: 44px; flex: 0 0 auto; }
+  #app .mod-head .edu-badge { font-size: 11px; font-weight: 700; color: var(--accent2); background: #e9f0e0; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .5px; }
+  #app .mod-quote { font-family: 'Fraunces'; font-style: italic; font-size: 20px; color: var(--accent); line-height: 1.4; margin: 14px 0 20px; padding-left: 16px; border-left: 4px solid var(--accent3); }
+  #app .mod-body { line-height: 1.75; }
+  #app .mod-body p { margin: 0 0 14px; font-size: 15px; }
+  #app .mod-body ul { margin: 0 0 14px; padding-left: 22px; }
+  #app .mod-body li { margin-bottom: 7px; font-size: 15px; }
+  #app .mod-body .mod-h { font-family: 'Fraunces'; font-size: 21px; color: var(--accent); margin: 24px 0 12px; padding-top: 6px; border-top: 1px solid var(--line); }
+  #app .mod-body .mod-sh { font-family: 'Fraunces'; font-size: 17px; color: var(--accent2); margin: 18px 0 8px; }
+  #app .mod-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; }
+  #app .mod-nav button { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13.5px; color: var(--ink); cursor: pointer; max-width: 48%; text-align: left; }
+  #app .mod-nav button:hover { border-color: var(--accent); color: var(--accent); }
   #app .upsell { background: linear-gradient(135deg,#2c2117,#3d3020); color: #f4efe6; border-radius: 20px; padding: 30px 28px; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg); }
   #app .upsell .up-lock { font-size: 30px; margin-bottom: 8px; }
   #app .upsell h2 { color: #fff; font-size: 28px; margin-bottom: 10px; }
@@ -239,7 +247,6 @@
       var recipes = DATA.recipes || [];
       var tips = DATA.tips || [];
       var byliny = OBSAH.byliny || [];
-      var KOD = (OBSAH.slevovy_kod || {});
       var member = { name: 'Milý člene', email: '' };
 
       var catLabels = { jidla: 'Běžné jídlo', dezerty: 'Dezert', sklad: 'Skladování' };
@@ -274,15 +281,12 @@
       }
 
       function toast(msg) { var t = document.createElement('div'); t.className='toast'; t.textContent=msg; app.appendChild(t); setTimeout(function(){ t.remove(); }, 1800); }
-      function copyCode(code) {
-        if (navigator.clipboard) navigator.clipboard.writeText(code).then(function(){ toast('Kód '+code+' zkopírován'); }, function(){ toast('Kód: '+code); });
-        else toast('Kód: '+code);
-      }
 
       function render() {
         if (view.name === 'dashboard') return renderDashboard();
         if (view.name === 'recipes') return renderAllRecipes();
         if (view.name === 'section') return renderSection(view.payload);
+        if (view.name === 'module') return renderModule(view.payload);
       }
 
       function topbar() {
@@ -290,18 +294,16 @@
         return '<div class="topbar">' +
           '<div class="member"><span class="avatar">'+esc(initials)+'</span>' +
             '<span>'+esc(member.name)+(member.email?' · '+esc(member.email):'')+'</span></div>' +
-          '<div class="promo">🤝 <b>Spolupráce s '+esc(KOD.eshop||'')+'</b> — slevový kód ' +
-            '<button class="code" data-copy="'+esc(KOD.kod||'')+'">'+esc(KOD.kod||'')+'</button></div>' +
         '</div>';
       }
-      function bindTopbar() { var c = app.querySelector('.topbar .code'); if (c) c.onclick = function(){ copyCode(c.dataset.copy); }; }
+      function bindTopbar() {}
 
       function renderDashboard() {
         var n = new Date();
         var dateStr = days[n.getDay()] + ', ' + n.getDate() + '. ' + months[n.getMonth()] + ' ' + n.getFullYear();
         var m = todayMeals();
         var tiles = [
-          {k:'vzdelavani', ico:'📚', h:'Transformace stravování', p:'Proč jíme, jak jíme', cls:'accent'},
+          {k:'vzdelavani', ico:'📚', h:'Transformace stravování', p:'Vzdělávací minikurz', cls:'accent'},
           {k:'semenareni', ico:'🌱', h:'Semenaření', p:'Co a kdy sít', cls:'accent2'},
           {k:'sobestacnost', ico:'🌾', h:'Soběstačnost', p:'Plánování & zásoby', cls:'accent2'},
           {k:'zahrada', ico:'🪴', h:'Zahradničení', p:'Péče o záhony', cls:'accent2'},
@@ -450,19 +452,12 @@
         if (!mb) return;
         var ingHTML = (r.ing||[]).map(function(i){ return /:\s*$/.test(i) ? '<li class="label-row">'+esc(i)+'</li>' : '<li>'+esc(i)+'</li>'; }).join('');
         var stepsHTML = (r.steps||[]).map(function(s){ return '<li>'+esc(s)+'</li>'; }).join('');
-        var shopHTML = '';
-        if (r.shop) {
-          shopHTML = '<div class="shopbox"><div class="sh-h">🛒 Kde koupit</div>' +
-            '<a href="'+esc(r.shop.url)+'" target="_blank" rel="noopener">'+esc(r.shop.eshop)+' →</a>' +
-            (r.shop.kod ? '<br><span class="sh-code" data-copy="'+esc(r.shop.kod)+'">Slevový kód: '+esc(r.shop.kod)+'</span>' : '') + '</div>';
-        }
-        // klíčová podstata + odkaz na vzdělávací dokument
+        // vzdělávací citace s proklikem do konkrétního modulu minikurzu
         var essHTML = '';
-        if (r.essence) {
-          var allTags = (r.essence.all||[r.essence.text]).map(function(t){ return '<span class="ess-tag">'+esc(t)+'</span>'; }).join('');
-          essHTML = '<div class="essence"><div class="ess-lead">Proč to jíst</div>' +
-            '<div class="ess-tags">'+allTags+'</div>' +
-            '<button class="ess-link" data-doc="'+esc(r.essence.doc)+'">📚 Přečíst si víc v transformaci stravování →</button></div>';
+        if (r.edu) {
+          essHTML = '<div class="essence"><div class="ess-lead">💡 Z minikurzu Transformace stravování</div>' +
+            '<div class="ess-quote">„'+esc(r.edu.citace)+'"</div>' +
+            '<button class="ess-link" data-modul="'+esc(r.edu.modul)+'">📚 Otevřít modul →</button></div>';
         }
         mb.innerHTML = '<div class="modal"><button class="close" id="cls">×</button>' +
           '<div class="hero-img" style="background-image:url(\''+imgOf(r)+'\')"></div>' +
@@ -470,12 +465,12 @@
           '<div class="sub">📅 '+esc(r.date||'')+(r.time&&r.time!=='—'?' · ⏱ '+esc(r.time):'')+' · '+(catLabels[r.cat]||'')+'</div>' +
           essHTML +
           (ingHTML?'<h4>Ingredience</h4><ul>'+ingHTML+'</ul>':'') +
-          (stepsHTML?'<h4>Postup</h4><ol>'+stepsHTML+'</ol>':'') + shopHTML +
+          (stepsHTML?'<h4>Postup</h4><ol>'+stepsHTML+'</ol>':'') +
           '<button class="orig-toggle" id="origbtn">📄 Zobrazit původní znění receptu</button>' +
           '<div class="orig-text" id="origtxt">'+esc(r.fullText||'')+'</div></div></div>';
         mb.classList.add('open');
         wireModal(mb);
-        mb.querySelectorAll('.ess-link[data-doc]').forEach(function(el){ el.onclick=function(){ mb.classList.remove('open'); go('section','vzdelavani'); }; });
+        mb.querySelectorAll('.ess-link[data-modul]').forEach(function(el){ el.onclick=function(){ mb.classList.remove('open'); go('module', el.dataset.modul); }; });
       }
 
       function openHerb(name) {
@@ -498,7 +493,6 @@
         mb.onclick = function(e){ if(e.target===mb) mb.classList.remove('open'); };
         var ob = document.getElementById('origbtn');
         if (ob) ob.onclick = function(){ document.getElementById('origtxt').classList.toggle('open'); };
-        mb.querySelectorAll('.sh-code[data-copy]').forEach(function(el){ el.onclick=function(){ copyCode(el.dataset.copy); }; });
       }
 
       function renderAllRecipes() {
@@ -546,13 +540,18 @@
         var html = topbar() + '<div class="wrap page"><button class="back" id="back">← Zpět na přehled</button>';
 
         if (key === 'vzdelavani' && o) {
-          html += '<h1 class="ptitle">📚 '+esc(o.title)+'</h1><div class="pintro">'+esc(o.intro)+'</div>';
+          html += '<h1 class="ptitle">📚 '+esc(o.title)+'</h1>' +
+            (o.podtitul?'<div class="edu-sub">'+esc(o.podtitul)+'</div>':'') +
+            '<div class="pintro">'+esc(o.intro)+'</div>';
           html += '<div class="edu-grid">';
-          (o.temata||[]).forEach(function(t){
-            var hasFull = t.full && t.full.trim();
-            html += '<div class="edu-card"><div class="edu-ico">'+t.ico+'</div>' +
-              '<h3>'+esc(t.h)+'</h3><p>'+esc(t.perex)+'</p>' +
-              '<div class="edu-status">'+(hasFull?'✓ K přečtení':'⏳ Připravujeme')+'</div></div>';
+          (o.moduly||[]).forEach(function(m){
+            html += '<div class="edu-card" id="mod-'+esc(m.key)+'" data-modul="'+esc(m.key)+'">' +
+              '<div class="edu-top"><div class="edu-ico">'+m.ico+'</div><span class="edu-badge">'+esc(m.modul||'')+'</span></div>' +
+              '<h3>'+esc(m.h)+'</h3>' +
+              '<div class="edu-quote">„'+esc(m.citace)+'"</div>' +
+              '<p>'+esc(m.perex)+'</p>' +
+              '<button class="edu-open">📖 Číst modul →</button>' +
+              '</div>';
           });
           html += '</div>';
           if (o.upsell) {
@@ -574,10 +573,7 @@
           (o.blocks||[]).forEach(function(b){ html += '<div class="pblock warm"><h3>'+esc(b.h)+'</h3><p>'+esc(b.t)+'</p></div>'; });
           html += '<div class="sec-h"><h2>Doporučené značky</h2><div class="line"></div></div><div class="pblock">';
           (o.doporuceni||[]).forEach(function(d){
-            html += '<div class="dorow"><div class="dl"><b>'+esc(d.znacka)+'</b><span>'+esc(d.co)+'</span></div><div class="da">' +
-              (d.url?'<a href="'+esc(d.url)+'" target="_blank" rel="noopener">Eshop →</a>':'') +
-              (d.kod?'<span class="sh-code" style="background:var(--accent3);color:#2c2117;font-weight:700;padding:4px 11px;border-radius:7px;cursor:pointer" data-copy="'+esc(d.kod)+'">'+esc(d.kod)+'</span>':'') +
-              '</div></div>';
+            html += '<div class="dorow"><div class="dl"><b>'+esc(d.znacka)+'</b><span>'+esc(d.co)+'</span></div></div>';
           });
           html += '</div><div class="pblock"><p>'+esc(o.zaver)+'</p></div>';
         }
@@ -606,7 +602,47 @@
         bindTopbar();
         document.getElementById('back').onclick = function(){ go('dashboard'); };
         app.querySelectorAll('[data-herb]').forEach(function(h){ h.onclick=function(){ openHerb(h.dataset.herb); }; });
-        app.querySelectorAll('.sh-code[data-copy]').forEach(function(el){ el.onclick=function(){ copyCode(el.dataset.copy); }; });
+        app.querySelectorAll('.edu-card[data-modul]').forEach(function(c){ c.onclick=function(){ go('module', c.dataset.modul); }; });
+      }
+
+      function renderModule(key) {
+        var mods = (OBSAH.vzdelavani && OBSAH.vzdelavani.moduly) || [];
+        var m = mods.find(function(x){ return x.key===key; });
+        if (!m) { go('section','vzdelavani'); return; }
+        var idx = mods.indexOf(m);
+        var prev = mods[idx-1], next = mods[idx+1];
+        var paras = (m.full||'').split(/\n\n+/).map(function(p){
+          p = p.trim(); if (!p) return '';
+          // mezinadpis: krátký řádek velkými písmeny (SVĚTLO, ÚSKALÍ DNEŠNÍ DOBY)
+          if (p.length < 45 && p === p.toUpperCase() && /[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]/.test(p) && p.indexOf('\n')===-1) {
+            return '<h3 class="mod-h">'+esc(p)+'</h3>';
+          }
+          // podnadpis "Problém č. 1: ..." nebo "Ranní rutina" na samostatném řádku
+          if (/^(Problém č\.|Ranní|Večerní|Denní|TIP|Pozn)/.test(p) && p.length < 80 && p.indexOf('\n')===-1) {
+            return '<h4 class="mod-sh">'+esc(p)+'</h4>';
+          }
+          // odrážky (řádky s − • -)
+          if (/\n\s*[−•]/.test('\n'+p) || /^[−•]/.test(p)) {
+            var items = p.split(/\n/).map(function(l){ return l.replace(/^\s*[−•\-]\s*/,'').trim(); }).filter(Boolean);
+            return '<ul>'+items.map(function(i){ return '<li>'+esc(i)+'</li>'; }).join('')+'</ul>';
+          }
+          return '<p>'+esc(p)+'</p>';
+        }).join('');
+        var html = topbar() + '<div class="wrap page">' +
+          '<button class="back" id="back">← Zpět na minikurz</button>' +
+          '<div class="mod-head"><div class="mod-ico">'+m.ico+'</div>' +
+            '<div><span class="edu-badge">'+esc(m.modul||'')+'</span><h1 class="ptitle">'+esc(m.h)+'</h1></div></div>' +
+          '<div class="mod-quote">„'+esc(m.citace)+'"</div>' +
+          '<div class="pblock mod-body">'+paras+'</div>' +
+          '<div class="mod-nav">' +
+            (prev?'<button data-go-mod="'+esc(prev.key)+'">← '+esc(prev.h)+'</button>':'<span></span>') +
+            (next?'<button data-go-mod="'+esc(next.key)+'">'+esc(next.h)+' →</button>':'<span></span>') +
+          '</div>' +
+          '<div class="foot"></div></div>';
+        app.innerHTML = html;
+        bindTopbar();
+        document.getElementById('back').onclick = function(){ go('section','vzdelavani'); };
+        app.querySelectorAll('[data-go-mod]').forEach(function(b){ b.onclick=function(){ go('module', b.dataset.goMod); }; });
       }
 
       function go(name, payload) { view = { name: name, payload: payload }; window.scrollTo(0,0); render(); }
