@@ -168,6 +168,13 @@
   #app .shopbox a { font-weight: 600; }
   #app .shopbox .sh-code { display: inline-block; margin-top: 8px; background: var(--accent3); color: #2c2117; font-weight: 700; padding: 4px 12px; border-radius: 7px; letter-spacing: .5px; cursor: pointer; }
 
+  #app .essence { margin: 4px 0 6px; background: linear-gradient(135deg,#eef3e8,#e6efdc); border: 1px solid #d5e2c5; border-radius: 14px; padding: 14px 16px; }
+  #app .essence .ess-lead { font-family: 'Fraunces'; font-weight: 600; color: var(--accent2); font-size: 15px; margin-bottom: 8px; }
+  #app .essence .ess-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  #app .essence .ess-tag { background: #fff; border: 1px solid #d5e2c5; color: var(--ink); font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 999px; }
+  #app .essence .ess-link { margin-top: 11px; background: var(--accent2); color: #fff; border: none; border-radius: 9px; padding: 9px 14px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13px; cursor: pointer; }
+  #app .essence .ess-link:hover { filter: brightness(1.06); }
+
   #app .page { animation: fade .3s ease; }
   @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
   #app .back { background: none; border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px; font-family: 'Albert Sans'; font-weight: 600; font-size: 14px; cursor: pointer; color: var(--ink-soft); margin: 22px 0 8px; }
@@ -194,6 +201,18 @@
   #app .dorow .dl span { font-size: 13px; color: var(--ink-soft); }
   #app .dorow .da { display: flex; align-items: center; gap: 8px; }
 
+  #app .edu-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); margin-bottom: 26px; }
+  #app .edu-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; box-shadow: var(--shadow); border-top: 4px solid var(--accent2); }
+  #app .edu-card .edu-ico { font-size: 30px; }
+  #app .edu-card h3 { font-size: 18px; margin: 8px 0 6px; }
+  #app .edu-card p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 10px; }
+  #app .edu-card .edu-status { font-size: 12px; font-weight: 700; color: var(--accent3); }
+  #app .upsell { background: linear-gradient(135deg,#2c2117,#3d3020); color: #f4efe6; border-radius: 20px; padding: 30px 28px; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg); }
+  #app .upsell .up-lock { font-size: 30px; margin-bottom: 8px; }
+  #app .upsell h2 { color: #fff; font-size: 28px; margin-bottom: 10px; }
+  #app .upsell p { color: #e6dccb; max-width: 540px; margin: 0 auto 18px; font-size: 15px; }
+  #app .upsell .up-cta { background: var(--accent3); color: #2c2117; border: none; border-radius: 999px; padding: 12px 28px; font-family: 'Albert Sans'; font-weight: 700; font-size: 15px; cursor: pointer; }
+  #app .upsell .up-soon { margin-top: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #c7bca9; }
   #app .foot { text-align: center; color: var(--ink-soft); font-size: 12.5px; margin-top: 50px; opacity: .8; }
   #app .err { background: #fff; border: 1px solid var(--accent); color: var(--accent); padding: 18px; border-radius: 12px; margin: 24px; font-size: 14px; }
   #app .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 11px 20px; border-radius: 999px; font-size: 14px; z-index: 999; box-shadow: var(--shadow-lg); animation: fade .25s ease; }
@@ -228,6 +247,7 @@
       var days = ['neděle','pondělí','úterý','středa','čtvrtek','pátek','sobota'];
 
       function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+      function normDia(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
       function encPath(p){ return p ? p.split('/').map(encodeURIComponent).join('/') : ''; }
       function ph(c){ return 'data:image/svg+xml;utf8,'+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='400' height='300' fill='"+(c||'#5a7a3f')+"'/><text x='50%' y='50%' font-family='sans-serif' font-size='18' fill='rgba(255,255,255,.85)' text-anchor='middle' dominant-baseline='middle'>foto</text></svg>"); }
       function imgOf(o){ return (o && o.img && o.img.trim()) ? encPath(o.img) : ph(o && o.color); }
@@ -281,6 +301,7 @@
         var dateStr = days[n.getDay()] + ', ' + n.getDate() + '. ' + months[n.getMonth()] + ' ' + n.getFullYear();
         var m = todayMeals();
         var tiles = [
+          {k:'vzdelavani', ico:'📚', h:'Transformace stravování', p:'Proč jíme, jak jíme', cls:'accent'},
           {k:'semenareni', ico:'🌱', h:'Semenaření', p:'Co a kdy sít', cls:'accent2'},
           {k:'sobestacnost', ico:'🌾', h:'Soběstačnost', p:'Plánování & zásoby', cls:'accent2'},
           {k:'zahrada', ico:'🪴', h:'Zahradničení', p:'Péče o záhony', cls:'accent2'},
@@ -409,11 +430,11 @@
       }
 
       function runPantry(val) {
-        var items = (val||'').toLowerCase().split(/[,;]+/).map(function(s){return s.trim();}).filter(Boolean);
+        var items = normDia(val||'').split(/[,;]+/).map(function(s){return s.trim();}).filter(Boolean);
         var box = document.getElementById('pantryMatches');
         if (!items.length) { box.innerHTML=''; return; }
         var scored = recipes.map(function(r){
-          var hay = (r.name+' '+(r.ing||[]).join(' ')+' '+(r.fullText||'')).toLowerCase();
+          var hay = r.search || normDia(r.name+' '+(r.ing||[]).join(' ')+' '+(r.fullText||''));
           var hits = items.filter(function(it){ return hay.indexOf(it)!==-1; });
           return { r:r, hits:hits.length };
         }).filter(function(x){ return x.hits>0; }).sort(function(a,b){ return b.hits-a.hits; }).slice(0,6);
@@ -435,16 +456,26 @@
             '<a href="'+esc(r.shop.url)+'" target="_blank" rel="noopener">'+esc(r.shop.eshop)+' →</a>' +
             (r.shop.kod ? '<br><span class="sh-code" data-copy="'+esc(r.shop.kod)+'">Slevový kód: '+esc(r.shop.kod)+'</span>' : '') + '</div>';
         }
+        // klíčová podstata + odkaz na vzdělávací dokument
+        var essHTML = '';
+        if (r.essence) {
+          var allTags = (r.essence.all||[r.essence.text]).map(function(t){ return '<span class="ess-tag">'+esc(t)+'</span>'; }).join('');
+          essHTML = '<div class="essence"><div class="ess-lead">Proč to jíst</div>' +
+            '<div class="ess-tags">'+allTags+'</div>' +
+            '<button class="ess-link" data-doc="'+esc(r.essence.doc)+'">📚 Přečíst si víc v transformaci stravování →</button></div>';
+        }
         mb.innerHTML = '<div class="modal"><button class="close" id="cls">×</button>' +
           '<div class="hero-img" style="background-image:url(\''+imgOf(r)+'\')"></div>' +
           '<div class="inner"><h2>#'+r.n+' · '+esc(r.name)+'</h2>' +
           '<div class="sub">📅 '+esc(r.date||'')+(r.time&&r.time!=='—'?' · ⏱ '+esc(r.time):'')+' · '+(catLabels[r.cat]||'')+'</div>' +
+          essHTML +
           (ingHTML?'<h4>Ingredience</h4><ul>'+ingHTML+'</ul>':'') +
           (stepsHTML?'<h4>Postup</h4><ol>'+stepsHTML+'</ol>':'') + shopHTML +
           '<button class="orig-toggle" id="origbtn">📄 Zobrazit původní znění receptu</button>' +
           '<div class="orig-text" id="origtxt">'+esc(r.fullText||'')+'</div></div></div>';
         mb.classList.add('open');
         wireModal(mb);
+        mb.querySelectorAll('.ess-link[data-doc]').forEach(function(el){ el.onclick=function(){ mb.classList.remove('open'); go('section','vzdelavani'); }; });
       }
 
       function openHerb(name) {
@@ -484,10 +515,10 @@
         document.getElementById('back').onclick = function(){ go('dashboard'); };
         var grid = document.getElementById('allGrid');
         function paint() {
-          var q = rSearch.toLowerCase();
+          var q = normDia(rSearch);
           var list = recipes.filter(function(r){
             var inCat = rCat==='vse'||r.cat===rCat;
-            var hay = (r.name+' '+(r.ing||[]).join(' ')+' '+(r.fullText||'')).toLowerCase();
+            var hay = r.search || normDia(r.name+' '+(r.ing||[]).join(' ')+' '+(r.fullText||''));
             return inCat && hay.indexOf(q)!==-1;
           });
           grid.innerHTML = list.length ? list.map(rcard).join('') : '<div class="pintro">Nic nenalezeno 🍂</div>';
@@ -514,7 +545,24 @@
         var o = OBSAH[key];
         var html = topbar() + '<div class="wrap page"><button class="back" id="back">← Zpět na přehled</button>';
 
-        if (key === 'byliny') {
+        if (key === 'vzdelavani' && o) {
+          html += '<h1 class="ptitle">📚 '+esc(o.title)+'</h1><div class="pintro">'+esc(o.intro)+'</div>';
+          html += '<div class="edu-grid">';
+          (o.temata||[]).forEach(function(t){
+            var hasFull = t.full && t.full.trim();
+            html += '<div class="edu-card"><div class="edu-ico">'+t.ico+'</div>' +
+              '<h3>'+esc(t.h)+'</h3><p>'+esc(t.perex)+'</p>' +
+              '<div class="edu-status">'+(hasFull?'✓ K přečtení':'⏳ Připravujeme')+'</div></div>';
+          });
+          html += '</div>';
+          if (o.upsell) {
+            html += '<div class="upsell"><div class="up-lock">🔒</div>' +
+              '<h2>'+esc(o.upsell.h)+'</h2><p>'+esc(o.upsell.text)+'</p>' +
+              '<button class="up-cta">'+esc(o.upsell.cta)+' →</button>' +
+              '<div class="up-soon">Brzy v prodeji</div></div>';
+          }
+        }
+        else if (key === 'byliny') {
           html += '<h1 class="ptitle">🌿 Bylinář</h1><div class="pintro">Jedlé a léčivé byliny, které najdeš v přírodě. Klikni pro detail.</div>' +
             '<div class="herb-strip">' + byliny.map(function(b){
               var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');

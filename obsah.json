@@ -217,5 +217,66 @@
     "kod": "ZDRAVAMAMA",
     "eshop": "holybaby.cz",
     "url": "https://www.holybaby.cz"
+  },
+  "vzdelavani": {
+    "title": "Transformace stravování",
+    "intro": "Vzdělávací základ celého receptáře. Tady se dozvíš, PROČ jíme tak, jak jíme — co tělu dodává energii, hormony a zdraví. Recepty na tyto principy odkazují.",
+    "temata": [
+      {
+        "key": "strevo",
+        "ico": "🦠",
+        "h": "Střevní mikrobiom a probiotika",
+        "perex": "Proč jsou fermentované potraviny (kefír, jogurt) základem imunity a trávení.",
+        "full": ""
+      },
+      {
+        "key": "bilkoviny",
+        "ico": "💪",
+        "h": "Bílkoviny, železo a vnitřnosti",
+        "perex": "Kvalitní maso, kosti a vnitřnosti jako zdroj stavebních látek.",
+        "full": ""
+      },
+      {
+        "key": "tuky",
+        "ico": "🧈",
+        "h": "Zdravé tuky pro mozek a hormony",
+        "perex": "Proč se nebát másla, ghí a živočišných tuků z kvalitních zdrojů.",
+        "full": ""
+      },
+      {
+        "key": "bezlepek",
+        "ico": "🌾",
+        "h": "Přirozeně bezlepkové obiloviny",
+        "perex": "Pohanka, jáhly, rýže — a proč je máčíme a fermentujeme.",
+        "full": ""
+      },
+      {
+        "key": "sezona",
+        "ico": "🥕",
+        "h": "Sezónnost a lokálnost",
+        "perex": "Proč jíst podle ročního období a z blízkých zdrojů.",
+        "full": ""
+      },
+      {
+        "key": "sladidla",
+        "ico": "🍯",
+        "h": "Přírodní sladidla místo cukru",
+        "perex": "Med, kokosový cukr, panela — a jak s nimi zacházet.",
+        "full": ""
+      },
+      {
+        "key": "zaklad",
+        "ico": "🌿",
+        "h": "Základní principy výživného vaření",
+        "perex": "Filtrovaná voda, kvalitní suroviny, příprava předem.",
+        "full": ""
+      }
+    ],
+    "upsell": {
+      "h": "Přirozené otěhotnění 21",
+      "text": "Kompletní 21denní program, který propojuje výživu, tělo a přípravu na zdravé početí. Vše, co je v receptáři, dovedené do uceleného systému.",
+      "cta": "Zjistit více",
+      "locked": true
+    }
   }
 }
