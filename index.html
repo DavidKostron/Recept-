@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Transformace stravování</title>
 </head>
 <body style="margin:0;background:#f4efe6;">
@@ -167,9 +170,10 @@
   function boot(){
     var app=document.getElementById('app');
     if(!app) return;
+    var bust = '?v=' + Date.now();
     Promise.all([
-      fetch('recepty.json').then(function(r){if(!r.ok)throw new Error('recepty.json '+r.status);return r.json()}),
-      fetch('obsah.json').then(function(r){if(!r.ok)throw new Error('obsah.json '+r.status);return r.json()})
+      fetch('recepty.json'+bust).then(function(r){if(!r.ok)throw new Error('recepty.json '+r.status);return r.json()}),
+      fetch('obsah.json'+bust).then(function(r){if(!r.ok)throw new Error('obsah.json '+r.status);return r.json()})
     ]).then(function(res){init(res[0],res[1])}).catch(function(e){
       app.innerHTML='<div class="err"><b>Nepodařilo se načíst data</b><br>Zkontroluj recepty.json a obsah.json vedle stránky, a spouštěj přes web (ne dvojklikem).<br><small>'+e.message+'</small></div>';
     });
@@ -207,6 +211,7 @@
         if(view.name==='byliny')return renderByliny();
         if(view.name==='jidelnicky')return renderJidelnicky();
         if(view.name==='zpracovani')return renderZpracovani();
+        if(view.name==='minikurz')return renderMinikurz();
         if(view.name==='modul')return renderModule(view.payload);
         if(view.name==='pilir')return renderPilir(view.payload);
       }
@@ -295,6 +300,7 @@
             '<div class="cta-lock">🔒 Brzy dostupné</div></div>'+
           '<div class="soon-panel"><div class="sh">Připravujeme</div>'+soon+'</div>'+
           '<div class="soon-panel"><div class="sh">Objevuj dál</div>'+
+            '<div class="soon-item" data-go="minikurz" style="cursor:pointer"><div class="si-ico" style="opacity:1;background:#f5dfd7">📚</div><div><h4 style="color:var(--ink)">Minikurz</h4><p>10 modulů — celá teorie zdravého stravování</p></div></div>'+
             '<div class="soon-item" data-go="byliny" style="cursor:pointer"><div class="si-ico" style="opacity:1">🌿</div><div><h4 style="color:var(--ink)">Bylinář</h4><p>Sezónní jedlé a léčivé byliny</p></div></div>'+
             '<div class="soon-item" data-go="jidelnicky" style="cursor:pointer"><div class="si-ico" style="opacity:1">📋</div><div><h4 style="color:var(--ink)">Ukázkové jídelníčky</h4><p>Jak jíme za den — osobní inspirace</p></div></div>'+
             '<div class="soon-item" data-go="zpracovani" style="cursor:pointer"><div class="si-ico" style="opacity:1">🫙</div><div><h4 style="color:var(--ink)">Zpracování surovin</h4><p>Fermenty, nálevy, kombucha, limča</p></div></div>'+
@@ -410,6 +416,25 @@
         app.innerHTML=html;
         document.getElementById('back').onclick=function(){go('home')};
         app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+      }
+
+      // ---------- MINIKURZ (přehled všech modulů) ----------
+      function renderMinikurz(){
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
+          '<h1 class="ptitle">📚 Minikurz: Transformace stravování</h1>'+
+          '<div class="pintro">Ucelený vzdělávací základ — '+moduly.length+' modulů ze série „Daruji si zdraví". Projdi je popořadě, nebo vyber téma, které tě zajímá.</div>'+
+          '<div class="grid-cards" style="margin-top:20px">'+
+          moduly.map(function(m,i){
+            return '<div class="rcard" data-modul="'+esc(m.key)+'" style="border-top:4px solid var(--accent2)">'+
+              '<div class="rb"><div style="font-size:30px;margin-bottom:6px">'+m.ico+'</div>'+
+              '<div style="font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Modul '+(i+1)+'</div>'+
+              '<h3>'+esc(m.h)+'</h3>'+
+              (m.citace?'<div style="font-family:Fraunces;font-style:italic;font-size:13px;color:var(--accent);margin:6px 0">„'+esc(m.citace)+'"</div>':'')+
+              '<div class="rtag">Číst modul →</div></div></div>';
+          }).join('')+'</div><div class="foot"></div></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
+        app.querySelectorAll('[data-modul]').forEach(function(el){el.onclick=function(){go('modul',el.dataset.modul)}});
       }
 
       // ---------- ZPRACOVÁNÍ SUROVIN ----------
