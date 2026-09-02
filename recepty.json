@@ -27,7 +27,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 2,
@@ -59,7 +60,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 3,
@@ -95,7 +97,8 @@
       "edu": {
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 4,
@@ -128,7 +131,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 5,
@@ -168,7 +172,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 6,
@@ -197,7 +202,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 7,
@@ -225,7 +231,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 8,
@@ -253,7 +260,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 9,
@@ -287,7 +295,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 10,
@@ -316,7 +325,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 11,
@@ -343,7 +353,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 12,
@@ -376,7 +387,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 13,
@@ -409,7 +421,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 14,
@@ -433,11 +446,12 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 15,
-      "name": "Sezóna dýní jede, a tak sdílím jeden bezmasé, ale výživne jídlo, kde je dýně v hlavní roli🎃",
+      "name": "Pečená dýně",
       "cat": "jidla",
       "time": "30 min",
       "date": "2024-08-16",
@@ -448,7 +462,7 @@
         "dýni nakrájím, osolím, přidám ghí a peču cca 30 min na 180 st.",
         "bio sýry nejčastěji objednávám na nebo kupuji na farmě/ v bio obchůdku - najdete v mapě propojení ❤️"
       ],
-      "fullText": "14.8. den č 15.\n👉 dýni nakrájím, osolím, přidám ghí a peču cca 30 min na 180 st.\n👉 nastrouhám/pokrájím oblíbený sýr, ten se krásně ještě rozteče 🤩\nbio sýry nejčastěji objednávám na nebo kupuji na farmě/ v bio obchůdku - najdete v mapě propojení ❤️",
+      "fullText": "14.8. den č 15.\n👉 dýni nakrájím, osolím, přidám ghí a peču cca 30 min na 180 st.\n👉 nastrouhám/pokrájím oblíbený sýr, ten se krásně ještě rozteče 🤩\nbio sýry nejčastěji objednávám na nebo kupuji na farmě/ v bio obchůdku -",
       "photos": [
         "photo_23@16-08-2024_19-45-23.jpg",
         "photo_24@16-08-2024_19-45-23.jpg"
@@ -459,7 +473,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 16,
@@ -489,7 +504,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 17,
@@ -518,7 +534,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 18,
@@ -552,7 +569,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 19,
@@ -583,7 +601,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 20,
@@ -614,7 +633,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 21,
@@ -644,7 +664,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 22,
@@ -682,7 +703,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 23,
@@ -710,7 +732,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 24,
@@ -742,7 +765,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 25,
@@ -775,7 +799,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 26,
@@ -808,7 +833,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 27,
@@ -834,7 +860,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 28,
@@ -865,7 +892,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 29,
@@ -892,7 +920,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 30,
@@ -922,7 +951,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 31,
@@ -950,7 +980,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 32,
@@ -991,7 +1022,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 33,
@@ -1020,7 +1052,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 34,
@@ -1042,7 +1075,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 35,
@@ -1070,7 +1104,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 36,
@@ -1107,7 +1142,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 37,
@@ -1135,7 +1171,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 38,
@@ -1161,7 +1198,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 39,
@@ -1190,7 +1228,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 40,
@@ -1217,7 +1256,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 41,
@@ -1243,7 +1283,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 42,
@@ -1266,7 +1307,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 43,
@@ -1291,7 +1333,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 44,
@@ -1318,7 +1361,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 45,
@@ -1342,7 +1386,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 46,
@@ -1366,7 +1411,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 47,
@@ -1390,7 +1436,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 48,
@@ -1422,7 +1469,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 49,
@@ -1454,7 +1502,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 50,
@@ -1483,7 +1532,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 51,
@@ -1510,7 +1560,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 52,
@@ -1569,7 +1620,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 53,
@@ -1598,7 +1650,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 54,
@@ -1628,7 +1681,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 55,
@@ -1658,7 +1712,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 56,
@@ -1683,7 +1738,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 57,
@@ -1713,7 +1769,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 58,
@@ -1743,7 +1800,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 59,
@@ -1769,32 +1827,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
-    },
-    {
-      "n": 60,
-      "name": "TIP JAK SI Z TOHO VŠEHO ZDE KRÁSNĚ POSKLÁDAT JÍDELNÍČEK V KAŽDODENNOSTI - jak to teď máme my",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2024-11-17",
-      "ing": [],
-      "steps": [
-        "77. TIP JAK SI Z TOHO VŠEHO ZDE KRÁSNĚ POSKLÁDAT JÍDELNÍČEK V KAŽDODENNOSTI - jak to teď máme my",
-        "snídaně: sladká- palačinky s jablky, jogurtem, tvarohem",
-        "slaná: míchaná vajíčka, ferment zelenina, pohankové krekry",
-        "Oběd: polévka ze sezónní zeleniny a vývaru + pečené maso / vnitřnosti se sezónní zeleninou",
-        "Dezert: koláč švestky/ hrušky nebo dušená jablíčka do jogurtu/ zbytek palačinek",
-        "Večeře: pohankové krekry s paštikou nebo vajíčkovou pomazánkou/ krémová polévka z obědu + do ní uvařená vejce"
-      ],
-      "fullText": "snídaně: sladká- palačinky s jablky, jogurtem, tvarohem\nslaná: míchaná vajíčka, ferment zelenina, pohankové krekry\n\nOběd: polévka ze sezónní zeleniny a vývaru + pečené maso / vnitřnosti se sezónní zeleninou\n\nDezert: koláč švestky/ hrušky nebo dušená jablíčka do jogurtu/ zbytek palačinek\n\nVečeře: pohankové krekry s paštikou nebo vajíčkovou pomazánkou/ krémová polévka z obědu + do ní uvařená vejce",
-      "photos": [],
-      "color": "#b5462f",
-      "img": "",
-      "search": "tip jak si z toho vseho zde krasne poskladat jidelnicek v kazdodennosti - jak to ted mame my  77. tip jak si z toho vseho zde krasne poskladat jidelnicek v kazdodennosti - jak to ted mame my snidane: sladka- palacinky s jablky, jogurtem, tvarohem slana: michana vajicka, ferment zelenina, pohankove krekry obed: polevka ze sezonni zeleniny a vyvaru + pecene maso / vnitrnosti se sezonni zeleninou dezert: kolac svestky/ hrusky nebo dusena jablicka do jogurtu/ zbytek palacinek vecere: pohankove krekry s pastikou nebo vajickovou pomazankou/ kremova polevka z obedu + do ni uvarena vejce snidane: sladka- palacinky s jablky, jogurtem, tvarohem\nslana: michana vajicka, ferment zelenina, pohankove krekry\n\nobed: polevka ze sezonni zeleniny a vyvaru + pecene maso / vnitrnosti se sezonni zeleninou\n\ndezert: kolac svestky/ hrusky nebo dusena jablicka do jogurtu/ zbytek palacinek\n\nvecere: pohankove krekry s pastikou nebo vajickovou pomazankou/ kremova polevka z obedu + do ni uvarena vejce",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 61,
@@ -1825,7 +1859,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 62,
@@ -1851,40 +1886,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 63,
-      "name": "Žlázy z divočáka (skvělý pro podporu testosteronu u mužů, na pravidelné konzumaci, ženy se toho bát nemusí jednou za čas",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2024-12-19",
-      "ing": [
-        "Sůl/ pepř",
-        "Sezonní salát s jablečným octem",
-        "+ jablečný ocet"
-      ],
-      "steps": [
-        "82. Žlázy z divočáka (skvělý pro podporu testosteronu u mužů, na pravidelné konzumaci, ženy se toho bát nemusí jednou za čas.",
-        "Oloupat ~ pokrájet ~ osmahnout na cibulce a sádle (zatáhnout) ~ rozklepnout vajíčka, dosmažit ❤️",
-        "Ze zahrady vše za čerstva - vodnice, pórek, mrkev ❤️",
-        "84. děkuji Haničce za oběd, klasický recept od Daruji si zdraví ~ kuře, + pyré z dýně/ brambor ve vývaru❤️, ferment -po O bio datle, jako dezert, (sušený datle beru jako jednu ze SOS potravin s dotazkem rychle energie )"
-      ],
-      "fullText": "—-\nOloupat ~ pokrájet ~ osmahnout na cibulce a sádle (zatáhnout) ~ rozklepnout vajíčka, dosmažit ❤️\n—-\nSůl/ pepř\n83.\nSezonní salát s jablečným octem\n\nZe zahrady vše za čerstva - vodnice, pórek, mrkev ❤️\n+ jablečný ocet\n84. děkuji Haničce za oběd, klasický recept od Daruji si zdraví ~ kuře, + pyré z dýně/ brambor ve vývaru❤️, ferment -po O bio datle, jako dezert, (sušený datle beru jako jednu ze SOS potravin s dotazkem rychle energie )",
-      "photos": [
-        "photo_98@19-12-2024_16-56-43.jpg",
-        "photo_99@19-12-2024_16-56-43.jpg",
-        "photo_100@19-12-2024_16-56-43.jpg",
-        "photo_101@19-12-2024_16-58-29.jpg",
-        "photo_102@19-12-2024_17-00-44.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_98@19-12-2024_16-56-43.jpg",
-      "search": "zlazy z divocaka (skvely pro podporu testosteronu u muzu, na pravidelne konzumaci, zeny se toho bat nemusi jednou za cas sul/ pepr sezonni salat s jablecnym octem + jablecny ocet 82. zlazy z divocaka (skvely pro podporu testosteronu u muzu, na pravidelne konzumaci, zeny se toho bat nemusi jednou za cas. oloupat ~ pokrajet ~ osmahnout na cibulce a sadle (zatahnout) ~ rozklepnout vajicka, dosmazit ❤ ze zahrady vse za cerstva - vodnice, porek, mrkev ❤ 84. dekuji hanicce za obed, klasicky recept od daruji si zdravi ~ kure, + pyre z dyne/ brambor ve vyvaru❤, ferment -po o bio datle, jako dezert, (suseny datle beru jako jednu ze sos potravin s dotazkem rychle energie ) —-\noloupat ~ pokrajet ~ osmahnout na cibulce a sadle (zatahnout) ~ rozklepnout vajicka, dosmazit ❤\n—-\nsul/ pepr\n83.\nsezonni salat s jablecnym octem\n\nze zahrady vse za cerstva - vodnice, porek, mrkev ❤\n+ jablecny ocet\n84. dekuji hanicce za obed, klasicky recept od daruji si zdravi ~ kure, + pyre z dyne/ brambor ve vyvaru❤, ferment -po o bio datle, jako dezert, (suseny datle beru jako jednu ze sos potravin s dotazkem rychle energie )",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 64,
@@ -1909,76 +1912,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 65,
-      "name": "svačiny školka v zimě - nejosvědčenější varianta, která jde i ohřát na kamnech ve školce",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2025-01-29",
-      "ing": [],
-      "steps": [
-        "88. svačiny školka v zimě - nejosvědčenější varianta, která jde i ohřát na kamnech ve školce",
-        "- kaše z pohanky/ rýže, předem namočit (znáte), uvařit ve vývatu (znáte) - do slané varianty dávám obrané maso z vývaru a parmazán/ do sladké kozí protein a med 🐝"
-      ],
-      "fullText": "- kaše z pohanky/ rýže, předem namočit (znáte), uvařit ve vývatu (znáte) - do slané varianty dávám obrané maso z vývaru a parmazán/ do sladké kozí protein a med 🐝",
-      "photos": [],
-      "color": "#b5462f",
-      "img": "",
-      "search": "svaciny skolka v zime - nejosvedcenejsi varianta, ktera jde i ohrat na kamnech ve skolce  88. svaciny skolka v zime - nejosvedcenejsi varianta, ktera jde i ohrat na kamnech ve skolce - kase z pohanky/ ryze, predem namocit (znate), uvarit ve vyvatu (znate) - do slane varianty davam obrane maso z vyvaru a parmazan/ do sladke kozi protein a med 🐝 - kase z pohanky/ ryze, predem namocit (znate), uvarit ve vyvatu (znate) - do slane varianty davam obrane maso z vyvaru a parmazan/ do sladke kozi protein a med 🐝",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 66,
-      "name": "Palačinky pouze z vajec a lžíce karobu 🙌  rozmícháno metličkou a dělano na ghí",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2025-01-29",
-      "ing": [
-        "Karob:"
-      ],
-      "steps": [
-        "91. Palačinky pouze z vajec a lžíce karobu 🙌 rozmícháno metličkou a dělano na ghí"
-      ],
-      "fullText": "Karob:",
-      "photos": [
-        "photo_105@29-01-2025_20-48-06.jpg",
-        "photo_106@29-01-2025_20-48-06.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_105@29-01-2025_20-48-06.jpg",
-      "search": "palacinky pouze z vajec a lzice karobu 🙌  rozmichano metlickou a delano na ghi karob: 91. palacinky pouze z vajec a lzice karobu 🙌 rozmichano metlickou a delano na ghi karob:",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 67,
-      "name": "Recyklace dárků od prababičky, která vždy koupí bio kokos plátky, i její kamarádky, které chtějí něco dát dětičkám, jako",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2025-01-29",
-      "ing": [],
-      "steps": [
-        "92. Recyklace dárků od prababičky, která vždy koupí bio kokos plátky, i její kamarádky, které chtějí něco dát dětičkám, jako zdravou ňaminu. “Granola” - kokos plátky osmažím na ghí s bio kokos cukrem (kakao, skořice), dám sušené ovoce, co taky od někoho děti dostávají, aby jej nejedli samotné (cukr) a dáváme do jogurtu 🙌",
-        "Pokud vám někdo nosí sladkosti a vy to nechcete, ukažte mu konkrétní tip co má nosit, a pokud má averzi k bio obchudkun, v DMku mají výběr docela"
-      ],
-      "fullText": "92. Recyklace dárků od prababičky, která vždy koupí bio kokos plátky, i její kamarádky, které chtějí něco dát dětičkám, jako zdravou ňaminu. “Granola” - kokos plátky osmažím na ghí s bio kokos cukrem (kakao, skořice), dám sušené ovoce, co taky od někoho děti dostávají, aby jej nejedli samotné (cukr) a dáváme do jogurtu 🙌\n—-\nPokud vám někdo nosí sladkosti a vy to nechcete, ukažte mu konkrétní tip co má nosit, a pokud má averzi k bio obchudkun, v DMku mají výběr docela",
-      "photos": [
-        "photo_107@29-01-2025_20-58-03.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_107@29-01-2025_20-58-03.jpg",
-      "search": "recyklace darku od prababicky, ktera vzdy koupi bio kokos platky, i jeji kamaradky, ktere chteji neco dat detickam, jako  92. recyklace darku od prababicky, ktera vzdy koupi bio kokos platky, i jeji kamaradky, ktere chteji neco dat detickam, jako zdravou naminu. “granola” - kokos platky osmazim na ghi s bio kokos cukrem (kakao, skorice), dam susene ovoce, co taky od nekoho deti dostavaji, aby jej nejedli samotne (cukr) a davame do jogurtu 🙌 pokud vam nekdo nosi sladkosti a vy to nechcete, ukazte mu konkretni tip co ma nosit, a pokud ma averzi k bio obchudkun, v dmku maji vyber docela 92. recyklace darku od prababicky, ktera vzdy koupi bio kokos platky, i jeji kamaradky, ktere chteji neco dat detickam, jako zdravou naminu. “granola” - kokos platky osmazim na ghi s bio kokos cukrem (kakao, skorice), dam susene ovoce, co taky od nekoho deti dostavaji, aby jej nejedli samotne (cukr) a davame do jogurtu 🙌\n—-\npokud vam nekdo nosi sladkosti a vy to nechcete, ukazte mu konkretni tip co ma nosit, a pokud ma averzi k bio obchudkun, v dmku maji vyber docela",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 68,
@@ -2033,124 +1968,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
-    },
-    {
-      "n": 69,
-      "name": "Kuřecí stripsíčky :D - kuřecí prsa pokrájet na kousky, obalit v pohankové mouce se solí - vajíčku - pohankové mouce se s",
-      "cat": "dezerty",
-      "time": "40 min",
-      "date": "2025-02-21",
-      "ing": [
-        "Péct cca 40 min na 160 st.",
-        "100.Výživný termix",
-        "101. Nejedlíkovský tip - dítě nechce játra"
-      ],
-      "steps": [
-        "97. Kuřecí stripsíčky :D - kuřecí prsa pokrájet na kousky, obalit v pohankové mouce se solí - vajíčku - pohankové mouce se solí, smažit na nonotxic pánvi na sádle, k tomu lokální příloha",
-        "98. Oblíbená náplň do palačinek (palacinkovych receptů je tu dost)- vyklízíme mrazák:)",
-        "Mražené švestky - rozehřát, umixovat, smíchat s nepaster tvarohem",
-        "99. Nákyp na slano (měl fakt úspěch u dětí :)) Pohanka - předem namočit jak znáte, uvařit ve vývaru",
-        "Smíchat s 5 vejci a celým bločkem nastrouhaného bio parmazánu",
-        "500g nepaster tvarohu, smíchat s 50g rozehřáté kvalitní čokolády a 2 žloutky, důkladně promíchat a nechat přes noc v lednici ve skleničkách",
-        "Paštika (znáte ze skupinky), smíchat s domácím kečupem (znáte ze skupinky)"
-      ],
-      "fullText": "97. Kuřecí stripsíčky :D - kuřecí prsa pokrájet na kousky, obalit v pohankové mouce se solí - vajíčku - pohankové mouce se solí, smažit na nonotxic pánvi na sádle, k tomu lokální příloha\n98. Oblíbená náplň do palačinek (palacinkovych receptů je tu dost)- vyklízíme mrazák:)\nMražené švestky - rozehřát, umixovat, smíchat s nepaster tvarohem\n99. Nákyp na slano (měl fakt úspěch u dětí :)) Pohanka - předem namočit jak znáte, uvařit ve vývaru\nSmíchat s 5 vejci a celým bločkem nastrouhaného bio parmazánu\nPéct cca 40 min na 160 st.\n100.Výživný termix\n500g nepaster tvarohu, smíchat s 50g rozehřáté kvalitní čokolády a 2 žloutky, důkladně promíchat a nechat přes noc v lednici ve skleničkách\n101. Nejedlíkovský tip - dítě nechce játra\nPaštika (znáte ze skupinky), smíchat s domácím kečupem (znáte ze skupinky)",
-      "photos": [
-        "photo_113@21-02-2025_11-20-14.jpg",
-        "photo_114@21-02-2025_11-20-58.jpg",
-        "photo_115@21-02-2025_11-21-51.jpg",
-        "photo_116@21-02-2025_11-22-17.jpg",
-        "photo_117@21-02-2025_11-22-33.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_113@21-02-2025_11-20-14.jpg",
-      "search": "kureci stripsicky :d - kureci prsa pokrajet na kousky, obalit v pohankove mouce se soli - vajicku - pohankove mouce se s pect cca 40 min na 160 st. 100.vyzivny termix 101. nejedlikovsky tip - dite nechce jatra 97. kureci stripsicky :d - kureci prsa pokrajet na kousky, obalit v pohankove mouce se soli - vajicku - pohankove mouce se soli, smazit na nonotxic panvi na sadle, k tomu lokalni priloha 98. oblibena napln do palacinek (palacinkovych receptu je tu dost)- vyklizime mrazak:) mrazene svestky - rozehrat, umixovat, smichat s nepaster tvarohem 99. nakyp na slano (mel fakt uspech u deti :)) pohanka - predem namocit jak znate, uvarit ve vyvaru smichat s 5 vejci a celym blockem nastrouhaneho bio parmazanu 500g nepaster tvarohu, smichat s 50g rozehrate kvalitni cokolady a 2 zloutky, dukladne promichat a nechat pres noc v lednici ve sklenickach pastika (znate ze skupinky), smichat s domacim kecupem (znate ze skupinky) 97. kureci stripsicky :d - kureci prsa pokrajet na kousky, obalit v pohankove mouce se soli - vajicku - pohankove mouce se soli, smazit na nonotxic panvi na sadle, k tomu lokalni priloha\n98. oblibena napln do palacinek (palacinkovych receptu je tu dost)- vyklizime mrazak:)\nmrazene svestky - rozehrat, umixovat, smichat s nepaster tvarohem\n99. nakyp na slano (mel fakt uspech u deti :)) pohanka - predem namocit jak znate, uvarit ve vyvaru\nsmichat s 5 vejci a celym blockem nastrouhaneho bio parmazanu\npect cca 40 min na 160 st.\n100.vyzivny termix\n500g nepaster tvarohu, smichat s 50g rozehrate kvalitni cokolady a 2 zloutky, dukladne promichat a nechat pres noc v lednici ve sklenickach\n101. nejedlikovsky tip - dite nechce jatra\npastika (znate ze skupinky), smichat s domacim kecupem (znate ze skupinky)",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 70,
-      "name": "Čas adaptace na 🌞 , pŕikládám screenshot z appky Corcadian (doporučuji), ukazuje vám, kdy je jaké záření, kdy chytáte Dč",
-      "cat": "jidla",
-      "time": "30 min",
-      "date": "2025-03-11",
-      "ing": [
-        "104. Bylinkové máslo",
-        "svízel- najemno nasekat",
-        "Sůl",
-        "Máslo přes noc mimo lednici",
-        "105.Masové kuličky s kadeŕávkem",
-        "mleté maso (jakékoliv)",
-        "Nasekaný kadeřávek",
-        "Sůl",
-        "106. Čočka na kyselo - výživná varianta"
-      ],
-      "steps": [
-        "102. Čas adaptace na 🌞, pŕikládám screenshot z appky Corcadian (doporučuji), ukazuje vám, kdy je jaké záření, kdy chytáte Dčko :), UVA je adaptace, aby pro nás i UVB bylo prospěšné.",
-        "103. Svízel - tahle bylinka roste snad všude na louce/ zahradě, takhle mladá chutná jako hrášek - dávám např. na vajíčka namísto pažitky.",
-        "- vše smíchat",
-        "Smíchat, udělat kuličky a péct na 30 min na 180 st.",
-        "čočku předem namočit, uvařit ve vývaru",
-        "Dochutit: bio jablečným octem, solí a majoránkou",
-        "K tomu cibulku na (hodně) ghí/ sádle - dětem maskuji rovnou do čočky :-)",
-        "Posypte např pórkem nebo právě svízelem",
-        "107. Čaj z jehněd lísky 🤩, jakékoliv raw byliny zalévám vychladlejší vodou, nebo ji vědomě nepřivedu k varu (okolo 80st)"
-      ],
-      "fullText": "102. Čas adaptace na 🌞, pŕikládám screenshot z appky Corcadian (doporučuji), ukazuje vám, kdy je jaké záření, kdy chytáte Dčko :), UVA je adaptace, aby pro nás i UVB bylo prospěšné.\n103. Svízel - tahle bylinka roste snad všude na louce/ zahradě, takhle mladá chutná jako hrášek - dávám např. na vajíčka namísto pažitky.\n104. Bylinkové máslo\nsvízel- najemno nasekat\nSůl\nMáslo přes noc mimo lednici\n- vše smíchat\n105.Masové kuličky s kadeŕávkem\nmleté maso (jakékoliv)\nNasekaný kadeřávek\nSůl\nSmíchat, udělat kuličky a péct na 30 min na 180 st.\n106. Čočka na kyselo - výživná varianta\nčočku předem namočit, uvařit ve vývaru\nDochutit: bio jablečným octem, solí a majoránkou\nK tomu cibulku na (hodně) ghí/ sádle - dětem maskuji rovnou do čočky :-)\nPosypte např pórkem nebo právě svízelem\n107. Čaj z jehněd lísky 🤩, jakékoliv raw byliny zalévám vychladlejší vodou, nebo ji vědomě nepřivedu k varu (okolo 80st)",
-      "photos": [
-        "photo_118@11-03-2025_22-03-26.jpg",
-        "photo_119@11-03-2025_22-03-51.jpg",
-        "photo_120@11-03-2025_22-03-51.jpg",
-        "photo_121@11-03-2025_22-04-47.jpg",
-        "photo_122@11-03-2025_22-05-57.jpg",
-        "photo_123@11-03-2025_22-05-57.jpg",
-        "photo_124@11-03-2025_22-07-11.jpg",
-        "photo_125@11-03-2025_22-08-42.jpg",
-        "photo_126@11-03-2025_22-08-42.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_118@11-03-2025_22-03-26.jpg",
-      "search": "cas adaptace na 🌞 , prikladam screenshot z appky corcadian (doporucuji), ukazuje vam, kdy je jake zareni, kdy chytate dc 104. bylinkove maslo svizel- najemno nasekat sul maslo pres noc mimo lednici 105.masove kulicky s kaderavkem mlete maso (jakekoliv) nasekany kaderavek sul 106. cocka na kyselo - vyzivna varianta 102. cas adaptace na 🌞, prikladam screenshot z appky corcadian (doporucuji), ukazuje vam, kdy je jake zareni, kdy chytate dcko :), uva je adaptace, aby pro nas i uvb bylo prospesne. 103. svizel - tahle bylinka roste snad vsude na louce/ zahrade, takhle mlada chutna jako hrasek - davam napr. na vajicka namisto pazitky. - vse smichat smichat, udelat kulicky a pect na 30 min na 180 st. cocku predem namocit, uvarit ve vyvaru dochutit: bio jablecnym octem, soli a majorankou k tomu cibulku na (hodne) ghi/ sadle - detem maskuji rovnou do cocky :-) posypte napr porkem nebo prave svizelem 107. caj z jehned lisky 🤩, jakekoliv raw byliny zalevam vychladlejsi vodou, nebo ji vedome neprivedu k varu (okolo 80st) 102. cas adaptace na 🌞, prikladam screenshot z appky corcadian (doporucuji), ukazuje vam, kdy je jake zareni, kdy chytate dcko :), uva je adaptace, aby pro nas i uvb bylo prospesne.\n103. svizel - tahle bylinka roste snad vsude na louce/ zahrade, takhle mlada chutna jako hrasek - davam napr. na vajicka namisto pazitky.\n104. bylinkove maslo\nsvizel- najemno nasekat\nsul\nmaslo pres noc mimo lednici\n- vse smichat\n105.masove kulicky s kaderavkem\nmlete maso (jakekoliv)\nnasekany kaderavek\nsul\nsmichat, udelat kulicky a pect na 30 min na 180 st.\n106. cocka na kyselo - vyzivna varianta\ncocku predem namocit, uvarit ve vyvaru\ndochutit: bio jablecnym octem, soli a majorankou\nk tomu cibulku na (hodne) ghi/ sadle - detem maskuji rovnou do cocky :-)\nposypte napr porkem nebo prave svizelem\n107. caj z jehned lisky 🤩, jakekoliv raw byliny zalevam vychladlejsi vodou, nebo ji vedome neprivedu k varu (okolo 80st)",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 71,
-      "name": "Bršlice kozí noha - další bylina, kterou můžete použít do salátu, na vajíčka nebo chleba s máslem.",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2025-03-28",
-      "ing": [],
-      "steps": [
-        "108.Bršlice kozí noha - další bylina, kterou můžete použít do salátu, na vajíčka nebo chleba s máslem.",
-        "109. Čočkové placky - zbytek čočky na kyselo + nastrouhaná mrkev + vejce + pohanková mouka: přidávejte od oka a průběžně mixujte, z těsta vám půjdou udělat placky na pánvi a dobře otočit - v případě suchosti dořeďte vodou, v případě tekutosti moukou",
-        "110. Podběl - čaj z čerstvého nebo sušeného je pohlazení!",
-        "111. Sběr aktuálně :) fialky (čaj, jedlé květy na dezert), divoká pažitka (do másla, na vajíčka), svízel (stejně jako pažitka), jahodník (na čaj)",
-        "112.Parmazánové placky: 10 vajec, celý bloček bio parmazánu (nastrouhat) - smíchat a smažit na ghí placičky",
-        "113. Kombucha - jak ji nejjednodušeji získat - už několikrát ověřený proces:",
-        "Odlijte cca 0,5 l kupované (bio)/ nebo darované kombuchy, přidejte do ní 3 lžíce cukru a nechte v pokojové teplotě, dokud se vám nahoře neutvoří houba, já ji tentokrát vypěstovala z kombuchy, kterou nechala kamarádka u nás v lednici (svou domácí), mám ověřeno i z kupované."
-      ],
-      "fullText": "109. Čočkové placky - zbytek čočky na kyselo + nastrouhaná mrkev + vejce + pohanková mouka: přidávejte od oka a průběžně mixujte, z těsta vám půjdou udělat placky na pánvi a dobře otočit - v případě suchosti dořeďte vodou, v případě tekutosti moukou\n110. Podběl - čaj z čerstvého nebo sušeného je pohlazení!\n111. Sběr aktuálně :) fialky (čaj, jedlé květy na dezert), divoká pažitka (do másla, na vajíčka), svízel (stejně jako pažitka), jahodník (na čaj)\n112.Parmazánové placky: 10 vajec, celý bloček bio parmazánu (nastrouhat) - smíchat a smažit na ghí placičky\n113. Kombucha - jak ji nejjednodušeji získat - už několikrát ověřený proces:\nOdlijte cca 0,5 l kupované (bio)/ nebo darované kombuchy, přidejte do ní 3 lžíce cukru a nechte v pokojové teplotě, dokud se vám nahoře neutvoří houba, já ji tentokrát vypěstovala z kombuchy, kterou nechala kamarádka u nás v lednici (svou domácí), mám ověřeno i z kupované.",
-      "photos": [
-        "photo_127@28-03-2025_13-40-02.jpg",
-        "photo_128@28-03-2025_13-41-17.jpg",
-        "photo_129@28-03-2025_13-41-18.jpg",
-        "photo_130@28-03-2025_13-41-19.jpg",
-        "photo_131@28-03-2025_13-41-29.jpg",
-        "photo_132@28-03-2025_13-41-57.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_127@28-03-2025_13-40-02.jpg",
-      "search": "brslice kozi noha - dalsi bylina, kterou muzete pouzit do salatu, na vajicka nebo chleba s maslem.  108.brslice kozi noha - dalsi bylina, kterou muzete pouzit do salatu, na vajicka nebo chleba s maslem. 109. cockove placky - zbytek cocky na kyselo + nastrouhana mrkev + vejce + pohankova mouka: pridavejte od oka a prubezne mixujte, z testa vam pujdou udelat placky na panvi a dobre otocit - v pripade suchosti doredte vodou, v pripade tekutosti moukou 110. podbel - caj z cerstveho nebo suseneho je pohlazeni! 111. sber aktualne :) fialky (caj, jedle kvety na dezert), divoka pazitka (do masla, na vajicka), svizel (stejne jako pazitka), jahodnik (na caj) 112.parmazanove placky: 10 vajec, cely blocek bio parmazanu (nastrouhat) - smichat a smazit na ghi placicky 113. kombucha - jak ji nejjednoduseji ziskat - uz nekolikrat overeny proces: odlijte cca 0,5 l kupovane (bio)/ nebo darovane kombuchy, pridejte do ni 3 lzice cukru a nechte v pokojove teplote, dokud se vam nahore neutvori houba, ja ji tentokrat vypestovala z kombuchy, kterou nechala kamaradka u nas v lednici (svou domaci), mam overeno i z kupovane. 109. cockove placky - zbytek cocky na kyselo + nastrouhana mrkev + vejce + pohankova mouka: pridavejte od oka a prubezne mixujte, z testa vam pujdou udelat placky na panvi a dobre otocit - v pripade suchosti doredte vodou, v pripade tekutosti moukou\n110. podbel - caj z cerstveho nebo suseneho je pohlazeni!\n111. sber aktualne :) fialky (caj, jedle kvety na dezert), divoka pazitka (do masla, na vajicka), svizel (stejne jako pazitka), jahodnik (na caj)\n112.parmazanove placky: 10 vajec, cely blocek bio parmazanu (nastrouhat) - smichat a smazit na ghi placicky\n113. kombucha - jak ji nejjednoduseji ziskat - uz nekolikrat overeny proces:\nodlijte cca 0,5 l kupovane (bio)/ nebo darovane kombuchy, pridejte do ni 3 lzice cukru a nechte v pokojove teplote, dokud se vam nahore neutvori houba, ja ji tentokrat vypestovala z kombuchy, kterou nechala kamaradka u nas v lednici (svou domaci), mam overeno i z kupovane.",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 72,
@@ -2185,7 +2004,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 73,
@@ -2213,7 +2033,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 74,
@@ -2254,7 +2075,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 75,
@@ -2281,60 +2103,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 76,
-      "name": "Kombucha - nový nálev (2l): uvařím plné sítko sypaného bio černého čaje , rozpustím cca 100g bio třtino",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2025-04-26",
-      "ing": [],
-      "steps": [
-        "124.Kombucha - nový nálev (2l): uvařím plné sítko sypaného bio černého čaje (např z), rozpustím cca 100g bio třtinového/ kokos cukru (dávám většinou napůl). Po vychladnutí nálevu přendám houbu i s cca 200 ml starého nálevu.",
-        "Fermentace probíhá dle tloušťky houby v rozmezí 5-10 dnů, já mám bambusové brčko a od toho 5.dne ochutnávám, a když mi chutná, sliju ji a trochu si zase nechám do dalšího nálevu. Používám plast/ dřevo, ne kov."
-      ],
-      "fullText": "124.Kombucha - nový nálev (2l): uvařím plné sítko sypaného bio černého čaje (např z), rozpustím cca 100g bio třtinového/ kokos cukru (dávám většinou napůl). Po vychladnutí nálevu přendám houbu i s cca 200 ml starého nálevu.\nFermentace probíhá dle tloušťky houby v rozmezí 5-10 dnů, já mám bambusové brčko a od toho 5.dne ochutnávám, a když mi chutná, sliju ji a trochu si zase nechám do dalšího nálevu. Používám plast/ dřevo, ne kov.",
-      "photos": [],
-      "color": "#5a7a3f",
-      "img": "",
-      "search": "kombucha - novy nalev (2l): uvarim plne sitko sypaneho bio cerneho caje , rozpustim cca 100g bio trtino  124.kombucha - novy nalev (2l): uvarim plne sitko sypaneho bio cerneho caje (napr z), rozpustim cca 100g bio trtinoveho/ kokos cukru (davam vetsinou napul). po vychladnuti nalevu prendam houbu i s cca 200 ml stareho nalevu. fermentace probiha dle tloustky houby v rozmezi 5-10 dnu, ja mam bambusove brcko a od toho 5.dne ochutnavam, a kdyz mi chutna, sliju ji a trochu si zase necham do dalsiho nalevu. pouzivam plast/ drevo, ne kov. 124.kombucha - novy nalev (2l): uvarim plne sitko sypaneho bio cerneho caje (napr z), rozpustim cca 100g bio trtinoveho/ kokos cukru (davam vetsinou napul). po vychladnuti nalevu prendam houbu i s cca 200 ml stareho nalevu.\nfermentace probiha dle tloustky houby v rozmezi 5-10 dnu, ja mam bambusove brcko a od toho 5.dne ochutnavam, a kdyz mi chutna, sliju ji a trochu si zase necham do dalsiho nalevu. pouzivam plast/ drevo, ne kov.",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 77,
-      "name": "Smrkové výhonky - obsahují spoustu vitamínů a podporují imunitu, můžete je jist jen tak, dávat i do salátu 🌱 a nebo nalo",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2025-05-02",
-      "ing": [
-        "opět do salátu a nebo pesto stejně jako z medvědího česneku- ze zde dostupných bylin se do pesta nyní hodí i lesní šťovík nebo bršlice 🌱",
-        "I jako jedlé květy🌸"
-      ],
-      "steps": [
-        "125.Smrkové výhonky - obsahují spoustu vitamínů a podporují imunitu, můžete je jist jen tak, dávat i do salátu 🌱 a nebo naložit do medu, já používám tento basic návod 🤍",
-        "126. Česnáček - podobný česneku, voní po něm a nese i jeho účinky, kvetoucí rostlinka už má hořké listy, v lesích najdete ještě nevykvetlé 🌿",
-        "127. Zběhovec plazivý má podobné účinky jako plicník, suší se takto celý a je skvělý při zánětech plic/ průdušek, při kašlích.",
-        "128. Hluchavka bílá, sbírám bílé květy, zkidňuje, podporuje spánek - skvělá na doplnění k heřmánku/ meduňce🤍"
-      ],
-      "fullText": "125.Smrkové výhonky - obsahují spoustu vitamínů a podporují imunitu, můžete je jist jen tak, dávat i do salátu 🌱 a nebo naložit do medu, já používám tento basic návod 🤍\n126. Česnáček - podobný česneku, voní po něm a nese i jeho účinky, kvetoucí rostlinka už má hořké listy, v lesích najdete ještě nevykvetlé 🌿\n- opět do salátu a nebo pesto stejně jako z medvědího česneku- ze zde dostupných bylin se do pesta nyní hodí i lesní šťovík nebo bršlice 🌱\n127. Zběhovec plazivý má podobné účinky jako plicník, suší se takto celý a je skvělý při zánětech plic/ průdušek, při kašlích.\n128. Hluchavka bílá, sbírám bílé květy, zkidňuje, podporuje spánek - skvělá na doplnění k heřmánku/ meduňce🤍\nI jako jedlé květy🌸",
-      "photos": [
-        "photo_148@02-05-2025_11-46-56.jpg",
-        "photo_149@02-05-2025_11-49-12.jpg",
-        "photo_150@02-05-2025_11-49-12.jpg",
-        "photo_151@02-05-2025_11-50-58.jpg",
-        "photo_152@02-05-2025_11-52-57.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_148@02-05-2025_11-46-56.jpg",
-      "search": "smrkove vyhonky - obsahuji spoustu vitaminu a podporuji imunitu, muzete je jist jen tak, davat i do salatu 🌱 a nebo nalo opet do salatu a nebo pesto stejne jako z medvediho cesneku- ze zde dostupnych bylin se do pesta nyni hodi i lesni stovik nebo brslice 🌱 i jako jedle kvety🌸 125.smrkove vyhonky - obsahuji spoustu vitaminu a podporuji imunitu, muzete je jist jen tak, davat i do salatu 🌱 a nebo nalozit do medu, ja pouzivam tento basic navod 🤍 126. cesnacek - podobny cesneku, voni po nem a nese i jeho ucinky, kvetouci rostlinka uz ma horke listy, v lesich najdete jeste nevykvetle 🌿 127. zbehovec plazivy ma podobne ucinky jako plicnik, susi se takto cely a je skvely pri zanetech plic/ prudusek, pri kaslich. 128. hluchavka bila, sbiram bile kvety, zkidnuje, podporuje spanek - skvela na doplneni k hermanku/ medunce🤍 125.smrkove vyhonky - obsahuji spoustu vitaminu a podporuji imunitu, muzete je jist jen tak, davat i do salatu 🌱 a nebo nalozit do medu, ja pouzivam tento basic navod 🤍\n126. cesnacek - podobny cesneku, voni po nem a nese i jeho ucinky, kvetouci rostlinka uz ma horke listy, v lesich najdete jeste nevykvetle 🌿\n- opet do salatu a nebo pesto stejne jako z medvediho cesneku- ze zde dostupnych bylin se do pesta nyni hodi i lesni stovik nebo brslice 🌱\n127. zbehovec plazivy ma podobne ucinky jako plicnik, susi se takto cely a je skvely pri zanetech plic/ prudusek, pri kaslich.\n128. hluchavka bila, sbiram bile kvety, zkidnuje, podporuje spanek - skvela na doplneni k hermanku/ medunce🤍\ni jako jedle kvety🌸",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 78,
@@ -2369,7 +2139,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 79,
@@ -2401,7 +2172,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 80,
@@ -2435,7 +2207,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 81,
@@ -2464,7 +2237,8 @@
       "edu": {
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 82,
@@ -2494,11 +2268,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 83,
-      "name": "Buchta s drobenkou a třešněmi",
+      "name": "Sezónní salát s jablečným octem",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-05-31",
@@ -2528,11 +2303,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 84,
-      "name": "Ferment.limonáda",
+      "name": "Pečené kuře s bramborovým nebo dýňovým pyré",
       "cat": "sklad",
       "time": "24 hod",
       "date": "2025-06-04",
@@ -2557,7 +2333,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 85,
@@ -2586,7 +2363,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 86,
@@ -2613,7 +2391,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 87,
@@ -2642,7 +2421,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 88,
@@ -2671,44 +2451,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 89,
-      "name": "Houby ~ malé množství, které nestojí za to sušit/ dělat houbové jidlo. Nyní nacházím bedly a žampiony.",
-      "cat": "jidla",
-      "time": "12 hod",
-      "date": "2025-06-18",
-      "ing": [
-        "155. Fast food 🙏",
-        "Kozí/ ovčí sýr",
-        "156. Pohanková krupice s rozvarem❤️",
-        "157. Zapečená brokolice",
-        "Zapekla jsem na 180 po dobu cca 30 minut"
-      ],
-      "steps": [
-        "154. Houby ~ malé množství, které nestojí za to sušit/ dělat houbové jidlo. Nyní nacházím bedly a žampiony.",
-        "Dělám následovně - pokrájím, kousky osmahnu se solí na sádle/ ghí a poté přidám do salátu.",
-        "Pohanka - namočená a ve vývaru uvařená, znáte",
-        "Libovolná sezónní obloha, sem se třeba hodí i ty houby 🍄",
-        "Pohankovou krupici máčím v kefiru tak 12 hod, poté uvařím v nepaster mléku, přidám kolagen a kokos cukr/ med, nakonec vmícham vanilku a skořici",
-        "Navrch dávám rozpustit máslo a rozvar z ovoce třešně/ višně/ jahody",
-        "- menší brokolici jsem uvařila ve vodě se solí do změknutí, poté rozmělnila vidličkou, smíchala s 6 vejci a cca 100 g nastrouhaného sýra"
-      ],
-      "fullText": "Dělám následovně - pokrájím, kousky osmahnu se solí na sádle/ ghí a poté přidám do salátu.\n155. Fast food 🙏\nPohanka - namočená a ve vývaru uvařená, znáte\nKozí/ ovčí sýr\nLibovolná sezónní obloha, sem se třeba hodí i ty houby 🍄\n156. Pohanková krupice s rozvarem❤️\nPohankovou krupici máčím v kefiru tak 12 hod, poté uvařím v nepaster mléku, přidám kolagen a kokos cukr/ med, nakonec vmícham vanilku a skořici\nNavrch dávám rozpustit máslo a rozvar z ovoce třešně/ višně/ jahody\n157. Zapečená brokolice\n- menší brokolici jsem uvařila ve vodě se solí do změknutí, poté rozmělnila vidličkou, smíchala s 6 vejci a cca 100 g nastrouhaného sýra\nZapekla jsem na 180 po dobu cca 30 minut",
-      "photos": [
-        "photo_183@18-06-2025_14-57-10.jpg",
-        "photo_184@18-06-2025_14-59-26.jpg",
-        "photo_185@18-06-2025_15-02-00.jpg",
-        "photo_186@18-06-2025_15-04-05.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_183@18-06-2025_14-57-10.jpg",
-      "search": "houby ~ male mnozstvi, ktere nestoji za to susit/ delat houbove jidlo. nyni nachazim bedly a zampiony. 155. fast food 🙏 kozi/ ovci syr 156. pohankova krupice s rozvarem❤ 157. zapecena brokolice zapekla jsem na 180 po dobu cca 30 minut 154. houby ~ male mnozstvi, ktere nestoji za to susit/ delat houbove jidlo. nyni nachazim bedly a zampiony. delam nasledovne - pokrajim, kousky osmahnu se soli na sadle/ ghi a pote pridam do salatu. pohanka - namocena a ve vyvaru uvarena, znate libovolna sezonni obloha, sem se treba hodi i ty houby 🍄 pohankovou krupici macim v kefiru tak 12 hod, pote uvarim v nepaster mleku, pridam kolagen a kokos cukr/ med, nakonec vmicham vanilku a skorici navrch davam rozpustit maslo a rozvar z ovoce tresne/ visne/ jahody - mensi brokolici jsem uvarila ve vode se soli do zmeknuti, pote rozmelnila vidlickou, smichala s 6 vejci a cca 100 g nastrouhaneho syra delam nasledovne - pokrajim, kousky osmahnu se soli na sadle/ ghi a pote pridam do salatu.\n155. fast food 🙏\npohanka - namocena a ve vyvaru uvarena, znate\nkozi/ ovci syr\nlibovolna sezonni obloha, sem se treba hodi i ty houby 🍄\n156. pohankova krupice s rozvarem❤\npohankovou krupici macim v kefiru tak 12 hod, pote uvarim v nepaster mleku, pridam kolagen a kokos cukr/ med, nakonec vmicham vanilku a skorici\nnavrch davam rozpustit maslo a rozvar z ovoce tresne/ visne/ jahody\n157. zapecena brokolice\n- mensi brokolici jsem uvarila ve vode se soli do zmeknuti, pote rozmelnila vidlickou, smichala s 6 vejci a cca 100 g nastrouhaneho syra\nzapekla jsem na 180 po dobu cca 30 minut",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 90,
@@ -2735,29 +2479,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 91,
-      "name": "Třezalka - sušte květy, jsou skvele na zklidnění nervového systému. Skvělá je i do mastí na masáže jizev nebo bolavých m",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2025-06-26",
-      "ing": [],
-      "steps": [
-        "160. Třezalka - sušte květy, jsou skvele na zklidnění nervového systému. Skvělá je i do mastí na masáže jizev nebo bolavých míst - pozor na rostlinné oleje, které se dávají do Janova oleje, mají tendenci oxidovat a to není pro pokožku vhodné. Doporučuji základ hovězí lůj/ bambuc máslo, pokud chcete něco tekutějšího, tak upravený kokos.olej"
-      ],
-      "fullText": "160. Třezalka - sušte květy, jsou skvele na zklidnění nervového systému. Skvělá je i do mastí na masáže jizev nebo bolavých míst - pozor na rostlinné oleje, které se dávají do Janova oleje, mají tendenci oxidovat a to není pro pokožku vhodné. Doporučuji základ hovězí lůj/ bambuc máslo, pokud chcete něco tekutějšího, tak upravený kokos.olej",
-      "photos": [
-        "photo_189@26-06-2025_11-04-32.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_189@26-06-2025_11-04-32.jpg",
-      "search": "trezalka - suste kvety, jsou skvele na zklidneni nervoveho systemu. skvela je i do masti na masaze jizev nebo bolavych m  160. trezalka - suste kvety, jsou skvele na zklidneni nervoveho systemu. skvela je i do masti na masaze jizev nebo bolavych mist - pozor na rostlinne oleje, ktere se davaji do janova oleje, maji tendenci oxidovat a to neni pro pokozku vhodne. doporucuji zaklad hovezi luj/ bambuc maslo, pokud chcete neco tekutejsiho, tak upraveny kokos.olej 160. trezalka - suste kvety, jsou skvele na zklidneni nervoveho systemu. skvela je i do masti na masaze jizev nebo bolavych mist - pozor na rostlinne oleje, ktere se davaji do janova oleje, maji tendenci oxidovat a to neni pro pokozku vhodne. doporucuji zaklad hovezi luj/ bambuc maslo, pokud chcete neco tekutejsiho, tak upraveny kokos.olej",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 92,
@@ -2783,7 +2506,8 @@
       "edu": {
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 93,
@@ -2813,7 +2537,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 94,
@@ -2840,45 +2565,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 95,
-      "name": "BLACKOUT",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2025-07-04",
-      "ing": [
-        "Co mám tady a teď",
-        "natočit do nádob pití (město)// kde jsou nejbližší prameny - zdroje vody? (Mapastudanek)",
-        "Sůl",
-        "Uvnitř komunity:",
-        "Kultivovat soucit a důvěru",
-        "Když už nic nezbývá, medituji, modlím se"
-      ],
-      "steps": [
-        "Základní lékárnička (obvaz, léky na bolest, desinfekce)",
-        "HOTOVOST// CO MÁM NA VÝMĚNU - SPACÁKY, JÍDLO, PITÍ - co lidi nebudou mít - pozice vyjednavatele je pro mě výhodná = bezpečí",
-        "S kým se spojím? Nejbližší komnunita offline, spojená skupina = obrana před rabováním, jednáním z pozice nebezpečí /(agrese,..)",
-        "Kde je jídlo - vím o opuštěných sadech..? V lese,…",
-        "Kam půjdu - jak se dostanu z města na vesnici při delším trvání",
-        "Co mohu nabídnout radary, aby se začleňoval?(žádám vás o vodu ze studny, budu sušit seno,…)",
-        "Budování soběstačnosti - vše zavařuj (ano, i na ohni se dá) a fermentuj - NYNÍ JE VŠEHO DOSTATEK, JEŠTĚ ZASEJ, CO MŮŽEŠ",
-        "Nejednat skrze emoce - odpovědnost za svůj proces// vím, s kým si mohu v komunitě řešit procesy (- je to jeho role)",
-        "Učíme se přijímat utrpení a smrt v soucitu a laskavosti",
-        "Města potenciál největšího nebezpečí (rabování/ intenzivní nedostatek - vše je na elektřinu, lidé nemají zásoby a půdu",
-        "Největší únik energie = vnitřní konflikty (horší, než nedostatek potravy), učím se být upřímný, jasně komunikovat, jednám z bodu vnímání celku",
-        "To nejlepší, co mohu dát, je dopřát druhému smrt v pocitu přijetí a bezpečí"
-      ],
-      "fullText": "Co mám tady a teď\n - natočit do nádob pití (město)// kde jsou nejbližší prameny - zdroje vody? (Mapastudanek)\nZákladní lékárnička (obvaz, léky na bolest, desinfekce)\nSůl\nHOTOVOST// CO MÁM NA VÝMĚNU - SPACÁKY, JÍDLO, PITÍ - co lidi nebudou mít - pozice vyjednavatele je pro mě výhodná = bezpečí\n\nS kým se spojím? Nejbližší komnunita offline, spojená skupina = obrana před rabováním, jednáním z pozice nebezpečí /(agrese,..)\nKde je jídlo - vím o opuštěných sadech..? V lese,…\n\nKam půjdu - jak se dostanu z města na vesnici při delším trvání\n\nCo mohu nabídnout radary, aby se začleňoval?(žádám vás o vodu ze studny, budu sušit seno,…)\nBudování soběstačnosti - vše zavařuj (ano, i na ohni se dá) a fermentuj - NYNÍ JE VŠEHO DOSTATEK, JEŠTĚ ZASEJ, CO MŮŽEŠ\n\nUvnitř komunity:\nKultivovat soucit a důvěru\nNejednat skrze emoce - odpovědnost za svůj proces// vím, s kým si mohu v komunitě řešit procesy (- je to jeho role)\nUčíme se přijímat utrpení a smrt v soucitu a laskavosti\n\nMěsta potenciál největšího nebezpečí (rabování/ intenzivní nedostatek - vše je na elektřinu, lidé nemají zásoby a půdu\nNejvětší únik energie = vnitřní konflikty (horší, než nedostatek potravy), učím se být upřímný, jasně komunikovat, jednám z bodu vnímání celku\nTo nejlepší, co mohu dát, je dopřát druhému smrt v pocitu přijetí a bezpečí\nKdyž už nic nezbývá, medituji, modlím se",
-      "photos": [],
-      "color": "#5a7a3f",
-      "img": "",
-      "search": "blackout co mam tady a ted natocit do nadob piti (mesto)// kde jsou nejblizsi prameny - zdroje vody? (mapastudanek) sul uvnitr komunity: kultivovat soucit a duveru kdyz uz nic nezbyva, medituji, modlim se zakladni lekarnicka (obvaz, leky na bolest, desinfekce) hotovost// co mam na vymenu - spacaky, jidlo, piti - co lidi nebudou mit - pozice vyjednavatele je pro me vyhodna = bezpeci s kym se spojim? nejblizsi komnunita offline, spojena skupina = obrana pred rabovanim, jednanim z pozice nebezpeci /(agrese,..) kde je jidlo - vim o opustenych sadech..? v lese,… kam pujdu - jak se dostanu z mesta na vesnici pri delsim trvani co mohu nabidnout radary, aby se zaclenoval?(zadam vas o vodu ze studny, budu susit seno,…) budovani sobestacnosti - vse zavaruj (ano, i na ohni se da) a fermentuj - nyni je vseho dostatek, jeste zasej, co muzes nejednat skrze emoce - odpovednost za svuj proces// vim, s kym si mohu v komunite resit procesy (- je to jeho role) ucime se prijimat utrpeni a smrt v soucitu a laskavosti mesta potencial nejvetsiho nebezpeci (rabovani/ intenzivni nedostatek - vse je na elektrinu, lide nemaji zasoby a pudu nejvetsi unik energie = vnitrni konflikty (horsi, nez nedostatek potravy), ucim se byt uprimny, jasne komunikovat, jednam z bodu vnimani celku to nejlepsi, co mohu dat, je doprat druhemu smrt v pocitu prijeti a bezpeci co mam tady a ted\n - natocit do nadob piti (mesto)// kde jsou nejblizsi prameny - zdroje vody? (mapastudanek)\nzakladni lekarnicka (obvaz, leky na bolest, desinfekce)\nsul\nhotovost// co mam na vymenu - spacaky, jidlo, piti - co lidi nebudou mit - pozice vyjednavatele je pro me vyhodna = bezpeci\n\ns kym se spojim? nejblizsi komnunita offline, spojena skupina = obrana pred rabovanim, jednanim z pozice nebezpeci /(agrese,..)\nkde je jidlo - vim o opustenych sadech..? v lese,…\n\nkam pujdu - jak se dostanu z mesta na vesnici pri delsim trvani\n\nco mohu nabidnout radary, aby se zaclenoval?(zadam vas o vodu ze studny, budu susit seno,…)\nbudovani sobestacnosti - vse zavaruj (ano, i na ohni se da) a fermentuj - nyni je vseho dostatek, jeste zasej, co muzes\n\nuvnitr komunity:\nkultivovat soucit a duveru\nnejednat skrze emoce - odpovednost za svuj proces// vim, s kym si mohu v komunite resit procesy (- je to jeho role)\nucime se prijimat utrpeni a smrt v soucitu a laskavosti\n\nmesta potencial nejvetsiho nebezpeci (rabovani/ intenzivni nedostatek - vse je na elektrinu, lide nemaji zasoby a pudu\nnejvetsi unik energie = vnitrni konflikty (horsi, nez nedostatek potravy), ucim se byt uprimny, jasne komunikovat, jednam z bodu vnimani celku\nto nejlepsi, co mohu dat, je doprat druhemu smrt v pocitu prijeti a bezpeci\nkdyz uz nic nezbyva, medituji, modlim se",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 96,
@@ -2917,11 +2605,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 97,
-      "name": "Meruňková marmeláda",
+      "name": "Smažené kuřecí stripsy",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-07-10",
@@ -2943,7 +2632,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 98,
@@ -2971,11 +2661,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 99,
-      "name": "Cuketový perník",
+      "name": "Nákyp na slano",
       "cat": "dezerty",
       "time": "40 min",
       "date": "2025-07-29",
@@ -3009,11 +2700,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 100,
-      "name": "Další ukázka běžného dne",
+      "name": "Výživný termix",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-07-29",
@@ -3036,7 +2728,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 101,
@@ -3063,7 +2756,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 102,
@@ -3100,7 +2794,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 103,
@@ -3143,7 +2838,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 104,
@@ -3178,11 +2874,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 105,
-      "name": "Povidla z mirabelek/ švestek.",
+      "name": "Masové kuličky s kadeřávkem",
       "cat": "sklad",
       "time": "5 hod",
       "date": "2025-08-16",
@@ -3206,11 +2903,12 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 106,
-      "name": "Tvarohová pizza - 2 plechy",
+      "name": "Čočka na kyselo",
       "cat": "jidla",
       "time": "20 min",
       "date": "2025-08-22",
@@ -3235,7 +2933,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 107,
@@ -3264,7 +2963,8 @@
       "edu": {
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 108,
@@ -3290,11 +2990,12 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 109,
-      "name": "Domácí kapsičky",
+      "name": "Čočkové placky",
       "cat": "jidla",
       "time": "—",
       "date": "2025-08-22",
@@ -3315,7 +3016,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 110,
@@ -3347,7 +3049,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 111,
@@ -3377,11 +3080,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 112,
-      "name": "Denní jídelníček",
+      "name": "Parmazánové placky",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-08-29",
@@ -3405,7 +3109,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 113,
@@ -3447,29 +3152,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 114,
-      "name": "Krásný den, dlouho jsem přemýšlela, jak uchopit tuto informaci, protože se ke mě doneslo (jako vždy se donese😆), že jist",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2025-09-22",
-      "ing": [],
-      "steps": [
-        "Ale vše v mne dozrálo, a volím si jako vždy transparentnost, a nechávám na každém jeho morální hodnoty, tudíž vám sdílím, že jsem nyní v těhotenském nechutenství, a nechávám si vařit od pomalého hrnce, Davida a mamky, protože mi vadí syrové maso a játra - ale hotové to miluji, nebo jím jogurty se zavařenými třešněmi (ještě, že jsem si jich udělala tolik😆).",
-        "Zatím čerpejte z loňských receptů - kečupy, fermenty, sezónní jídla.. zásobte se tím, co je, já se s recepty zase vrátím. 🫶",
-        "Ps: rozhodně vidím výhodu v této celé jednoduchosti, z níž David vaří pro sebe a děti a nemůže nic pokazit❤️"
-      ],
-      "fullText": "Krásný den, dlouho jsem přemýšlela, jak uchopit tuto informaci, protože se ke mě doneslo (jako vždy se donese😆), že jisté ženy z této skupinky mají tendenci si mne brát jako téma k obědu i večeři v jiné drbací skupince, tedy jsem se chvíli v představě otevřenosti necítila bezpečně.\nAle vše v mne dozrálo, a volím si jako vždy transparentnost, a nechávám na každém jeho morální hodnoty, tudíž vám sdílím, že jsem nyní v těhotenském nechutenství, a nechávám si vařit od pomalého hrnce, Davida a mamky, protože mi vadí syrové maso a játra - ale hotové to miluji, nebo jím jogurty se zavařenými třešněmi (ještě, že jsem si jich udělala tolik😆).\n\nZatím čerpejte z loňských receptů - kečupy, fermenty, sezónní jídla.. zásobte se tím, co je, já se s recepty zase vrátím. 🫶\n\nPs: rozhodně vidím výhodu v této celé jednoduchosti, z níž David vaří pro sebe a děti a nemůže nic pokazit❤️",
-      "photos": [],
-      "color": "#5a7a3f",
-      "img": "",
-      "search": "krasny den, dlouho jsem premyslela, jak uchopit tuto informaci, protoze se ke me doneslo (jako vzdy se donese😆), ze jist  ale vse v mne dozralo, a volim si jako vzdy transparentnost, a nechavam na kazdem jeho moralni hodnoty, tudiz vam sdilim, ze jsem nyni v tehotenskem nechutenstvi, a nechavam si varit od pomaleho hrnce, davida a mamky, protoze mi vadi syrove maso a jatra - ale hotove to miluji, nebo jim jogurty se zavarenymi tresnemi (jeste, ze jsem si jich udelala tolik😆). zatim cerpejte z lonskych receptu - kecupy, fermenty, sezonni jidla.. zasobte se tim, co je, ja se s recepty zase vratim. 🫶 ps: rozhodne vidim vyhodu v teto cele jednoduchosti, z niz david vari pro sebe a deti a nemuze nic pokazit❤ krasny den, dlouho jsem premyslela, jak uchopit tuto informaci, protoze se ke me doneslo (jako vzdy se donese😆), ze jiste zeny z teto skupinky maji tendenci si mne brat jako tema k obedu i veceri v jine drbaci skupince, tedy jsem se chvili v predstave otevrenosti necitila bezpecne.\nale vse v mne dozralo, a volim si jako vzdy transparentnost, a nechavam na kazdem jeho moralni hodnoty, tudiz vam sdilim, ze jsem nyni v tehotenskem nechutenstvi, a nechavam si varit od pomaleho hrnce, davida a mamky, protoze mi vadi syrove maso a jatra - ale hotove to miluji, nebo jim jogurty se zavarenymi tresnemi (jeste, ze jsem si jich udelala tolik😆).\n\nzatim cerpejte z lonskych receptu - kecupy, fermenty, sezonni jidla.. zasobte se tim, co je, ja se s recepty zase vratim. 🫶\n\nps: rozhodne vidim vyhodu v teto cele jednoduchosti, z niz david vari pro sebe a deti a nemuze nic pokazit❤",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 115,
@@ -3498,41 +3182,12 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
-    },
-    {
-      "n": 116,
-      "name": "Krásný den,",
-      "cat": "jidla",
-      "time": "1 hod",
-      "date": "2025-10-15",
-      "ing": [
-        "BLIŽŠÍ INFO KE SKUPINĚ"
-      ],
-      "steps": [
-        "od zítra zde bude probíhat sdílení jídelníčku z naší každodennosti. Než vám sem nahraji dokumenty, které se vám mohou hodit pro plánování jídla a další info, chci ještě zmínit SKUPINU S MOU PODPOROU ZAMĚŘENOU NA VZTAH K JÍDLU A SEBEHODNOTU, pár z vás mi psalo na ig, zda je možné se do ni přidat - samozřejmě je, a bohužel mě to nenapadlo dřív to nabídnout tady 🙏",
-        "Skupina začíná zítra, zítra je tedy i poslední den, kdy se můžete přidat, začneme se tam mezi sebou poznávat a bude již otevřeno sdílení❤️ ničeho se nemusíte bát, naopak, pokud v jídle tápete/ je pro vás tlakem/ řešíte postavu-váhu, tak vám tato společná cesta intenzivní podpory zodpoví spoustu otázek, přinese úlevu a sebepřijetí🙏",
-        "Přihlásit se můžete tady - cena je maximálně dostupná, protože tohle řeší často maminky na mateřské nebo třeba velmi mladé slečny a dělám to i pro vás.",
-        "Vím, jaké to je, když zdravá strava není zdravá, ale sebedestruktivní. Vím, jaké to je, stát každý den na váze a počítat kalorie. Vím, jaké to je, bát se jídla kvůli přibírání nebo nemoci. Vím, jaké to je, neustále začínat od znova a snažit se o dokonalost, která je zničující. Vím jaké to je, určovat svou hodnotu dle velikosti kalhot nebo čísla na váze.",
-        "Poruchy příjmu potravy od anorexie po záchvatovité přejídání patřily do mého života bezmála 6 let, myslela jsem, že to nikdy neskončí! Klasická doporučení od psychologů a lékařů pomáhala jen na povrchu, vůbec neřešila problém, který byl uvnitř – nesebevědomí, vnitřní prázdnota,… Byla mi doporučena nakonec i antidepresiva.",
-        "Zkusila jsem spoustu cest, které mne dovedly do stejného místa, ale jen jedna jediná mne vymotala ze začarovaného kruhu. Byla to cesta radikálního sebepoznání a přijetí všech zranění, protože jídlo bylo nástroj, jak jsem před nimi utíkala (= nevědomky je prohlubovala a způsobovala další).",
-        "Skupina začne 16. 10. na dobu 3 týdnů (do 6.11.), je to vstupenka k započetí radikální transformace tvého vztahu k jídlu a sama sobě.",
-        "V rámci skupiny se sejdeme 2x na ZOOMu (v pondělí 20.10. a v pondělí 3.11. v čase 18 – 19:30), kde bude prostor pro každého, ze ZOOMu bude záznam. V průběhu skupiny bude možné vaše sdílení ve WhatsApp skupině a moje podpora tam ve dnech mimo soboty a neděle.",
-        "V rámci skupiny obdržíš kromě Receptáře ještě webinář Sebehodnota (1 hod 50 min) & webinář Výživa a energie (1 hod 44 min)."
-      ],
-      "fullText": "od zítra zde bude probíhat sdílení jídelníčku z naší každodennosti. Než vám sem nahraji dokumenty, které se vám mohou hodit pro plánování jídla a další info, chci ještě zmínit SKUPINU S MOU PODPOROU ZAMĚŘENOU NA VZTAH K JÍDLU A SEBEHODNOTU, pár z vás mi psalo na ig, zda je možné se do ni přidat - samozřejmě je, a bohužel mě to nenapadlo dřív to nabídnout tady 🙏\n\nSkupina začíná zítra, zítra je tedy i poslední den, kdy se můžete přidat, začneme se tam mezi sebou poznávat a bude již otevřeno sdílení❤️ ničeho se nemusíte bát, naopak, pokud v jídle tápete/ je pro vás tlakem/ řešíte postavu-váhu, tak vám tato společná cesta intenzivní podpory zodpoví spoustu otázek, přinese úlevu a sebepřijetí🙏\n\nPřihlásit se můžete tady - cena je maximálně dostupná, protože tohle řeší často maminky na mateřské nebo třeba velmi mladé slečny a dělám to i pro vás.\n\nBLIŽŠÍ INFO KE SKUPINĚ\nVím, jaké to je, když zdravá strava není zdravá, ale sebedestruktivní. Vím, jaké to je, stát každý den na váze a počítat kalorie. Vím, jaké to je, bát se jídla kvůli přibírání nebo nemoci. Vím, jaké to je, neustále začínat od znova a snažit se o dokonalost, která je zničující. Vím jaké to je, určovat svou hodnotu dle velikosti kalhot nebo čísla na váze.\n\nPoruchy příjmu potravy od anorexie po záchvatovité přejídání patřily do mého života bezmála 6 let, myslela jsem, že to nikdy neskončí! Klasická doporučení od psychologů a lékařů pomáhala jen na povrchu, vůbec neřešila problém, který byl uvnitř – nesebevědomí, vnitřní prázdnota,… Byla mi doporučena nakonec i antidepresiva.\n\nZkusila jsem spoustu cest, které mne dovedly do stejného místa, ale jen jedna jediná mne vymotala ze začarovaného kruhu. Byla to cesta radikálního sebepoznání a přijetí všech zranění, protože jídlo bylo nástroj, jak jsem před nimi utíkala (= nevědomky je prohlubovala a způsobovala další).\n\nSkupina začne 16. 10. na dobu 3 týdnů (do 6.11.), je to vstupenka k započetí radikální transformace tvého vztahu k jídlu a sama sobě.\n\nV rámci skupiny se sejdeme 2x na ZOOMu (v pondělí 20.10. a v pondělí 3.11. v čase 18 – 19:30), kde bude prostor pro každého, ze ZOOMu bude záznam. V průběhu skupiny bude možné vaše sdílení ve WhatsApp skupině a moje podpora tam ve dnech mimo soboty a neděle.\n\nV rámci skupiny obdržíš kromě Receptáře ještě webinář Sebehodnota (1 hod 50 min) & webinář Výživa a energie (1 hod 44 min).",
-      "photos": [],
-      "color": "#a8632f",
-      "img": "",
-      "search": "krasny den, blizsi info ke skupine od zitra zde bude probihat sdileni jidelnicku z nasi kazdodennosti. nez vam sem nahraji dokumenty, ktere se vam mohou hodit pro planovani jidla a dalsi info, chci jeste zminit skupinu s mou podporou zamerenou na vztah k jidlu a sebehodnotu, par z vas mi psalo na ig, zda je mozne se do ni pridat - samozrejme je, a bohuzel me to nenapadlo driv to nabidnout tady 🙏 skupina zacina zitra, zitra je tedy i posledni den, kdy se muzete pridat, zacneme se tam mezi sebou poznavat a bude jiz otevreno sdileni❤ niceho se nemusite bat, naopak, pokud v jidle tapete/ je pro vas tlakem/ resite postavu-vahu, tak vam tato spolecna cesta intenzivni podpory zodpovi spoustu otazek, prinese ulevu a sebeprijeti🙏 prihlasit se muzete tady - cena je maximalne dostupna, protoze tohle resi casto maminky na materske nebo treba velmi mlade slecny a delam to i pro vas. vim, jake to je, kdyz zdrava strava neni zdrava, ale sebedestruktivni. vim, jake to je, stat kazdy den na vaze a pocitat kalorie. vim, jake to je, bat se jidla kvuli pribirani nebo nemoci. vim, jake to je, neustale zacinat od znova a snazit se o dokonalost, ktera je znicujici. vim jake to je, urcovat svou hodnotu dle velikosti kalhot nebo cisla na vaze. poruchy prijmu potravy od anorexie po zachvatovite prejidani patrily do meho zivota bezmala 6 let, myslela jsem, ze to nikdy neskonci! klasicka doporuceni od psychologu a lekaru pomahala jen na povrchu, vubec neresila problem, ktery byl uvnitr – nesebevedomi, vnitrni prazdnota,… byla mi doporucena nakonec i antidepresiva. zkusila jsem spoustu cest, ktere mne dovedly do stejneho mista, ale jen jedna jedina mne vymotala ze zacarovaneho kruhu. byla to cesta radikalniho sebepoznani a prijeti vsech zraneni, protoze jidlo bylo nastroj, jak jsem pred nimi utikala (= nevedomky je prohlubovala a zpusobovala dalsi). skupina zacne 16. 10. na dobu 3 tydnu (do 6.11.), je to vstupenka k zapoceti radikalni transformace tveho vztahu k jidlu a sama sobe. v ramci skupiny se sejdeme 2x na zoomu (v pondeli 20.10. a v pondeli 3.11. v case 18 – 19:30), kde bude prostor pro kazdeho, ze zoomu bude zaznam. v prubehu skupiny bude mozne vase sdileni ve whatsapp skupine a moje podpora tam ve dnech mimo soboty a nedele. v ramci skupiny obdrzis krome receptare jeste webinar sebehodnota (1 hod 50 min) & webinar vyziva a energie (1 hod 44 min). od zitra zde bude probihat sdileni jidelnicku z nasi kazdodennosti. nez vam sem nahraji dokumenty, ktere se vam mohou hodit pro planovani jidla a dalsi info, chci jeste zminit skupinu s mou podporou zamerenou na vztah k jidlu a sebehodnotu, par z vas mi psalo na ig, zda je mozne se do ni pridat - samozrejme je, a bohuzel me to nenapadlo driv to nabidnout tady 🙏\n\nskupina zacina zitra, zitra je tedy i posledni den, kdy se muzete pridat, zacneme se tam mezi sebou poznavat a bude jiz otevreno sdileni❤ niceho se nemusite bat, naopak, pokud v jidle tapete/ je pro vas tlakem/ resite postavu-vahu, tak vam tato spolecna cesta intenzivni podpory zodpovi spoustu otazek, prinese ulevu a sebeprijeti🙏\n\nprihlasit se muzete tady - cena je maximalne dostupna, protoze tohle resi casto maminky na materske nebo treba velmi mlade slecny a delam to i pro vas.\n\nblizsi info ke skupine\nvim, jake to je, kdyz zdrava strava neni zdrava, ale sebedestruktivni. vim, jake to je, stat kazdy den na vaze a pocitat kalorie. vim, jake to je, bat se jidla kvuli pribirani nebo nemoci. vim, jake to je, neustale zacinat od znova a snazit se o dokonalost, ktera je znicujici. vim jake to je, urcovat svou hodnotu dle velikosti kalhot nebo cisla na vaze.\n\nporuchy prijmu potravy od anorexie po zachvatovite prejidani patrily do meho zivota bezmala 6 let, myslela jsem, ze to nikdy neskonci! klasicka doporuceni od psychologu a lekaru pomahala jen na povrchu, vubec neresila problem, ktery byl uvnitr – nesebevedomi, vnitrni prazdnota,… byla mi doporucena nakonec i antidepresiva.\n\nzkusila jsem spoustu cest, ktere mne dovedly do stejneho mista, ale jen jedna jedina mne vymotala ze zacarovaneho kruhu. byla to cesta radikalniho sebepoznani a prijeti vsech zraneni, protoze jidlo bylo nastroj, jak jsem pred nimi utikala (= nevedomky je prohlubovala a zpusobovala dalsi).\n\nskupina zacne 16. 10. na dobu 3 tydnu (do 6.11.), je to vstupenka k zapoceti radikalni transformace tveho vztahu k jidlu a sama sobe.\n\nv ramci skupiny se sejdeme 2x na zoomu (v pondeli 20.10. a v pondeli 3.11. v case 18 – 19:30), kde bude prostor pro kazdeho, ze zoomu bude zaznam. v prubehu skupiny bude mozne vase sdileni ve whatsapp skupine a moje podpora tam ve dnech mimo soboty a nedele.\n\nv ramci skupiny obdrzis krome receptare jeste webinar sebehodnota (1 hod 50 min) & webinar vyziva a energie (1 hod 44 min).",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 117,
-      "name": "Receptář 201/ jídelníček 1.",
+      "name": "Jídelníček – den 1",
       "cat": "jidla",
       "time": "—",
       "date": "2025-10-17",
@@ -3555,11 +3210,12 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 118,
-      "name": "Receptář 202./ jídelníček 2.",
+      "name": "Jídelníček – den 2",
       "cat": "dezerty",
       "time": "25 min",
       "date": "2025-10-18",
@@ -3583,11 +3239,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 119,
-      "name": "Receptář 203./ jidelníček 3.",
+      "name": "Ukázkový jídelníček",
       "cat": "jidla",
       "time": "—",
       "date": "2025-10-19",
@@ -3611,11 +3268,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 120,
-      "name": "Receptář 204./ jíd 4.",
+      "name": "Jídelníček – den 4",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-10-20",
@@ -3634,11 +3292,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 121,
-      "name": "Receptář 205./ jíd 5.",
+      "name": "Jídelníček – den 5",
       "cat": "jidla",
       "time": "—",
       "date": "2025-10-22",
@@ -3663,11 +3322,12 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 122,
-      "name": "Receptář 206./ jidelníček 6.",
+      "name": "Ukázkový jídelníček",
       "cat": "jidla",
       "time": "—",
       "date": "2025-10-22",
@@ -3691,11 +3351,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 123,
-      "name": "Receptář 207./ jíd 7.",
+      "name": "Jídelníček – den 7",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-10-24",
@@ -3718,11 +3379,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 124,
-      "name": "Receptář 208./ jíd 8.",
+      "name": "Jídelníček – den 8",
       "cat": "sklad",
       "time": "15 min",
       "date": "2025-10-25",
@@ -3744,37 +3406,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 125,
-      "name": "Receptář 209.",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2025-10-25",
-      "ing": [
-        "Podzimní ferment limča"
-      ],
-      "steps": [
-        "Na 1 l sklenici (dělám rovnou víc najednou) 2-3 jablka na kostičky, filtr.voda převařená, zalít s ní 2 PL třtin.cukr, nechat vystydnout a zalít s tím jablka",
-        "Nechat 3 dny s neutáhlým víčkem, každý den promíchat.",
-        "Pak sliju do lahví, do části dám spetku skořice a skladním v lednici."
-      ],
-      "fullText": "Podzimní ferment limča\nNa 1 l sklenici (dělám rovnou víc najednou) 2-3 jablka na kostičky, filtr.voda převařená, zalít s ní 2 PL třtin.cukr, nechat vystydnout a zalít s tím jablka\nNechat 3 dny s neutáhlým víčkem, každý den promíchat.\nPak sliju do lahví, do části dám spetku skořice a skladním v lednici.",
-      "photos": [
-        "photo_277@25-10-2025_17-19-46.jpg"
-      ],
-      "color": "#5a7a3f",
-      "img": "fotky/photo_277@25-10-2025_17-19-46.jpg",
-      "search": "receptar 209. podzimni ferment limca na 1 l sklenici (delam rovnou vic najednou) 2-3 jablka na kosticky, filtr.voda prevarena, zalit s ni 2 pl trtin.cukr, nechat vystydnout a zalit s tim jablka nechat 3 dny s neutahlym vickem, kazdy den promichat. pak sliju do lahvi, do casti dam spetku skorice a skladnim v lednici. podzimni ferment limca\nna 1 l sklenici (delam rovnou vic najednou) 2-3 jablka na kosticky, filtr.voda prevarena, zalit s ni 2 pl trtin.cukr, nechat vystydnout a zalit s tim jablka\nnechat 3 dny s neutahlym vickem, kazdy den promichat.\npak sliju do lahvi, do casti dam spetku skorice a skladnim v lednici.",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 126,
-      "name": "Receptář 210./ jíd 9.",
+      "name": "Jídelníček – den 9",
       "cat": "sklad",
       "time": "20 min",
       "date": "2025-10-26",
@@ -3796,11 +3433,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 127,
-      "name": "Receptář 211./ jíd. 10.",
+      "name": "Jídelníček – den 10",
       "cat": "sklad",
       "time": "—",
       "date": "2025-10-27",
@@ -3826,36 +3464,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 128,
-      "name": "Receptář 212.",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2025-10-27",
-      "ing": [
-        "Ferment řepa"
-      ],
-      "steps": [
-        "- řepu očistím a nakrájím na kousky, vytvořím si “solný roztok”: filtr. voda + kvalitní sůl v poměru 2 pol.lžíce soli na 1l vody",
-        "- řepu dám do sklenice a zaliju roztokem cca 0,5cm pod okraj, nechám při pokoj.teplotě 7-8 dní (zavřené- každý den pootevřu a upustím bublinky), pak utěsním na max a skladuji v lednici- nejdýl mi vydržela asi 6 měsíců a byla stále top, pak už jsme jí snedli, takže vydrží i déle:)"
-      ],
-      "fullText": "Ferment řepa\n- řepu očistím a nakrájím na kousky, vytvořím si “solný roztok”: filtr. voda + kvalitní sůl v poměru 2 pol.lžíce soli na 1l vody\n- řepu dám do sklenice a zaliju roztokem cca 0,5cm pod okraj, nechám při pokoj.teplotě 7-8 dní (zavřené- každý den pootevřu a upustím bublinky), pak utěsním na max a skladuji v lednici- nejdýl mi vydržela asi 6 měsíců a byla stále top, pak už jsme jí snedli, takže vydrží i déle:)",
-      "photos": [
-        "photo_285@27-10-2025_21-29-18.jpg"
-      ],
-      "color": "#5a7a3f",
-      "img": "fotky/photo_285@27-10-2025_21-29-18.jpg",
-      "search": "receptar 212. ferment repa - repu ocistim a nakrajim na kousky, vytvorim si “solny roztok”: filtr. voda + kvalitni sul v pomeru 2 pol.lzice soli na 1l vody - repu dam do sklenice a zaliju roztokem cca 0,5cm pod okraj, necham pri pokoj.teplote 7-8 dni (zavrene- kazdy den pootevru a upustim bublinky), pak utesnim na max a skladuji v lednici- nejdyl mi vydrzela asi 6 mesicu a byla stale top, pak uz jsme ji snedli, takze vydrzi i dele:) ferment repa\n- repu ocistim a nakrajim na kousky, vytvorim si “solny roztok”: filtr. voda + kvalitni sul v pomeru 2 pol.lzice soli na 1l vody\n- repu dam do sklenice a zaliju roztokem cca 0,5cm pod okraj, necham pri pokoj.teplote 7-8 dni (zavrene- kazdy den pootevru a upustim bublinky), pak utesnim na max a skladuji v lednici- nejdyl mi vydrzela asi 6 mesicu a byla stale top, pak uz jsme ji snedli, takze vydrzi i dele:)",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 129,
-      "name": "Receptář 213./ jíd 11.",
+      "name": "Jídelníček – den 11",
       "cat": "jidla",
       "time": "—",
       "date": "2025-10-29",
@@ -3881,11 +3495,12 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 130,
-      "name": "Receptář 214./ jíd 12.",
+      "name": "Jídelníček – den 12",
       "cat": "jidla",
       "time": "—",
       "date": "2025-10-29",
@@ -3912,11 +3527,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 131,
-      "name": "Receptář 215./ jíd 13.",
+      "name": "Jídelníček – den 13",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-10-30",
@@ -3950,11 +3566,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 132,
-      "name": "Receptář 216./ jíd 14.",
+      "name": "Jídelníček – den 14",
       "cat": "jidla",
       "time": "—",
       "date": "2025-11-01",
@@ -3980,11 +3597,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 133,
-      "name": "Receptář 217./ jíd 15.",
+      "name": "Jídelníček – den 15",
       "cat": "jidla",
       "time": "40 min",
       "date": "2025-11-02",
@@ -4014,11 +3632,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 134,
-      "name": "Receptář 218. Jíd 16.",
+      "name": "Jídelníček – den 16",
       "cat": "sklad",
       "time": "—",
       "date": "2025-11-04",
@@ -4047,11 +3666,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 135,
-      "name": "Receptář 219./ jíd 17.",
+      "name": "Jídelníček – den 17",
       "cat": "dezerty",
       "time": "15 min",
       "date": "2025-11-04",
@@ -4080,11 +3700,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 136,
-      "name": "Receptář 220/ jíd 18.",
+      "name": "Jídelníček – den 18",
       "cat": "dezerty",
       "time": "20 min",
       "date": "2025-11-06",
@@ -4110,33 +3731,12 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 137,
-      "name": "INFO: zítra začíná druhá (a nyní poslední) skupina k tématu vztahu k jídlu - ppp - vztahu k tělu, v první se hojně otevř",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2025-11-06",
-      "ing": [
-        "Tady je možnost se přihlásit:"
-      ],
-      "steps": [
-        "Skupina obnáší 2 společné zoom setkání a podporu v uzavřené telegram skupině pro dotazy/ sdílení po dobu 3 týdnů."
-      ],
-      "fullText": "INFO: zítra začíná druhá (a nyní poslední) skupina k tématu vztahu k jídlu - ppp - vztahu k tělu, v první se hojně otevřely i příkrmy, jiný názor prarodičů- komunikace a hranice, takže celkově otevřen prostor k oblasti stravy a tomu, co přináší a otevírá ve vašem životě:)\nSkupina obnáší 2 společné zoom setkání a podporu v uzavřené telegram skupině pro dotazy/ sdílení po dobu 3 týdnů.\nTady je možnost se přihlásit:",
-      "photos": [],
-      "color": "#a8632f",
-      "img": "",
-      "search": "info: zitra zacina druha (a nyni posledni) skupina k tematu vztahu k jidlu - ppp - vztahu k telu, v prvni se hojne otevr tady je moznost se prihlasit: skupina obnasi 2 spolecne zoom setkani a podporu v uzavrene telegram skupine pro dotazy/ sdileni po dobu 3 tydnu. info: zitra zacina druha (a nyni posledni) skupina k tematu vztahu k jidlu - ppp - vztahu k telu, v prvni se hojne otevrely i prikrmy, jiny nazor prarodicu- komunikace a hranice, takze celkove otevren prostor k oblasti stravy a tomu, co prinasi a otevira ve vasem zivote:)\nskupina obnasi 2 spolecne zoom setkani a podporu v uzavrene telegram skupine pro dotazy/ sdileni po dobu 3 tydnu.\ntady je moznost se prihlasit:",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 138,
-      "name": "Receptář 221./ jíd 19.",
+      "name": "Jídelníček – den 19",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-11-08",
@@ -4162,7 +3762,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "jidelnicek"
     },
     {
       "n": 139,
@@ -4188,30 +3789,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 140,
-      "name": "Jak vidíte, někdy jíme pořád za sebou vývar nebo maso, někde pořád vejce a jindy zase více kváskového pečiva nebo obecně",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2025-11-10",
-      "ing": [
-        "Beru co je, a neřeším, co není☺️."
-      ],
-      "steps": [
-        "Posloucháme tělu a necpeme do něj jídlo za každých okolností.",
-        "Čím méně svačinek, tím více výživného jídla děti snědí:)."
-      ],
-      "fullText": "Jak vidíte, někdy jíme pořád za sebou vývar nebo maso, někde pořád vejce a jindy zase více kváskového pečiva nebo obecně mouky… celek tvoří vyváženost.\n\nPosloucháme tělu a necpeme do něj jídlo za každých okolností.\n\nČím méně svačinek, tím více výživného jídla děti snědí:).\n\nBeru co je, a neřeším, co není☺️.",
-      "photos": [],
-      "color": "#a8632f",
-      "img": "",
-      "search": "jak vidite, nekdy jime porad za sebou vyvar nebo maso, nekde porad vejce a jindy zase vice kvaskoveho peciva nebo obecne beru co je, a neresim, co neni☺. poslouchame telu a necpeme do nej jidlo za kazdych okolnosti. cim mene svacinek, tim vice vyzivneho jidla deti snedi:). jak vidite, nekdy jime porad za sebou vyvar nebo maso, nekde porad vejce a jindy zase vice kvaskoveho peciva nebo obecne mouky… celek tvori vyvazenost.\n\nposlouchame telu a necpeme do nej jidlo za kazdych okolnosti.\n\ncim mene svacinek, tim vice vyzivneho jidla deti snedi:).\n\nberu co je, a neresim, co neni☺.",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 141,
@@ -4236,7 +3815,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 142,
@@ -4274,7 +3854,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 143,
@@ -4309,7 +3890,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 144,
@@ -4342,7 +3924,8 @@
       "edu": {
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 145,
@@ -4380,36 +3963,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 146,
-      "name": "Krásný den vespolek!",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2026-01-29",
-      "ing": [
-        "Receptář se tak promění přímo v “Sezónník”.",
-        "Půjdeme ještě víc do praxe ❤️",
-        "Tady je odkaz na disk:"
-      ],
-      "steps": [
-        "Leden nám končí a v jídelníčku stále převažuje to, jsme byli schopni si uskladnit. Vývary, maso, vajíčka. Nebo třeba ferment.obiloviny.",
-        "Sezónní zelenina: pór, brambory, kapusta, mrkev a další uskladněná kořenovka",
-        "Zdroje ovoce: zavařeniny/ zavřeniny a ještě přeživší jablka uskladněná ve sklepě.",
-        "Nyní nastane nový cyklus, a my si jej budeme procházet od samotného pěstování.",
-        "Od teď vám budu dělat jednoduché záznamy i na google disku po měsících, ať si to můžete vytisknout:).",
-        "Jako první si pusťte rozhovor o semínkách, pokud se ptáte, proč je tohle důležité, tak se budete možná divit, jak moc 🙏"
-      ],
-      "fullText": "Leden nám končí a v jídelníčku stále převažuje to, jsme byli schopni si uskladnit. Vývary, maso, vajíčka. Nebo třeba ferment.obiloviny.\nSezónní zelenina: pór, brambory, kapusta, mrkev a další uskladněná kořenovka\nZdroje ovoce: zavařeniny/ zavřeniny a ještě přeživší jablka uskladněná ve sklepě.\n\nNyní nastane nový cyklus, a my si jej budeme procházet od samotného pěstování.\nReceptář se tak promění přímo v “Sezónník”.\n\nOd teď vám budu dělat jednoduché záznamy i na google disku po měsících, ať si to můžete vytisknout:).\n\nPůjdeme ještě víc do praxe ❤️\n\nJako první si pusťte rozhovor o semínkách, pokud se ptáte, proč je tohle důležité, tak se budete možná divit, jak moc 🙏\n\nTady je odkaz na disk:",
-      "photos": [],
-      "color": "#5a7a3f",
-      "img": "",
-      "search": "krasny den vespolek! receptar se tak promeni primo v “sezonnik”. pujdeme jeste vic do praxe ❤ tady je odkaz na disk: leden nam konci a v jidelnicku stale prevazuje to, jsme byli schopni si uskladnit. vyvary, maso, vajicka. nebo treba ferment.obiloviny. sezonni zelenina: por, brambory, kapusta, mrkev a dalsi uskladnena korenovka zdroje ovoce: zavareniny/ zavreniny a jeste prezivsi jablka uskladnena ve sklepe. nyni nastane novy cyklus, a my si jej budeme prochazet od samotneho pestovani. od ted vam budu delat jednoduche zaznamy i na google disku po mesicich, at si to muzete vytisknout:). jako prvni si pustte rozhovor o seminkach, pokud se ptate, proc je tohle dulezite, tak se budete mozna divit, jak moc 🙏 leden nam konci a v jidelnicku stale prevazuje to, jsme byli schopni si uskladnit. vyvary, maso, vajicka. nebo treba ferment.obiloviny.\nsezonni zelenina: por, brambory, kapusta, mrkev a dalsi uskladnena korenovka\nzdroje ovoce: zavareniny/ zavreniny a jeste prezivsi jablka uskladnena ve sklepe.\n\nnyni nastane novy cyklus, a my si jej budeme prochazet od samotneho pestovani.\nreceptar se tak promeni primo v “sezonnik”.\n\nod ted vam budu delat jednoduche zaznamy i na google disku po mesicich, at si to muzete vytisknout:).\n\npujdeme jeste vic do praxe ❤\n\njako prvni si pustte rozhovor o seminkach, pokud se ptate, proc je tohle dulezite, tak se budete mozna divit, jak moc 🙏\n\ntady je odkaz na disk:",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 147,
@@ -4439,60 +3994,8 @@
       "edu": {
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      }
-    },
-    {
-      "n": 148,
-      "name": "Ahoj všem,",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2026-02-17",
-      "ing": [
-        "Únor: recepty",
-        "Odkaz na disk",
-        "V receptech vás čeká i toto❤️"
-      ],
-      "steps": [
-        "na disku jsem udělala složky, kde vám budu rozšiřovat zásoby. Tato skupina obsahuje cca 230 receptů, ale už to nemusí být tolik přehledné.",
-        "Nyní vám to budu rozdělovat do měsíců a typu obsahu - mrkněte",
-        "Únor: zahrada- tam jsem doplnila, co budu vysévat nyní a na konci února doma// venku dle nadmořských výšek",
-        "Healing tipy - tam budu přidávat vše, co ke mě přijde skrze naši rodinu - nyní je tam strava při nemoci dětí",
-        "Od března bude ještě rozdělení na byliny, únor bílý :-)"
-      ],
-      "fullText": "na disku jsem udělala složky, kde vám budu rozšiřovat zásoby. Tato skupina obsahuje cca 230 receptů, ale už to nemusí být tolik přehledné.\nNyní vám to budu rozdělovat do měsíců a typu obsahu - mrkněte\nÚnor: zahrada- tam jsem doplnila, co budu vysévat nyní a na konci února doma// venku dle nadmořských výšek\n\nÚnor: recepty\n\nHealing tipy - tam budu přidávat vše, co ke mě přijde skrze naši rodinu - nyní je tam strava při nemoci dětí\n\nOd března bude ještě rozdělení na byliny, únor bílý :-)\n\nOdkaz na disk\nV receptech vás čeká i toto❤️",
-      "photos": [
-        "photo_355@17-02-2026_14-43-58.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_355@17-02-2026_14-43-58.jpg",
-      "search": "ahoj vsem, unor: recepty odkaz na disk v receptech vas ceka i toto❤ na disku jsem udelala slozky, kde vam budu rozsirovat zasoby. tato skupina obsahuje cca 230 receptu, ale uz to nemusi byt tolik prehledne. nyni vam to budu rozdelovat do mesicu a typu obsahu - mrknete unor: zahrada- tam jsem doplnila, co budu vysevat nyni a na konci unora doma// venku dle nadmorskych vysek healing tipy - tam budu pridavat vse, co ke me prijde skrze nasi rodinu - nyni je tam strava pri nemoci deti od brezna bude jeste rozdeleni na byliny, unor bily :-) na disku jsem udelala slozky, kde vam budu rozsirovat zasoby. tato skupina obsahuje cca 230 receptu, ale uz to nemusi byt tolik prehledne.\nnyni vam to budu rozdelovat do mesicu a typu obsahu - mrknete\nunor: zahrada- tam jsem doplnila, co budu vysevat nyni a na konci unora doma// venku dle nadmorskych vysek\n\nunor: recepty\n\nhealing tipy - tam budu pridavat vse, co ke me prijde skrze nasi rodinu - nyni je tam strava pri nemoci deti\n\nod brezna bude jeste rozdeleni na byliny, unor bily :-)\n\nodkaz na disk\nv receptech vas ceka i toto❤",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
-    },
-    {
-      "n": 149,
-      "name": "Mladé kopřivy a bršlice již v rozpuku🌱 doplním vám i s využitím na disk",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2026-03-07",
-      "ing": [],
-      "steps": [
-        "Kopřivy - top na čaj, můžete i sušit. Tyhle mladé mají fakt sílu❤️",
-        "Bršlice - do bylinkoveho másla apod. podobně jako svízel a ptačinec (máte na disku)"
-      ],
-      "fullText": "Kopřivy - top na čaj, můžete i sušit. Tyhle mladé mají fakt sílu❤️\nBršlice - do bylinkoveho másla apod. podobně jako svízel a ptačinec (máte na disku)",
-      "photos": [
-        "photo_359@07-03-2026_16-15-45.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_359@07-03-2026_16-15-45.jpg",
-      "search": "mlade koprivy a brslice jiz v rozpuku🌱 doplnim vam i s vyuzitim na disk  koprivy - top na caj, muzete i susit. tyhle mlade maji fakt silu❤ brslice - do bylinkoveho masla apod. podobne jako svizel a ptacinec (mate na disku) koprivy - top na caj, muzete i susit. tyhle mlade maji fakt silu❤\nbrslice - do bylinkoveho masla apod. podobne jako svizel a ptacinec (mate na disku)",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 150,
@@ -4522,7 +4025,8 @@
       "edu": {
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 151,
@@ -4556,7 +4060,8 @@
       "edu": {
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 152,
@@ -4587,7 +4092,8 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      }
+      },
+      "kind": "recept"
     },
     {
       "n": 153,
@@ -4614,6 +4120,233 @@
       "edu": {
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
+      },
+      "kind": "recept"
+    },
+    {
+      "n": 154,
+      "name": "Nákyp na slano",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "pohanka",
+        "5 vajec",
+        "celý bloček bio parmazánu (nastrouhaný)"
+      ],
+      "steps": [
+        "Pohanku předem namočit, uvařit ve vývaru.",
+        "Smíchat s 5 vejci a nastrouhaným parmazánem.",
+        "Péct cca 40 min na 160 °C."
+      ],
+      "fullText": "Nákyp na slano — měl fakt úspěch u dětí.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "nakyp na slano pohanka 5 vajec cely blocek bio parmazanu (nastrouhany) pohanku predem namocit, uvarit ve vyvaru. smichat s 5 vejci a nastrouhanym parmazanem. pect cca 40 min na 160 °c. nakyp na slano — mel fakt uspech u deti.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 155,
+      "name": "Výživný termix",
+      "cat": "dezerty",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "500 g nepasterovaného tvarohu",
+        "50 g kvalitní čokolády",
+        "2 žloutky"
+      ],
+      "steps": [
+        "Tvaroh smíchat s rozehřátou čokoládou a žloutky.",
+        "Důkladně promíchat a nechat přes noc v lednici ve skleničkách."
+      ],
+      "fullText": "Výživný termix.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "vyzivny termix 500 g nepasterovaneho tvarohu 50 g kvalitni cokolady 2 zloutky tvaroh smichat s rozehratou cokoladou a zloutky. dukladne promichat a nechat pres noc v lednici ve sklenickach. vyzivny termix.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 156,
+      "name": "Masové kuličky s kadeřávkem",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "mleté maso (jakékoliv)",
+        "nasekaný kadeřávek",
+        "sůl"
+      ],
+      "steps": [
+        "Vše smíchat, vytvarovat kuličky.",
+        "Péct 30 min na 180 °C."
+      ],
+      "fullText": "Masové kuličky s kadeřávkem.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "masove kulicky s kaderavkem mlete maso (jakekoliv) nasekany kaderavek sul vse smichat, vytvarovat kulicky. pect 30 min na 180 °c. masove kulicky s kaderavkem.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 157,
+      "name": "Čočka na kyselo",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "čočka",
+        "vývar",
+        "bio jablečný ocet",
+        "sůl",
+        "majoránka",
+        "cibule",
+        "ghí/sádlo"
+      ],
+      "steps": [
+        "Čočku předem namočit, uvařit ve vývaru.",
+        "Dochutit jablečným octem, solí a majoránkou.",
+        "Přidat cibulku osmaženou na ghí/sádle.",
+        "Posypat pórkem nebo svízelem."
+      ],
+      "fullText": "Čočka na kyselo — výživná varianta. Dětem cibulku maskuji rovnou do čočky.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "cocka na kyselo cocka vyvar bio jablecny ocet sul majoranka cibule ghi/sadlo cocku predem namocit, uvarit ve vyvaru. dochutit jablecnym octem, soli a majorankou. pridat cibulku osmazenou na ghi/sadle. posypat porkem nebo svizelem. cocka na kyselo — vyzivna varianta. detem cibulku maskuji rovnou do cocky.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 158,
+      "name": "Čočkové placky",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "zbytek čočky na kyselo",
+        "nastrouhaná mrkev",
+        "vejce",
+        "pohanková mouka"
+      ],
+      "steps": [
+        "Přidávejte suroviny od oka a průběžně mixujte.",
+        "Z těsta dělejte placky na pánvi, dobře otočte.",
+        "Při suchosti dořeďte vodou, při tekutosti moukou."
+      ],
+      "fullText": "Čočkové placky.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "cockove placky zbytek cocky na kyselo nastrouhana mrkev vejce pohankova mouka pridavejte suroviny od oka a prubezne mixujte. z testa delejte placky na panvi, dobre otocte. pri suchosti doredte vodou, pri tekutosti moukou. cockove placky.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 159,
+      "name": "Parmazánové placky",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "10 vajec",
+        "celý bloček bio parmazánu (nastrouhaný)"
+      ],
+      "steps": [
+        "Smíchat vejce s nastrouhaným parmazánem.",
+        "Smažit na ghí placičky."
+      ],
+      "fullText": "Parmazánové placky.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "parmazanove placky 10 vajec cely blocek bio parmazanu (nastrouhany) smichat vejce s nastrouhanym parmazanem. smazit na ghi placicky. parmazanove placky.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 160,
+      "name": "Zapečená brokolice",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "menší brokolice",
+        "6 vajec",
+        "cca 100 g nastrouhaného sýra",
+        "sůl"
+      ],
+      "steps": [
+        "Brokolici uvařit ve vodě se solí do změknutí.",
+        "Rozmělnit vidličkou, smíchat s vejci a sýrem.",
+        "Zapéct na 180 °C cca 30 minut."
+      ],
+      "fullText": "Zapečená brokolice.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "zapecena brokolice mensi brokolice 6 vajec cca 100 g nastrouhaneho syra sul brokolici uvarit ve vode se soli do zmeknuti. rozmelnit vidlickou, smichat s vejci a syrem. zapect na 180 °c cca 30 minut. zapecena brokolice.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
+      }
+    },
+    {
+      "n": 161,
+      "name": "Pohanková krupice s rozvarem",
+      "cat": "jidla",
+      "time": "—",
+      "date": "",
+      "ing": [
+        "pohanková krupice",
+        "kefír",
+        "nepasterované mléko",
+        "kolagen",
+        "kokosový cukr/med",
+        "vanilka",
+        "skořice",
+        "máslo",
+        "ovoce (třešně/višně/jahody)"
+      ],
+      "steps": [
+        "Pohankovou krupici máčit v kefíru cca 12 hodin.",
+        "Uvařit v nepasterovaném mléce, přidat kolagen a kokosový cukr/med.",
+        "Vmíchat vanilku a skořici.",
+        "Navrch rozpustit máslo a přidat rozvar z ovoce."
+      ],
+      "fullText": "Pohanková krupice s rozvarem.",
+      "photos": [],
+      "color": "#a8632f",
+      "img": "",
+      "kind": "recept",
+      "search": "pohankova krupice s rozvarem pohankova krupice kefir nepasterovane mleko kolagen kokosovy cukr/med vanilka skorice maslo ovoce (tresne/visne/jahody) pohankovou krupici macit v kefiru cca 12 hodin. uvarit v nepasterovanem mlece, pridat kolagen a kokosovy cukr/med. vmichat vanilku a skorici. navrch rozpustit maslo a pridat rozvar z ovoce. pohankova krupice s rozvarem.",
+      "edu": {
+        "modul": "pristup",
+        "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
       }
     }
   ],

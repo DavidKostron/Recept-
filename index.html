@@ -3,655 +3,462 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sezónník — živý receptář a růstová komunita</title>
+<title>Transformace stravování</title>
 </head>
 <body style="margin:0;background:#f4efe6;">
 <!-- =====================================================================
-     SEZÓNNÍK — členská aplikace
-     Data: recepty.json (recepty + tipy) a obsah.json (sekce, byliny).
-     Fotky receptů: složka fotky/  ·  Fotky bylin: složka byliny/
+     TRANSFORMACE STRAVOVÁNÍ — členská aplikace
+     Data: recepty.json + obsah.json.  Fotky: fotky/  Byliny: byliny/
      Spouštět přes web/server (GitHub Pages), ne dvojklikem z disku.
      ===================================================================== -->
 <div id="app">
-  <div id="loading" style="text-align:center;padding:60px 20px;font-family:sans-serif;color:#6b5d4c">
-    Načítám Sezónník…
-  </div>
+  <div id="loading" style="text-align:center;padding:60px 20px;font-family:sans-serif;color:#6b5d4c">Načítám…</div>
 </div>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&display=swap');
-
-  #app {
-    --bg: #f4efe6;
-    --bg2: #efe7d9;
-    --panel: #fffdf8;
-    --ink: #2c2117;
-    --ink-soft: #6b5d4c;
-    --line: #e2d7c5;
-    --accent: #b5462f;
-    --accent2: #5a7a3f;
-    --accent3: #c98a1e;
-    --locked: #c7bca9;
-    --shadow: 0 2px 14px rgba(60,40,20,.10);
-    --shadow-lg: 0 12px 32px rgba(60,40,20,.16);
-    --radius: 18px;
-    font-family: 'Albert Sans', sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.55;
-    min-height: 100vh;
+  #app{
+    --bg:#f4efe6; --bg2:#efe7d9; --panel:#fffdf8; --ink:#2c2117; --ink-soft:#6b5d4c;
+    --line:#e2d7c5; --accent:#b5462f; --accent2:#5a7a3f; --accent3:#c98a1e;
+    --dark:#2c2117; --shadow:0 2px 14px rgba(60,40,20,.08); --shadow-lg:0 14px 36px rgba(60,40,20,.14);
+    --radius:20px; font-family:'Albert Sans',sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; min-height:100vh;
   }
-  #app *, #app *::before, #app *::after { box-sizing: border-box; }
-  #app h1, #app h2, #app h3, #app h4 { font-family: 'Fraunces', serif; font-weight: 600; margin: 0; line-height: 1.12; }
-  #app a { color: var(--accent); }
-  #app .wrap { max-width: 1080px; margin: 0 auto; padding: 0 18px 70px; }
+  #app *,#app *::before,#app *::after{box-sizing:border-box}
+  #app h1,#app h2,#app h3,#app h4{font-family:'Fraunces',serif;font-weight:600;margin:0;line-height:1.15}
+  #app a{color:var(--accent)}
+  #app .wrap{max-width:1180px;margin:0 auto;padding:0 20px 70px}
 
-  #app .topbar {
-    background: var(--ink); color: #f4efe6; font-size: 13.5px;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
-    padding: 9px 18px;
-  }
-  #app .topbar .member { display: flex; align-items: center; gap: 9px; }
-  #app .topbar .avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--accent2); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 12px; }
+  /* topbar */
+  #app .topbar{background:var(--dark);color:#f4efe6;font-size:14px;display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+  #app .topbar .member{display:flex;align-items:center;gap:10px}
+  #app .topbar .avatar{width:28px;height:28px;border-radius:50%;background:var(--accent2);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+  #app .topbar .brand{font-weight:600;color:#e6dccb;font-size:13.5px}
 
-  #app .hello { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 26px 0 4px; }
-  #app .hello .eyebrow { color: var(--accent2); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 11.5px; }
-  #app .hello h1 { font-size: clamp(28px, 4.2vw, 40px); letter-spacing: -.5px; margin-top: 4px; }
-  #app .hello h1 em { color: var(--accent); font-style: italic; }
-  #app .hello .date { color: var(--ink-soft); font-size: 15px; font-weight: 600; }
+  /* hero */
+  #app .hello{padding:30px 0 18px}
+  #app .hello .eyebrow{color:var(--accent2);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+  #app .hello h1{font-size:clamp(30px,4.5vw,42px);margin-top:6px}
+  #app .hello h1 em{color:var(--accent);font-style:italic}
 
-  #app .sec-h { display: flex; align-items: baseline; gap: 12px; margin: 36px 0 16px; }
-  #app .sec-h h2 { font-size: 27px; }
-  #app .sec-h .line { flex: 1; height: 1px; background: var(--line); }
-  #app .sec-h .more { font-size: 14px; font-weight: 600; color: var(--accent); cursor: pointer; background: none; border: none; font-family: 'Albert Sans'; }
+  /* layout dvousloupec */
+  #app .cols{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start}
+  @media(max-width:960px){#app .cols{grid-template-columns:1fr}}
 
-  #app .today { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; }
-  @media (max-width: 880px) { #app .today { grid-template-columns: 1fr; } }
-  #app .today-meals { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
-  @media (max-width: 620px) { #app .today-meals { grid-template-columns: 1fr; } }
-  #app .dessert-row { margin-top: 14px; }
-  #app .side-video .sv-label { font-family: 'Fraunces'; font-size: 16px; color: var(--ink-soft); margin-bottom: 8px; }
-  #app .side-video .frame { aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-lg); background: #000; }
-  #app .side-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+  /* velký panel Výživení */
+  #app .bigpanel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 26px}
+  #app .bp-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+  #app .bp-head .bp-ico{width:48px;height:48px;border-radius:14px;background:var(--bg2);display:grid;place-items:center;font-size:24px;flex:0 0 auto}
+  #app .bp-head h2{font-size:23px}
+  #app .bp-head p{margin:2px 0 0;color:var(--ink-soft);font-size:14px}
+  #app .bp-expand{margin-left:auto;background:var(--bg2);border:1px solid var(--line);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:15px;color:var(--ink-soft)}
 
-  #app .meal { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; position: relative; transition: transform .18s ease, box-shadow .18s ease; }
-  #app .meal:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-  #app .meal .mtag { position: absolute; top: 11px; left: 11px; background: rgba(44,33,23,.85); color:#fff; font-size: 11px; font-weight: 700; padding: 4px 11px; border-radius: 999px; text-transform: uppercase; letter-spacing: .6px; }
-  #app .meal .mimg { aspect-ratio: 4/3; background-size: cover; background-position: center; cursor: pointer; }
-  #app .meal .mbody { padding: 13px 15px 15px; flex: 1; display: flex; flex-direction: column; }
-  #app .meal .mbody h3 { font-size: 18px; cursor: pointer; line-height: 1.2; }
-  #app .meal .mbody h3:hover { color: var(--accent); }
-  #app .meal .mmeta { font-size: 12.5px; color: var(--ink-soft); margin-top: 5px; }
-  #app .meal .swap { margin-top: auto; padding-top: 12px; }
-  #app .meal .swap button { width: 100%; border: 1px solid var(--line); background: var(--bg); color: var(--ink-soft); border-radius: 9px; padding: 8px; font-family: 'Albert Sans'; font-size: 12.5px; font-weight: 600; cursor: pointer; }
-  #app .meal .swap button:hover { border-color: var(--accent); color: var(--accent); }
-  #app .meal.wide { flex-direction: row; }
-  #app .meal.wide .mimg { aspect-ratio: auto; width: 220px; flex: 0 0 220px; }
-  @media (max-width: 620px) { #app .meal.wide { flex-direction: column; } #app .meal.wide .mimg { width: 100%; aspect-ratio: 4/3; } }
-  #app .meal.wide .mbody { justify-content: center; }
-  #app .meal.wide .swap { padding-top: 12px; max-width: 240px; }
+  /* 4 pilíře */
+  #app .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:720px){#app .pillars{grid-template-columns:repeat(2,1fr)}}
+  #app .pillar{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px 15px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  #app .pillar:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  #app .pillar .p-ico{width:34px;height:34px;border-radius:9px;background:#fff;display:grid;place-items:center;font-size:17px;margin-bottom:9px}
+  #app .pillar h3{font-size:16px}
+  #app .pillar p{margin:5px 0 0;font-size:12px;color:var(--ink-soft);line-height:1.4}
 
-  #app .pantry { background: var(--bg2); border: 1px dashed var(--line); border-radius: 14px; padding: 12px 14px; margin-top: 14px; font-size: 13.5px; }
-  #app .pantry label { font-weight: 600; color: var(--ink); }
-  #app .pantry .row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-  #app .pantry input { flex: 1; min-width: 180px; border: 1px solid var(--line); border-radius: 9px; padding: 9px 12px; font-family: 'Albert Sans'; font-size: 13.5px; }
-  #app .pantry button { background: var(--accent2); color: #fff; border: none; border-radius: 9px; padding: 9px 16px; font-family: 'Albert Sans'; font-weight: 600; cursor: pointer; }
-  #app .pantry .hint { color: var(--ink-soft); font-size: 12px; margin-top: 6px; }
-  #app .pantry .matches { margin-top: 10px; }
+  /* receptář sekce */
+  #app .recept-sec{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+  #app .recept-sec h2{font-size:22px;margin-bottom:14px}
+  #app .flabel{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);margin:12px 0 8px}
+  #app .chips{display:flex;flex-wrap:wrap;gap:8px}
+  #app .chip{border:1px solid var(--line);background:var(--panel);padding:8px 15px;border-radius:999px;cursor:pointer;font-family:'Albert Sans';font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:all .15s}
+  #app .chip:hover{border-color:var(--accent)}
+  #app .chip.active{background:var(--accent3);color:#2c2117;border-color:var(--accent3)}
+  #app .chip.active.situ{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-  #app .tiles { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); }
-  #app .tiles { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important; }
-  #app .tile { border: 1px solid var(--line); border-radius: 14px; padding: 14px 15px; background: var(--panel); cursor: pointer; box-shadow: var(--shadow); position: relative; transition: transform .15s ease, box-shadow .15s ease; display: flex; align-items: center; gap: 12px; overflow: hidden; }
-  #app .tile:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-  #app .tile .ico { font-size: 24px; flex: 0 0 auto; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 11px; background: var(--bg2); }
-  #app .tile .tx { min-width: 0; }
-  #app .tile h3 { font-size: 15.5px; line-height: 1.15; }
-  #app .tile p { font-size: 11.5px; color: var(--ink-soft); margin: 2px 0 0; }
-  #app .tile.locked { background: #ece5d8; cursor: not-allowed; box-shadow: none; }
-  #app .tile.locked:hover { transform: none; }
-  #app .tile.locked h3, #app .tile.locked p { color: #a99e8b; }
-  #app .tile.locked .ico { background: #e0d8c9; }
-  #app .tile .lock { position: absolute; top: 10px; right: 11px; font-size: 14px; opacity: .55; }
-  #app .tile .soon { position: absolute; bottom: 8px; right: 11px; font-size: 9.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: #a99e8b; }
-  #app .tile.accent .ico { background: #f5dfd7; }
-  #app .tile.accent2 .ico { background: #e3ebda; }
-  #app .tile.accent3 .ico { background: #f6e8cf; }
+  #app .zamer{background:var(--bg2);border-radius:14px;padding:14px 16px;margin:16px 0}
+  #app .zamer .zh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);margin-bottom:6px}
+  #app .zamer p{margin:0;font-size:13.5px}
 
-  #app .strip { position: relative; }
-  #app .strip-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
-  @media (max-width: 720px) { #app .strip-grid { grid-template-columns: 1fr; } }
-  #app .rcard { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); cursor: pointer; display: flex; flex-direction: column; transition: transform .18s ease, box-shadow .18s ease; }
-  #app .rcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-  #app .rcard .rimg { aspect-ratio: 4/3; background-size: cover; background-position: center; position: relative; }
-  #app .rcard .rnum { position: absolute; top: 11px; left: 11px; background: rgba(44,33,23,.82); color: #fff; font-weight: 700; font-size: 12px; padding: 4px 11px; border-radius: 999px; }
-  #app .rcard .rb { padding: 15px 17px 18px; }
-  #app .rcard .rb h3 { font-size: 20px; line-height: 1.2; }
-  #app .rcard .rb .rmeta { font-size: 13px; color: var(--ink-soft); margin-top: 7px; }
-  #app .rcard .rb .rtag { display: inline-block; margin-top: 11px; font-size: 11px; font-weight: 700; color: var(--accent2); text-transform: uppercase; letter-spacing: .5px; }
-  #app .strip-nav { display: flex; gap: 8px; justify-content: center; margin-top: 14px; }
-  #app .strip-nav button { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 8px 18px; font-family: 'Albert Sans'; font-weight: 600; font-size: 14px; cursor: pointer; color: var(--ink-soft); }
-  #app .strip-nav button:hover { border-color: var(--accent); color: var(--accent); }
+  /* recept řádky */
+  #app .rlist{display:flex;flex-direction:column;gap:12px}
+  #app .rrow{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px 15px;display:flex;gap:14px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  #app .rrow:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  #app .rrow .rthumb{width:56px;height:56px;border-radius:11px;background-size:cover;background-position:center;flex:0 0 auto}
+  #app .rrow .rinfo{min-width:0;flex:1}
+  #app .rrow .rinfo h3{font-size:16px}
+  #app .rrow .rmeta{font-size:12px;color:var(--ink-soft);margin:3px 0}
+  #app .rrow .rcit{font-size:12.5px;color:var(--ink-soft);display:flex;gap:6px;align-items:flex-start;margin-top:4px}
+  #app .rrow .rcit b{color:var(--accent3)}
 
-  #app .herb-strip { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); }
-  #app .herb { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); cursor: pointer; border-top: 4px solid var(--accent2); display: flex; flex-direction: column; transition: transform .18s ease, box-shadow .18s ease; }
-  #app .herb:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-  #app .herb .himg { aspect-ratio: 1/1; background-size: cover; background-position: center; }
-  #app .herb .hb { padding: 11px 13px 13px; }
-  #app .herb .hb h3 { font-size: 16px; }
-  #app .herb .hb .hmore { font-size: 12.5px; color: var(--accent); font-weight: 600; margin-top: 4px; }
+  #app .rmore{text-align:right;margin-top:16px}
+  #app .rmore button{background:none;border:none;color:var(--accent);font-family:'Albert Sans';font-weight:700;font-size:14px;cursor:pointer}
+  #app .filter-note{color:var(--ink-soft);font-size:12.5px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 
-  #app .modal-bg { position: fixed; inset: 0; background: rgba(30,20,10,.55); display: none; align-items: flex-start; justify-content: center; padding: 28px 16px; z-index: 200; overflow-y: auto; backdrop-filter: blur(3px); }
-  #app .modal-bg.open { display: flex; }
-  #app .modal { background: var(--panel); border-radius: 20px; max-width: 660px; width: 100%; box-shadow: 0 30px 60px rgba(0,0,0,.3); animation: pop .28s ease; overflow: hidden; position: relative; }
-  @keyframes pop { from { transform: scale(.96); opacity: 0; } to { transform: none; opacity: 1; } }
-  #app .modal .hero-img { aspect-ratio: 16/9; background-size: cover; background-position: center; }
-  #app .modal .inner { padding: 24px 26px 30px; }
-  #app .modal h2 { font-size: 26px; }
-  #app .modal .sub { color: var(--ink-soft); margin: 8px 0 16px; font-size: 14px; }
-  #app .modal h4 { font-family: 'Fraunces'; font-size: 18px; margin: 20px 0 8px; color: var(--accent); }
-  #app .modal ul, #app .modal ol { margin: 0; padding-left: 20px; } #app .modal li { margin-bottom: 6px; }
-  #app .modal .label-row { display: block; font-weight: 700; margin: 4px 0 2px; list-style: none; }
-  #app .close { position: absolute; top: 15px; right: 16px; background: rgba(255,255,255,.92); border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 20px; color: var(--ink); box-shadow: var(--shadow); z-index: 5; }
-  #app .orig-toggle { margin-top: 22px; background: none; border: 1px solid var(--line); color: var(--ink-soft); font-family: 'Albert Sans'; font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px; cursor: pointer; }
-  #app .orig-toggle:hover { border-color: var(--accent); color: var(--accent); }
-  #app .orig-text { display: none; white-space: pre-wrap; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 12px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
-  #app .orig-text.open { display: block; }
+  /* pravý sloupec */
+  #app .cta-panel{background:var(--dark);color:#f4efe6;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-lg)}
+  #app .cta-panel .cta-ico{font-size:26px}
+  #app .cta-panel h3{color:#fff;font-size:20px;margin:8px 0}
+  #app .cta-panel p{color:#d9cdb9;font-size:13.5px;margin:0 0 16px}
+  #app .cta-panel .cta-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:11px;padding:12px;font-family:'Albert Sans';font-weight:700;font-size:14.5px;cursor:pointer}
+  #app .cta-panel .cta-btn:hover{filter:brightness(1.08)}
+  #app .cta-lock{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a99e8b;text-align:center;margin-top:10px}
 
-  #app .essence { margin: 4px 0 6px; background: linear-gradient(135deg,#eef3e8,#e6efdc); border: 1px solid #d5e2c5; border-radius: 14px; padding: 14px 16px; }
-  #app .essence .ess-lead { font-family: 'Fraunces'; font-weight: 600; color: var(--accent2); font-size: 15px; margin-bottom: 8px; }
-  #app .essence .ess-quote { font-family: 'Fraunces'; font-style: italic; font-size: 15.5px; color: var(--ink); line-height: 1.4; }
-  #app .essence .ess-link { margin-top: 11px; background: var(--accent2); color: #fff; border: none; border-radius: 9px; padding: 9px 14px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13px; cursor: pointer; }
-  #app .essence .ess-link:hover { filter: brightness(1.06); }
+  #app .soon-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-top:18px;box-shadow:var(--shadow)}
+  #app .soon-panel .sh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-soft);margin-bottom:12px}
+  #app .soon-item{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)}
+  #app .soon-item:last-child{border-bottom:none}
+  #app .soon-item .si-ico{width:30px;height:30px;border-radius:8px;background:var(--bg2);display:grid;place-items:center;font-size:15px;flex:0 0 auto;opacity:.7}
+  #app .soon-item h4{font-family:'Fraunces';font-size:14.5px;color:var(--ink-soft)}
+  #app .soon-item p{margin:1px 0 0;font-size:11.5px;color:#a99e8b}
 
-  #app .page { animation: fade .3s ease; }
-  @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-  #app .back { background: none; border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px; font-family: 'Albert Sans'; font-weight: 600; font-size: 14px; cursor: pointer; color: var(--ink-soft); margin: 22px 0 8px; }
-  #app .back:hover { border-color: var(--accent); color: var(--accent); }
-  #app .page h1.ptitle { font-size: clamp(28px,4.5vw,40px); margin: 6px 0 4px; }
-  #app .page .pintro { color: var(--ink-soft); font-size: 16px; max-width: 720px; margin-bottom: 8px; }
-  #app .page-video { max-width: 720px; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); margin: 16px 0 24px; background: #000; }
-  #app .page-video iframe { width: 100%; height: 100%; border: 0; }
-  #app .pblock { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; }
-  #app .pblock h3 { font-size: 19px; color: var(--accent2); margin-bottom: 8px; }
-  #app .pblock p { margin: 0; }
-  #app .pblock.warm { border-left: 5px solid var(--accent3); }
-  #app .longtext { white-space: pre-wrap; font-size: 14.5px; line-height: 1.7; color: var(--ink); }
-  #app .longtext a { word-break: break-word; }
-  #app .rec-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
-  #app .rec-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
-  #app .rec-table td:first-child { font-weight: 600; width: 38%; }
-  #app .prio-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 0; }
-  #app .prio-list li { background: var(--accent2); color: #fff; padding: 6px 13px; border-radius: 999px; font-size: 13.5px; font-weight: 600; }
-  #app .dorow { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
-  #app .dorow:last-child { border-bottom: none; }
-  #app .dorow .dl { flex: 1; min-width: 200px; }
-  #app .dorow .dl b { display: block; }
-  #app .dorow .dl span { font-size: 13px; color: var(--ink-soft); }
-  #app .dorow .da { display: flex; align-items: center; gap: 8px; }
+  /* modal + stránky (sdílené) */
+  #app .modal-bg{position:fixed;inset:0;background:rgba(30,20,10,.55);display:none;align-items:flex-start;justify-content:center;padding:28px 16px;z-index:200;overflow-y:auto;backdrop-filter:blur(3px)}
+  #app .modal-bg.open{display:flex}
+  #app .modal{background:var(--panel);border-radius:20px;max-width:660px;width:100%;box-shadow:0 30px 60px rgba(0,0,0,.3);animation:pop .28s ease;overflow:hidden;position:relative}
+  @keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}
+  #app .modal .hero-img{aspect-ratio:16/9;background-size:cover;background-position:center}
+  #app .modal .inner{padding:24px 26px 30px}
+  #app .modal h2{font-size:25px} #app .modal .sub{color:var(--ink-soft);margin:8px 0 16px;font-size:14px}
+  #app .modal h4{font-family:'Fraunces';font-size:18px;margin:20px 0 8px;color:var(--accent)}
+  #app .modal ul,#app .modal ol{margin:0;padding-left:20px} #app .modal li{margin-bottom:6px}
+  #app .modal .label-row{display:block;font-weight:700;margin:4px 0 2px;list-style:none}
+  #app .close{position:absolute;top:15px;right:16px;background:rgba(255,255,255,.92);border:none;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:20px;color:var(--ink);box-shadow:var(--shadow);z-index:5}
+  #app .orig-toggle{margin-top:22px;background:none;border:1px solid var(--line);color:var(--ink-soft);font-family:'Albert Sans';font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;cursor:pointer}
+  #app .orig-toggle:hover{border-color:var(--accent);color:var(--accent)}
+  #app .orig-text{display:none;white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:12px;font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+  #app .orig-text.open{display:block}
+  #app .essence{margin:4px 0 6px;background:linear-gradient(135deg,#eef3e8,#e6efdc);border:1px solid #d5e2c5;border-radius:14px;padding:14px 16px}
+  #app .essence .ess-lead{font-family:'Fraunces';font-weight:600;color:var(--accent2);font-size:15px;margin-bottom:8px}
+  #app .essence .ess-quote{font-family:'Fraunces';font-style:italic;font-size:15.5px;color:var(--ink);line-height:1.4}
+  #app .essence .ess-link{margin-top:11px;background:var(--accent2);color:#fff;border:none;border-radius:9px;padding:9px 14px;font-family:'Albert Sans';font-weight:600;font-size:13px;cursor:pointer}
 
-  #app .edu-sub { color: var(--accent2); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; margin-bottom: 6px; }
-  #app .edu-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); margin-bottom: 26px; }
-  #app .edu-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; box-shadow: var(--shadow); border-top: 4px solid var(--accent2); display: flex; flex-direction: column; }
-  #app .edu-card .edu-top { display: flex; align-items: center; justify-content: space-between; }
-  #app .edu-card .edu-ico { font-size: 30px; }
-  #app .edu-card .edu-badge { font-size: 11px; font-weight: 700; color: var(--accent2); background: #e9f0e0; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .5px; }
-  #app .edu-card h3 { font-size: 19px; margin: 8px 0 8px; }
-  #app .edu-card .edu-quote { font-family: 'Fraunces'; font-style: italic; font-size: 14.5px; color: var(--accent); line-height: 1.35; margin-bottom: 8px; }
-  #app .edu-card p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 12px; flex: 1; }
-  #app .edu-card .edu-open { display: inline-block; text-align: center; background: var(--accent2); color: #fff; text-decoration: none; border: none; border-radius: 9px; padding: 9px 14px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13.5px; cursor: pointer; }
-  #app .edu-card .edu-open:hover { filter: brightness(1.06); }
-  #app .edu-card .edu-status { font-size: 12px; font-weight: 700; color: var(--accent3); }
+  /* full page */
+  #app .page{animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  #app .back{background:none;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-family:'Albert Sans';font-weight:600;font-size:14px;cursor:pointer;color:var(--ink-soft);margin:22px 0 8px}
+  #app .back:hover{border-color:var(--accent);color:var(--accent)}
+  #app .page h1.ptitle{font-size:clamp(28px,4.5vw,40px);margin:6px 0 4px}
+  #app .page .pintro{color:var(--ink-soft);font-size:16px;max-width:720px;margin-bottom:8px}
+  #app .pblock{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+  #app .pblock h3{font-size:19px;color:var(--accent2);margin-bottom:8px}
+  #app .longtext{white-space:pre-wrap;font-size:14.5px;line-height:1.75;color:var(--ink)}
+  #app .mod-quote{font-family:'Fraunces';font-style:italic;font-size:20px;color:var(--accent);line-height:1.4;margin:14px 0 20px;padding-left:16px;border-left:4px solid var(--accent3)}
+  #app .mod-body{line-height:1.75} #app .mod-body p{margin:0 0 14px;font-size:15px}
+  #app .mod-body ul{margin:0 0 14px;padding-left:22px} #app .mod-body li{margin-bottom:7px;font-size:15px}
+  #app .mod-body .mod-h{font-family:'Fraunces';font-size:21px;color:var(--accent);margin:24px 0 12px;padding-top:6px;border-top:1px solid var(--line)}
+  #app .mod-body .mod-sh{font-family:'Fraunces';font-size:17px;color:var(--accent2);margin:18px 0 8px}
+  #app .grid-cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  #app .herb{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;border-top:4px solid var(--accent2);transition:transform .15s,box-shadow .15s}
+  #app .herb:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  #app .herb .himg{aspect-ratio:1/1;background-size:cover;background-position:center}
+  #app .herb .hb{padding:11px 13px 13px} #app .herb .hb h3{font-size:16px} #app .herb .hmore{font-size:12.5px;color:var(--accent);font-weight:600;margin-top:4px}
+  #app .rcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+  #app .rcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  #app .rcard .rimg{aspect-ratio:4/3;background-size:cover;background-position:center;position:relative}
+  #app .rcard .rnum{position:absolute;top:10px;left:10px;background:rgba(44,33,23,.82);color:#fff;font-weight:700;font-size:12px;padding:3px 9px;border-radius:999px}
+  #app .rcard .rb{padding:13px 15px 16px} #app .rcard .rb h3{font-size:17px} #app .rcard .rmeta{font-size:12.5px;color:var(--ink-soft);margin-top:5px}
+  #app .rcard .rtag{display:inline-block;margin-top:9px;font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px}
 
-  #app .mod-head { display: flex; align-items: center; gap: 16px; margin-bottom: 6px; }
-  #app .mod-head .mod-ico { font-size: 44px; flex: 0 0 auto; }
-  #app .mod-head .edu-badge { font-size: 11px; font-weight: 700; color: var(--accent2); background: #e9f0e0; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .5px; }
-  #app .mod-quote { font-family: 'Fraunces'; font-style: italic; font-size: 20px; color: var(--accent); line-height: 1.4; margin: 14px 0 20px; padding-left: 16px; border-left: 4px solid var(--accent3); }
-  #app .mod-body { line-height: 1.75; }
-  #app .mod-body p { margin: 0 0 14px; font-size: 15px; }
-  #app .mod-body ul { margin: 0 0 14px; padding-left: 22px; }
-  #app .mod-body li { margin-bottom: 7px; font-size: 15px; }
-  #app .mod-body .mod-h { font-family: 'Fraunces'; font-size: 21px; color: var(--accent); margin: 24px 0 12px; padding-top: 6px; border-top: 1px solid var(--line); }
-  #app .mod-body .mod-sh { font-family: 'Fraunces'; font-size: 17px; color: var(--accent2); margin: 18px 0 8px; }
-  #app .mod-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; }
-  #app .mod-nav button { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-family: 'Albert Sans'; font-weight: 600; font-size: 13.5px; color: var(--ink); cursor: pointer; max-width: 48%; text-align: left; }
-  #app .mod-nav button:hover { border-color: var(--accent); color: var(--accent); }
-  #app .upsell { background: linear-gradient(135deg,#2c2117,#3d3020); color: #f4efe6; border-radius: 20px; padding: 30px 28px; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg); }
-  #app .upsell .up-lock { font-size: 30px; margin-bottom: 8px; }
-  #app .upsell h2 { color: #fff; font-size: 28px; margin-bottom: 10px; }
-  #app .upsell p { color: #e6dccb; max-width: 540px; margin: 0 auto 18px; font-size: 15px; }
-  #app .upsell .up-cta { background: var(--accent3); color: #2c2117; border: none; border-radius: 999px; padding: 12px 28px; font-family: 'Albert Sans'; font-weight: 700; font-size: 15px; cursor: pointer; }
-  #app .upsell .up-soon { margin-top: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #c7bca9; }
-  #app .foot { text-align: center; color: var(--ink-soft); font-size: 12.5px; margin-top: 50px; opacity: .8; }
-  #app .err { background: #fff; border: 1px solid var(--accent); color: var(--accent); padding: 18px; border-radius: 12px; margin: 24px; font-size: 14px; }
-  #app .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 11px 20px; border-radius: 999px; font-size: 14px; z-index: 999; box-shadow: var(--shadow-lg); animation: fade .25s ease; }
+  #app .sec-h{display:flex;align-items:baseline;gap:12px;margin:32px 0 16px}
+  #app .sec-h h2{font-size:25px} #app .sec-h .line{flex:1;height:1px;background:var(--line)}
+  #app .foot{text-align:center;color:var(--ink-soft);font-size:12.5px;margin-top:50px;opacity:.8}
+  #app .err{background:#fff;border:1px solid var(--accent);color:var(--accent);padding:18px;border-radius:12px;margin:24px;font-size:14px}
+  #app .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:999px;font-size:14px;z-index:999;box-shadow:var(--shadow-lg)}
 </style>
 
 <script>
-(function () {
-  function boot() {
-    var app = document.getElementById('app');
-    if (!app) return;
-
+(function(){
+  function boot(){
+    var app=document.getElementById('app');
+    if(!app) return;
     Promise.all([
-      fetch('recepty.json').then(function(r){ if(!r.ok) throw new Error('recepty.json: '+r.status); return r.json(); }),
-      fetch('obsah.json').then(function(r){ if(!r.ok) throw new Error('obsah.json: '+r.status); return r.json(); })
-    ]).then(function (res) {
-      init(res[0], res[1]);
-    }).catch(function (e) {
-      app.innerHTML = '<div class="err"><b>Nepodařilo se načíst data</b><br>' +
-        'Zkontroluj, že <code>recepty.json</code> a <code>obsah.json</code> leží vedle této stránky ' +
-        'a že ji spouštíš přes web/server (ne dvojklikem z disku).<br><small>' + e.message + '</small></div>';
+      fetch('recepty.json').then(function(r){if(!r.ok)throw new Error('recepty.json '+r.status);return r.json()}),
+      fetch('obsah.json').then(function(r){if(!r.ok)throw new Error('obsah.json '+r.status);return r.json()})
+    ]).then(function(res){init(res[0],res[1])}).catch(function(e){
+      app.innerHTML='<div class="err"><b>Nepodařilo se načíst data</b><br>Zkontroluj recepty.json a obsah.json vedle stránky, a spouštěj přes web (ne dvojklikem).<br><small>'+e.message+'</small></div>';
     });
 
-    function init(DATA, OBSAH) {
-      var recipes = DATA.recipes || [];
-      var tips = DATA.tips || [];
-      var byliny = OBSAH.byliny || [];
-      var member = { name: 'Milý člene', email: '' };
+    function init(DATA,OBSAH){
+      var recipes=DATA.recipes||[];
+      var byliny=OBSAH.byliny||[];
+      var pilire=OBSAH.pilire||[];
+      var situace=OBSAH.situace||[];
+      var moduly=(OBSAH.vzdelavani&&OBSAH.vzdelavani.moduly)||[];
+      var member={name:'Petra',email:''};
 
-      var catLabels = { jidla: 'Běžné jídlo', dezerty: 'Dezert', sklad: 'Skladování' };
-      var months = ['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
-      var days = ['neděle','pondělí','úterý','středa','čtvrtek','pátek','sobota'];
+      // rozdělení receptů dle 'kind'
+      var onlyRecipes=recipes.filter(function(r){return (r.kind||'recept')==='recept'});
+      var jidelnicky=recipes.filter(function(r){return r.kind==='jidelnicek'});
 
-      function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-      function normDia(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
-      function encPath(p){ return p ? p.split('/').map(encodeURIComponent).join('/') : ''; }
-      function ph(c){ return 'data:image/svg+xml;utf8,'+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='400' height='300' fill='"+(c||'#5a7a3f')+"'/><text x='50%' y='50%' font-family='sans-serif' font-size='18' fill='rgba(255,255,255,.85)' text-anchor='middle' dominant-baseline='middle'>foto</text></svg>"); }
-      function imgOf(o){ return (o && o.img && o.img.trim()) ? encPath(o.img) : ph(o && o.color); }
-      function linkify(t){ return esc(t).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>'); }
+      var catLabels={jidla:'Běžné jídlo',dezerty:'Dezert',sklad:'Skladování'};
+      var months=['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
 
-      function dayIndex() { var n = new Date(); return Math.floor(Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())/86400000); }
-      var mainDishes = recipes.filter(function(r){ return r.cat==='jidla'; });
-      var desserts = recipes.filter(function(r){ return r.cat==='dezerty'; });
-      if (!mainDishes.length) mainDishes = recipes;
-      if (!desserts.length) desserts = recipes;
+      function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+      function normDia(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+      function encPath(p){return p?p.split('/').map(encodeURIComponent).join('/'):''}
+      function ph(c){return 'data:image/svg+xml;utf8,'+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='400' height='300' fill='"+(c||'#5a7a3f')+"'/></svg>")}
+      function imgOf(o){return (o&&o.img&&o.img.trim())?encPath(o.img):ph(o&&o.color)}
+      function linkify(t){return esc(t).replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
 
-      var swapState = { breakfast:0, lunch:0, dinner:0, dessert:0 };
-      var view = { name: 'dashboard', payload: null };
-      var stripPage = 0;
-      var rCat = 'vse', rSearch = '';
+      var view={name:'home'};
+      var sezona='podzim', situ='vse', rSearch='', rCat='vse';
 
-      function todayMeals() {
-        return {
-          breakfast: mainDishes[(dayIndex()+0+swapState.breakfast) % mainDishes.length],
-          lunch:     mainDishes[(dayIndex()+1+swapState.lunch) % mainDishes.length],
-          dinner:    mainDishes[(dayIndex()+2+swapState.dinner) % mainDishes.length],
-          dessert:   desserts[(dayIndex()+0+swapState.dessert) % desserts.length]
+      function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;app.appendChild(t);setTimeout(function(){t.remove()},1800)}
+
+      function render(){
+        if(view.name==='home')return renderHome();
+        if(view.name==='recepty')return renderAllRecipes();
+        if(view.name==='byliny')return renderByliny();
+        if(view.name==='jidelnicky')return renderJidelnicky();
+        if(view.name==='zpracovani')return renderZpracovani();
+        if(view.name==='modul')return renderModule(view.payload);
+        if(view.name==='pilir')return renderPilir(view.payload);
+      }
+      function go(n,p){view={name:n,payload:p};window.scrollTo(0,0);render()}
+
+      function topbar(){
+        var ini=member.name.trim().charAt(0).toUpperCase()||'Č';
+        return '<div class="topbar"><div class="member"><span class="avatar">'+esc(ini)+'</span><span>'+esc(member.name)+'</span></div>'+
+          '<span class="brand">Transformace stravování</span></div>';
+      }
+
+      function renderHome(){
+        var html=topbar()+'<div class="wrap">'+
+          '<div class="hello"><div class="eyebrow">Členská sekce</div><h1>Vítejte zpět, <em>'+esc(member.name)+'</em></h1></div>'+
+          '<div class="cols"><div>'+bigPanel()+'</div><div>'+rightCol()+'</div></div>'+
+          '<div class="foot">Transformace stravování · '+onlyRecipes.length+' receptů · '+byliny.length+' bylin · minikurz o '+moduly.length+' modulech</div>'+
+          '</div><div class="modal-bg" id="modalbg"></div>';
+        app.innerHTML=html;
+        bindHome();
+      }
+
+      function bigPanel(){
+        var pil=pilire.map(function(p){
+          return '<div class="pillar" data-pilir="'+p.key+'"><div class="p-ico">'+p.ico+'</div><h3>'+esc(p.h)+'</h3><p>'+esc(p.perex)+'</p></div>';
+        }).join('');
+        return '<div class="bigpanel">'+
+          '<div class="bp-head"><div class="bp-ico">🍵</div><div><h2>Výživení</h2><p>Základní návyky z programu Daruj si zdraví + receptář</p></div>'+
+            '<button class="bp-expand" data-go="recepty" title="Otevřít celý receptář">⤢</button></div>'+
+          '<div class="pillars">'+pil+'</div>'+
+          receptSec()+
+        '</div>';
+      }
+
+      function receptSec(){
+        var seas=[['jaro','Jaro'],['leto','Léto'],['podzim','Podzim'],['zima','Zima']];
+        var seasChips=seas.map(function(s){return '<button class="chip '+(sezona===s[0]?'active':'')+'" data-sez="'+s[0]+'">'+s[1]+'</button>'}).join('');
+        var situChips=situace.map(function(s){return '<button class="chip situ '+(situ===s.key?'active':'')+'" data-situ="'+s.key+'">'+esc(s.label)+'</button>'}).join('');
+        return '<div class="recept-sec"><h2>Receptář</h2>'+
+          '<div class="flabel">Sezóna</div><div class="chips">'+seasChips+'</div>'+
+          '<div class="flabel">Vaše situace</div><div class="chips">'+situChips+'</div>'+
+          '<div class="zamer"><div class="zh">Na co se zaměřit</div><p id="zamerText">'+zamerText()+'</p></div>'+
+          '<div class="rlist" id="rlist">'+recipeRows()+'</div>'+
+          (situ==='ekzem'?'<div class="filter-note">💡 Filtr „Řešíme ekzém" upřednostní recepty bez lepku — brzy propojíme s minikurzem Ekzém.</div>':'')+
+          '<div class="rmore"><button data-go="recepty">Zobrazit celý receptář →</button></div>'+
+        '</div>';
+      }
+
+      function zamerText(){
+        var map={
+          vse:'Zkuste zařadit vejce a masokostní vývar téměř denně a vnitřnosti alespoň 3× týdně — patří mezi nejvýživnější potraviny, na které se teď můžete zaměřit.',
+          miminko:'Základ pro plodnost: kvalitní tuky, vnitřnosti (železo, cholin) a fermentované potraviny pro mikrobiom. Vejce od šťastných slepic denně.',
+          tehotna:'Vývar, vnitřnosti a dostatek kvalitních tuků. Sezónní zelenina a ovoce, fermenty pro trávení. Poslouchejte chutě těla.',
+          kojici:'Výživné a hřejivé pokrmy — vývary, dušené maso, kaše. Dostatek tekutin a kvalitních tuků pro tvorbu mléka.',
+          ekzem:'Zaměřte se na střevo: fermentované potraviny, vývar (kolagen), vyřaďte lepek a průmyslové oleje. Sledujte reakce těla.'
         };
+        return map[situ]||map.vse;
       }
 
-      function toast(msg) { var t = document.createElement('div'); t.className='toast'; t.textContent=msg; app.appendChild(t); setTimeout(function(){ t.remove(); }, 1800); }
-
-      function render() {
-        if (view.name === 'dashboard') return renderDashboard();
-        if (view.name === 'recipes') return renderAllRecipes();
-        if (view.name === 'section') return renderSection(view.payload);
-        if (view.name === 'module') return renderModule(view.payload);
+      function filteredHomeRecipes(){
+        // vyber 3 recepty relevantní k sezóně (dle rotace) - jednoduše první 3 z receptů
+        var list=onlyRecipes.slice();
+        // preferovat ty s fotkou
+        list.sort(function(a,b){return (b.img?1:0)-(a.img?1:0)});
+        return list.slice(0,3);
       }
 
-      function topbar() {
-        var initials = member.name.trim().charAt(0).toUpperCase() || 'Č';
-        return '<div class="topbar">' +
-          '<div class="member"><span class="avatar">'+esc(initials)+'</span>' +
-            '<span>'+esc(member.name)+(member.email?' · '+esc(member.email):'')+'</span></div>' +
-        '</div>';
+      function recipeRows(){
+        var list=filteredHomeRecipes();
+        return list.map(function(r){
+          var cit=r.edu?('<div class="rcit">💡 <span><b>Zajímavost:</b> '+esc(r.edu.citace)+'</span></div>'):'';
+          return '<div class="rrow" data-open="'+r.n+'">'+
+            '<div class="rthumb" style="background-image:url(\''+imgOf(r)+'\')"></div>'+
+            '<div class="rinfo"><h3>'+esc(r.name)+'</h3>'+
+            '<div class="rmeta">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+esc(r.time):'')+'</div>'+cit+'</div></div>';
+        }).join('');
       }
-      function bindTopbar() {}
 
-      function renderDashboard() {
-        var n = new Date();
-        var dateStr = days[n.getDay()] + ', ' + n.getDate() + '. ' + months[n.getMonth()] + ' ' + n.getFullYear();
-        var m = todayMeals();
-        var tiles = [
-          {k:'vzdelavani', ico:'📚', h:'Transformace stravování', p:'Vzdělávací minikurz', cls:'accent'},
-          {k:'semenareni', ico:'🌱', h:'Semenaření', p:'Co a kdy sít', cls:'accent2'},
-          {k:'sobestacnost', ico:'🌾', h:'Soběstačnost', p:'Plánování & zásoby', cls:'accent2'},
-          {k:'zahrada', ico:'🪴', h:'Zahradničení', p:'Péče o záhony', cls:'accent2'},
-          {k:'byliny', ico:'🌿', h:'Bylinář', p:'Jedlé a léčivé byliny', cls:'accent2'},
-          {k:'nadobi', ico:'🍳', h:'Výběr nádobí', p:'Bezpečné materiály', cls:'accent'},
-          {k:'tipy_nakup', ico:'🛒', h:'Aktuální tipy', p:'Co nakoupit', cls:'accent3'},
-          {k:'zakladni_recepty', ico:'📖', h:'Základní recepty', p:'Chléb, vývar, kvas', cls:'accent'},
-          {k:'kvaskovani', ico:'🍞', h:'Kváskování', p:'Mazanec, French toast', cls:'accent3'},
-          {k:'healing', ico:'💚', h:'Healing tipy', p:'Strava při nemoci', cls:'accent2'}
-        ];
-        var locked = [
-          {ico:'👶', h:'Zdravé početí, těhotenství a porod', p:'Připravujeme'},
-          {ico:'🧴', h:'Ekzém — péče a produkty', p:'Brzy v prodeji'}
-        ];
-
-        var html = topbar() + '<div class="wrap">' +
-          '<div class="hello">' +
-            '<div><div class="eyebrow">Členská sekce · Sezónník</div>' +
-            '<h1>Vítej zpět, <em>'+esc(member.name.split(' ')[0])+'</em></h1></div>' +
-            '<div class="date">📅 ' + dateStr + '</div>' +
+      function rightCol(){
+        var cta=OBSAH.cta_produkt||{};
+        var soon=(OBSAH.pripravujeme||[]).map(function(s){
+          return '<div class="soon-item"><div class="si-ico">'+s.ico+'</div><div><h4>'+esc(s.h)+'</h4><p>'+esc(s.perex)+'</p></div></div>';
+        }).join('');
+        return '<div class="cta-panel"><div class="cta-ico">'+cta.ico+'</div>'+
+            '<h3>'+esc(cta.h||'')+'</h3><p>'+esc(cta.perex||'')+'</p>'+
+            '<button class="cta-btn" data-cta="1">'+esc(cta.cta||'Zjistit více')+' →</button>'+
+            '<div class="cta-lock">🔒 Brzy dostupné</div></div>'+
+          '<div class="soon-panel"><div class="sh">Připravujeme</div>'+soon+'</div>'+
+          '<div class="soon-panel"><div class="sh">Objevuj dál</div>'+
+            '<div class="soon-item" data-go="byliny" style="cursor:pointer"><div class="si-ico" style="opacity:1">🌿</div><div><h4 style="color:var(--ink)">Bylinář</h4><p>Sezónní jedlé a léčivé byliny</p></div></div>'+
+            '<div class="soon-item" data-go="jidelnicky" style="cursor:pointer"><div class="si-ico" style="opacity:1">📋</div><div><h4 style="color:var(--ink)">Ukázkové jídelníčky</h4><p>Jak jíme za den — osobní inspirace</p></div></div>'+
+            '<div class="soon-item" data-go="zpracovani" style="cursor:pointer"><div class="si-ico" style="opacity:1">🫙</div><div><h4 style="color:var(--ink)">Zpracování surovin</h4><p>Fermenty, nálevy, kombucha, limča</p></div></div>'+
           '</div>';
-
-        // dnešní talíř (3 jídla) + video vedle
-        html += '<div class="sec-h"><h2>Dnešní jídelníček</h2><div class="line"></div></div>';
-        html += '<div class="today">' +
-            '<div><div class="today-meals">' +
-              mealCard('Snídaně','breakfast',m.breakfast) +
-              mealCard('Oběd','lunch',m.lunch) +
-              mealCard('Večeře','dinner',m.dinner) +
-            '</div>' +
-            '<div class="dessert-row">' + mealCard('Dezert','dessert',m.dessert, true) + '</div></div>' +
-            '<div class="side-video"><div class="sv-label">▶ Úvodem od nás</div>' +
-              '<div class="frame"><iframe src="https://www.youtube.com/embed/ActrTrc-QHM" title="Úvodní video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>' +
-        '</div>';
-
-        html += '<div class="pantry"><label>🧺 Co máš doma?</label>' +
-          '<div class="row"><input id="pantryIn" placeholder="napiš suroviny oddělené čárkou, např. vejce, mrkev, jogurt"><button id="pantryBtn">Najdi recepty</button></div>' +
-          '<div class="hint">Najdu recepty, které tyhle suroviny obsahují.</div><div class="matches" id="pantryMatches"></div></div>';
-
-        // recepty (velké karty)
-        html += '<div class="sec-h"><h2>Recepty</h2><div class="line"></div><button class="more" data-go="recipes">Všechny recepty →</button></div>';
-        html += '<div class="strip"><div class="strip-grid" id="stripGrid"></div><div class="strip-nav"><button id="stripPrev">← Předchozí</button><button id="stripNext">Další →</button></div></div>';
-
-        // dlaždice (menší)
-        html += '<div class="sec-h"><h2>Objevuj a rosti</h2><div class="line"></div></div><div class="tiles">';
-        tiles.forEach(function(t){ html += '<div class="tile '+t.cls+'" data-sec="'+t.k+'"><div class="ico">'+t.ico+'</div><div class="tx"><h3>'+esc(t.h)+'</h3><p>'+esc(t.p)+'</p></div></div>'; });
-        locked.forEach(function(t){ html += '<div class="tile locked"><div class="ico">'+t.ico+'</div><div class="tx"><h3>'+esc(t.h)+'</h3><p>'+esc(t.p)+'</p></div><span class="lock">🔒</span><span class="soon">brzy</span></div>'; });
-        html += '</div>';
-
-        html += '<div class="sec-h"><h2>Z bylináře</h2><div class="line"></div><button class="more" data-sec="byliny">Celý bylinář →</button></div>';
-        html += '<div class="herb-strip" id="herbStrip"></div>';
-
-        html += '<div class="foot">Sezónník · živý receptář a růstová komunita · '+recipes.length+' receptů, '+tips.length+' tipů, '+byliny.length+' bylin</div>';
-        html += '</div><div class="modal-bg" id="modalbg"></div>';
-
-        app.innerHTML = html;
-        bindTopbar();
-        bindDashboard();
       }
 
-      function mealCard(label, key, r, wide) {
-        if (!r) return '';
-        return '<div class="meal'+(wide?' wide':'')+'"><span class="mtag">'+label+'</span>' +
-          '<div class="mimg" style="background-image:url(\''+imgOf(r)+'\')" data-open="'+r.n+'"></div>' +
-          '<div class="mbody"><h3 data-open="'+r.n+'">'+esc(r.name)+'</h3>' +
-          '<div class="mmeta">'+(r.time&&r.time!=='—'?'⏱ '+esc(r.time):'')+'</div>' +
-          '<div class="swap"><button data-swap="'+key+'">↻ Jiné jídlo</button></div></div></div>';
+      function bindHome(){
+        app.querySelectorAll('[data-pilir]').forEach(function(el){el.onclick=function(){go('pilir',el.dataset.pilir)}});
+        app.querySelectorAll('[data-go]').forEach(function(el){el.onclick=function(){go(el.dataset.go)}});
+        app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+        app.querySelectorAll('[data-sez]').forEach(function(el){el.onclick=function(){sezona=el.dataset.sez;refreshRecept()}});
+        app.querySelectorAll('[data-situ]').forEach(function(el){el.onclick=function(){situ=el.dataset.situ;refreshRecept()}});
+        var cta=app.querySelector('[data-cta]');if(cta)cta.onclick=function(){toast('Přirozené početí 21. st. — brzy dostupné 🔒')};
+      }
+      function refreshRecept(){
+        // překreslit jen recept sekci
+        var sec=app.querySelector('.recept-sec');
+        if(sec){sec.outerHTML=receptSec();}
+        // rebind
+        app.querySelectorAll('[data-sez]').forEach(function(el){el.onclick=function(){sezona=el.dataset.sez;refreshRecept()}});
+        app.querySelectorAll('[data-situ]').forEach(function(el){el.onclick=function(){situ=el.dataset.situ;refreshRecept()}});
+        app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+        app.querySelectorAll('.rmore [data-go]').forEach(function(el){el.onclick=function(){go(el.dataset.go)}});
       }
 
-      function rcard(r) {
-        return '<div class="rcard" data-open="'+r.n+'">' +
-          '<div class="rimg" style="background-image:url(\''+imgOf(r)+'\')"><span class="rnum">#'+r.n+'</span></div>' +
-          '<div class="rb"><h3>'+esc(r.name)+'</h3>' +
-          '<div class="rmeta">📅 '+esc(r.date||'')+(r.time&&r.time!=='—'?' · ⏱ '+esc(r.time):'')+'</div>' +
+      // ---------- RECEPT MODAL ----------
+      function openRecipe(n){
+        var r=recipes.find(function(x){return x.n===n});if(!r)return;
+        var mb=document.getElementById('modalbg');if(!mb)return;
+        var ingHTML=(r.ing||[]).map(function(i){return /:\s*$/.test(i)?'<li class="label-row">'+esc(i)+'</li>':'<li>'+esc(i)+'</li>'}).join('');
+        var stepsHTML=(r.steps||[]).map(function(s){return '<li>'+esc(s)+'</li>'}).join('');
+        var essHTML='';
+        if(r.edu){essHTML='<div class="essence"><div class="ess-lead">💡 Z minikurzu Transformace stravování</div><div class="ess-quote">„'+esc(r.edu.citace)+'"</div><button class="ess-link" data-modul="'+esc(r.edu.modul)+'">📖 Otevřít modul →</button></div>'}
+        mb.innerHTML='<div class="modal"><button class="close" id="cls">×</button>'+
+          '<div class="hero-img" style="background-image:url(\''+imgOf(r)+'\')"></div>'+
+          '<div class="inner"><h2>'+esc(r.name)+'</h2>'+
+          '<div class="sub">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+esc(r.time):'')+'</div>'+
+          essHTML+
+          (ingHTML?'<h4>Ingredience</h4><ul>'+ingHTML+'</ul>':'')+
+          (stepsHTML?'<h4>Postup</h4><ol>'+stepsHTML+'</ol>':'')+
+          '<button class="orig-toggle" id="origbtn">📄 Zobrazit původní znění</button>'+
+          '<div class="orig-text" id="origtxt">'+esc(r.fullText||'')+'</div></div></div>';
+        mb.classList.add('open');
+        document.getElementById('cls').onclick=function(){mb.classList.remove('open')};
+        mb.onclick=function(e){if(e.target===mb)mb.classList.remove('open')};
+        var ob=document.getElementById('origbtn');if(ob)ob.onclick=function(){document.getElementById('origtxt').classList.toggle('open')};
+        mb.querySelectorAll('.ess-link[data-modul]').forEach(function(el){el.onclick=function(){mb.classList.remove('open');go('modul',el.dataset.modul)}});
+      }
+
+      // ---------- ALL RECIPES ----------
+      function renderAllRecipes(){
+        var html=topbar()+'<div class="wrap"><button class="back" id="back">← Zpět</button>'+
+          '<h1 class="ptitle">Receptář</h1><div class="pintro">'+onlyRecipes.length+' receptů. Byliny a jídelníčky mají vlastní sekce.</div>';
+        var cats=[['vse','Vše'],['jidla','Běžná jídla'],['dezerty','Dezerty'],['sklad','Skladování']];
+        html+='<div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;align-items:center">'+
+          '<input id="rs" placeholder="🔍 Hledat recept nebo surovinu…" style="flex:1;min-width:200px;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-family:Albert Sans;font-size:15px" value="'+esc(rSearch)+'">'+
+          cats.map(function(c){return '<button class="chip '+(rCat===c[0]?'active':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'}).join('')+
+          '</div><div class="grid-cards" id="allGrid"></div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
+        var grid=document.getElementById('allGrid');
+        function paint(){
+          var q=normDia(rSearch);
+          var list=onlyRecipes.filter(function(r){
+            var inCat=rCat==='vse'||r.cat===rCat;
+            var hay=r.search||normDia(r.name+' '+(r.ing||[]).join(' '));
+            return inCat&&hay.indexOf(q)!==-1;
+          });
+          grid.innerHTML=list.length?list.map(rcard).join(''):'<div class="pintro">Nic nenalezeno 🍂</div>';
+          grid.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+        }
+        var rs=document.getElementById('rs');rs.oninput=function(e){rSearch=e.target.value;paint()};
+        app.querySelectorAll('.chip[data-cat]').forEach(function(c){c.onclick=function(){rCat=c.dataset.cat;renderAllRecipes()}});
+        paint();
+      }
+      function rcard(r){
+        return '<div class="rcard" data-open="'+r.n+'"><div class="rimg" style="background-image:url(\''+imgOf(r)+'\')"><span class="rnum">#'+r.n+'</span></div>'+
+          '<div class="rb"><h3>'+esc(r.name)+'</h3><div class="rmeta">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+esc(r.time):'')+'</div>'+
           '<span class="rtag">'+(catLabels[r.cat]||'')+'</span></div></div>';
       }
 
-      function renderStrip() {
-        var grid = document.getElementById('stripGrid');
-        if (!grid) return;
-        var per = window.innerWidth <= 720 ? 1 : 3;
-        var total = Math.ceil(recipes.length / per);
-        if (stripPage >= total) stripPage = 0;
-        if (stripPage < 0) stripPage = total - 1;
-        var slice = recipes.slice(stripPage*per, stripPage*per + per);
-        grid.innerHTML = slice.map(rcard).join('');
-        grid.querySelectorAll('[data-open]').forEach(function(el){ el.onclick = function(){ openRecipe(+el.dataset.open); }; });
+      // ---------- BYLINY ----------
+      function renderByliny(){
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
+          '<h1 class="ptitle">🌿 Bylinář</h1><div class="pintro">Sezónní jedlé a léčivé byliny. Klikni pro detail.</div>'+
+          '<div class="grid-cards">'+byliny.map(function(b){
+            var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');
+            return '<div class="herb" data-herb="'+esc(b.name)+'"><div class="himg" style="background-image:url(\''+img+'\')"></div><div class="hb"><h3>'+esc(b.name)+'</h3><div class="hmore">Zjistit více →</div></div></div>';
+          }).join('')+'</div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
+        app.querySelectorAll('[data-herb]').forEach(function(h){h.onclick=function(){openHerb(h.dataset.herb)}});
       }
-
-      function renderHerbStrip() {
-        var el = document.getElementById('herbStrip');
-        if (!el) return;
-        var show = [];
-        for (var i=0;i<Math.min(4,byliny.length);i++){ show.push(byliny[(dayIndex()+i)%byliny.length]); }
-        el.innerHTML = show.map(function(b){
-          var img = (b.img && b.img.trim()) ? encPath(b.img) : ph('#5a7a3f');
-          return '<div class="herb" data-herb="'+esc(b.name)+'"><div class="himg" style="background-image:url(\''+img+'\')"></div><div class="hb"><h3>'+esc(b.name)+'</h3><div class="hmore">Zjistit více →</div></div></div>';
-        }).join('');
-        el.querySelectorAll('[data-herb]').forEach(function(h){ h.onclick = function(){ openHerb(h.dataset.herb); }; });
-      }
-
-      function bindDashboard() {
-        app.querySelectorAll('.tile[data-sec]').forEach(function(t){ t.onclick = function(){ go('section', t.dataset.sec); }; });
-        app.querySelectorAll('[data-go]').forEach(function(b){ b.onclick = function(){ go(b.dataset.go); }; });
-        app.querySelectorAll('.more[data-sec]').forEach(function(b){ b.onclick = function(){ go('section', b.dataset.sec); }; });
-        app.querySelectorAll('.meal [data-open]').forEach(function(el){ el.onclick = function(){ openRecipe(+el.dataset.open); }; });
-        app.querySelectorAll('.meal [data-swap]').forEach(function(b){ b.onclick = function(){ swapState[b.dataset.swap]++; refreshMeals(todayMeals()); }; });
-        var pb = document.getElementById('pantryBtn'), pi = document.getElementById('pantryIn');
-        if (pb) pb.onclick = function(){ runPantry(pi.value); };
-        if (pi) pi.onkeydown = function(e){ if(e.key==='Enter') runPantry(pi.value); };
-        var sp=document.getElementById('stripPrev'), sn=document.getElementById('stripNext');
-        if (sp) sp.onclick=function(){ stripPage--; renderStrip(); };
-        if (sn) sn.onclick=function(){ stripPage++; renderStrip(); };
-        renderStrip();
-        renderHerbStrip();
-      }
-
-      function refreshMeals(m) {
-        var meals = app.querySelector('.today-meals');
-        var dessert = app.querySelector('.dessert-row');
-        if (!meals) return;
-        meals.innerHTML = mealCard('Snídaně','breakfast',m.breakfast)+mealCard('Oběd','lunch',m.lunch)+mealCard('Večeře','dinner',m.dinner);
-        if (dessert) dessert.innerHTML = mealCard('Dezert','dessert',m.dessert, true);
-        app.querySelectorAll('.meal [data-open]').forEach(function(el){ el.onclick=function(){ openRecipe(+el.dataset.open); }; });
-        app.querySelectorAll('.meal [data-swap]').forEach(function(b){ b.onclick=function(){ swapState[b.dataset.swap]++; refreshMeals(todayMeals()); }; });
-      }
-
-      function runPantry(val) {
-        var items = normDia(val||'').split(/[,;]+/).map(function(s){return s.trim();}).filter(Boolean);
-        var box = document.getElementById('pantryMatches');
-        if (!items.length) { box.innerHTML=''; return; }
-        var scored = recipes.map(function(r){
-          var hay = r.search || normDia(r.name+' '+(r.ing||[]).join(' ')+' '+(r.fullText||''));
-          var hits = items.filter(function(it){ return hay.indexOf(it)!==-1; });
-          return { r:r, hits:hits.length };
-        }).filter(function(x){ return x.hits>0; }).sort(function(a,b){ return b.hits-a.hits; }).slice(0,6);
-        if (!scored.length) { box.innerHTML = '<div class="hint">Nic se nenašlo — zkus jiné suroviny.</div>'; return; }
-        box.innerHTML = '<div class="strip-grid">' + scored.map(function(x){ return rcard(x.r); }).join('') + '</div>';
-        box.querySelectorAll('[data-open]').forEach(function(el){ el.onclick=function(){ openRecipe(+el.dataset.open); }; });
-      }
-
-      function openRecipe(n) {
-        var r = recipes.find(function(x){ return x.n===n; });
-        if (!r) return;
-        var mb = document.getElementById('modalbg');
-        if (!mb) return;
-        var ingHTML = (r.ing||[]).map(function(i){ return /:\s*$/.test(i) ? '<li class="label-row">'+esc(i)+'</li>' : '<li>'+esc(i)+'</li>'; }).join('');
-        var stepsHTML = (r.steps||[]).map(function(s){ return '<li>'+esc(s)+'</li>'; }).join('');
-        // vzdělávací citace s proklikem do konkrétního modulu minikurzu
-        var essHTML = '';
-        if (r.edu) {
-          essHTML = '<div class="essence"><div class="ess-lead">💡 Z minikurzu Transformace stravování</div>' +
-            '<div class="ess-quote">„'+esc(r.edu.citace)+'"</div>' +
-            '<button class="ess-link" data-modul="'+esc(r.edu.modul)+'">📚 Otevřít modul →</button></div>';
-        }
-        mb.innerHTML = '<div class="modal"><button class="close" id="cls">×</button>' +
-          '<div class="hero-img" style="background-image:url(\''+imgOf(r)+'\')"></div>' +
-          '<div class="inner"><h2>#'+r.n+' · '+esc(r.name)+'</h2>' +
-          '<div class="sub">📅 '+esc(r.date||'')+(r.time&&r.time!=='—'?' · ⏱ '+esc(r.time):'')+' · '+(catLabels[r.cat]||'')+'</div>' +
-          essHTML +
-          (ingHTML?'<h4>Ingredience</h4><ul>'+ingHTML+'</ul>':'') +
-          (stepsHTML?'<h4>Postup</h4><ol>'+stepsHTML+'</ol>':'') +
-          '<button class="orig-toggle" id="origbtn">📄 Zobrazit původní znění receptu</button>' +
-          '<div class="orig-text" id="origtxt">'+esc(r.fullText||'')+'</div></div></div>';
+      function openHerb(name){
+        var b=byliny.find(function(x){return x.name===name});if(!b)return;
+        var mb=document.getElementById('modalbg');if(!mb)return;
+        var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');
+        var receptBtn = b.recept ? '<button class="ess-link" style="margin-top:14px;background:var(--accent)" data-recept="'+b.recept.n+'">🍽️ Recept: '+esc(b.recept.name)+' →</button>' : '';
+        mb.innerHTML='<div class="modal"><button class="close" id="cls">×</button><div class="hero-img" style="background-image:url(\''+img+'\')"></div><div class="inner"><h2>🌿 '+esc(b.name)+'</h2>'+(b.kdy?'<div class="sub">Sezóna: '+esc(b.kdy)+'</div>':'')+'<p class="longtext">'+esc(b.use)+'</p>'+receptBtn+'</div></div>';
         mb.classList.add('open');
-        wireModal(mb);
-        mb.querySelectorAll('.ess-link[data-modul]').forEach(function(el){ el.onclick=function(){ mb.classList.remove('open'); go('module', el.dataset.modul); }; });
+        document.getElementById('cls').onclick=function(){mb.classList.remove('open')};
+        mb.onclick=function(e){if(e.target===mb)mb.classList.remove('open')};
+        mb.querySelectorAll('[data-recept]').forEach(function(el){el.onclick=function(){mb.classList.remove('open');openRecipe(+el.dataset.recept)}});
       }
 
-      function openHerb(name) {
-        var b = byliny.find(function(x){ return x.name===name; });
-        if (!b) return;
-        var mb = document.getElementById('modalbg');
-        if (!mb) return;
-        var img = (b.img && b.img.trim()) ? encPath(b.img) : ph('#5a7a3f');
-        mb.innerHTML = '<div class="modal"><button class="close" id="cls">×</button>' +
-          '<div class="hero-img" style="background-image:url(\''+img+'\')"></div>' +
-          '<div class="inner"><h2>🌿 '+esc(b.name)+'</h2>' +
-          (b.kdy?'<div class="sub">Sezóna: '+esc(b.kdy)+'</div>':'') +
-          '<p class="longtext">'+esc(b.use)+'</p></div></div>';
-        mb.classList.add('open');
-        wireModal(mb);
+      // ---------- JÍDELNÍČKY ----------
+      function renderJidelnicky(){
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
+          '<h1 class="ptitle">📋 Ukázkové jídelníčky</h1><div class="pintro">Osobní inspirace autorky — jak jednoduše poskládat den. Ne přesné recepty, ale reálná každodennost.</div>'+
+          '<div class="rlist">'+jidelnicky.map(function(r){
+            return '<div class="rrow" data-open="'+r.n+'"><div class="rthumb" style="background-image:url(\''+imgOf(r)+'\')"></div><div class="rinfo"><h3>'+esc(r.name)+'</h3><div class="rmeta">'+esc((r.fullText||'').replace(/\n/g,' ').slice(0,90))+'…</div></div></div>';
+          }).join('')+'</div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
+        app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
       }
 
-      function wireModal(mb) {
-        document.getElementById('cls').onclick = function(){ mb.classList.remove('open'); };
-        mb.onclick = function(e){ if(e.target===mb) mb.classList.remove('open'); };
-        var ob = document.getElementById('origbtn');
-        if (ob) ob.onclick = function(){ document.getElementById('origtxt').classList.toggle('open'); };
+      // ---------- ZPRACOVÁNÍ SUROVIN ----------
+      function renderZpracovani(){
+        var z=OBSAH.zpracovani||{polozky:[]};
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
+          '<h1 class="ptitle">🫙 '+esc(z.title||'Zpracování surovin')+'</h1><div class="pintro">'+esc(z.intro||'')+'</div>'+
+          (z.polozky||[]).map(function(p){return '<div class="pblock"><h3>'+esc(p.name)+'</h3><p class="longtext">'+esc(p.text)+'</p></div>'}).join('')+
+          '<div class="foot"></div></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
       }
 
-      function renderAllRecipes() {
-        var html = topbar() + '<div class="wrap"><button class="back" id="back">← Zpět na přehled</button>' +
-          '<h1 class="ptitle">Receptář</h1><div class="pintro">'+recipes.length+' receptů — tipy a byliny v samostatných sekcích.</div>';
-        var cats=[['vse','Vše'],['jidla','Běžná jídla'],['dezerty','Dezerty'],['sklad','Skladování']];
-        html += '<div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;align-items:center">' +
-          '<input id="rs" placeholder="🔍 Hledat recept nebo surovinu…" style="flex:1;min-width:200px;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-family:Albert Sans;font-size:15px" value="'+esc(rSearch)+'">' +
-          cats.map(function(c){ return '<button class="rchip" data-cat="'+c[0]+'" style="border:1px solid var(--line);background:'+(rCat===c[0]?'var(--accent)':'var(--panel)')+';color:'+(rCat===c[0]?'#fff':'var(--ink-soft)')+';padding:8px 15px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer;font-family:Albert Sans">'+c[1]+'</button>'; }).join('') +
-          '</div><div class="strip-grid" id="allGrid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))"></div>';
-        html += '<div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
-        app.innerHTML = html;
-        bindTopbar();
-        document.getElementById('back').onclick = function(){ go('dashboard'); };
-        var grid = document.getElementById('allGrid');
-        function paint() {
-          var q = normDia(rSearch);
-          var list = recipes.filter(function(r){
-            var inCat = rCat==='vse'||r.cat===rCat;
-            var hay = r.search || normDia(r.name+' '+(r.ing||[]).join(' ')+' '+(r.fullText||''));
-            return inCat && hay.indexOf(q)!==-1;
-          });
-          grid.innerHTML = list.length ? list.map(rcard).join('') : '<div class="pintro">Nic nenalezeno 🍂</div>';
-          grid.querySelectorAll('[data-open]').forEach(function(el){ el.onclick=function(){ openRecipe(+el.dataset.open); }; });
-        }
-        var rs=document.getElementById('rs'); rs.oninput=function(e){ rSearch=e.target.value; paint(); };
-        app.querySelectorAll('.rchip').forEach(function(c){ c.onclick=function(){ rCat=c.dataset.cat; renderAllRecipes(); }; });
-        paint();
+      // ---------- PILÍŘ (odkaz na modul) ----------
+      function renderPilir(key){
+        var p=pilire.find(function(x){return x.key===key});
+        if(p&&p.modul){go('modul',p.modul);return}
+        go('home');
       }
 
-      function ytEmbed(url) {
-        var id = '';
-        var m = url.match(/[?&]v=([^&]+)/) || url.match(/youtu\.be\/([^?&]+)/) || url.match(/embed\/([^?&]+)/);
-        if (m) id = m[1];
-        return 'https://www.youtube.com/embed/' + id;
-      }
-      function sectionVideoHTML(o) {
-        if (!o.video) return '';
-        return (o.video_label?'<div class="pintro">▶ '+esc(o.video_label)+'</div>':'') +
-          '<div class="page-video"><iframe src="'+ytEmbed(o.video)+'" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>';
-      }
-
-      function renderSection(key) {
-        var o = OBSAH[key];
-        var html = topbar() + '<div class="wrap page"><button class="back" id="back">← Zpět na přehled</button>';
-
-        if (key === 'vzdelavani' && o) {
-          html += '<h1 class="ptitle">📚 '+esc(o.title)+'</h1>' +
-            (o.podtitul?'<div class="edu-sub">'+esc(o.podtitul)+'</div>':'') +
-            '<div class="pintro">'+esc(o.intro)+'</div>';
-          html += '<div class="edu-grid">';
-          (o.moduly||[]).forEach(function(m){
-            html += '<div class="edu-card" id="mod-'+esc(m.key)+'" data-modul="'+esc(m.key)+'">' +
-              '<div class="edu-top"><div class="edu-ico">'+m.ico+'</div><span class="edu-badge">'+esc(m.modul||'')+'</span></div>' +
-              '<h3>'+esc(m.h)+'</h3>' +
-              '<div class="edu-quote">„'+esc(m.citace)+'"</div>' +
-              '<p>'+esc(m.perex)+'</p>' +
-              '<button class="edu-open">📖 Číst modul →</button>' +
-              '</div>';
-          });
-          html += '</div>';
-          if (o.upsell) {
-            html += '<div class="upsell"><div class="up-lock">🔒</div>' +
-              '<h2>'+esc(o.upsell.h)+'</h2><p>'+esc(o.upsell.text)+'</p>' +
-              '<button class="up-cta">'+esc(o.upsell.cta)+' →</button>' +
-              '<div class="up-soon">Brzy v prodeji</div></div>';
-          }
-        }
-        else if (key === 'byliny') {
-          html += '<h1 class="ptitle">🌿 Bylinář</h1><div class="pintro">Jedlé a léčivé byliny, které najdeš v přírodě. Klikni pro detail.</div>' +
-            '<div class="herb-strip">' + byliny.map(function(b){
-              var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');
-              return '<div class="herb" data-herb="'+esc(b.name)+'"><div class="himg" style="background-image:url(\''+img+'\')"></div><div class="hb"><h3>'+esc(b.name)+'</h3><div class="hmore">Zjistit více →</div></div></div>';
-            }).join('') + '</div>';
-        }
-        else if (key === 'nadobi' && o) {
-          html += '<h1 class="ptitle">'+esc(o.title)+'</h1><div class="pintro">'+esc(o.intro)+'</div>';
-          (o.blocks||[]).forEach(function(b){ html += '<div class="pblock warm"><h3>'+esc(b.h)+'</h3><p>'+esc(b.t)+'</p></div>'; });
-          html += '<div class="sec-h"><h2>Doporučené značky</h2><div class="line"></div></div><div class="pblock">';
-          (o.doporuceni||[]).forEach(function(d){
-            html += '<div class="dorow"><div class="dl"><b>'+esc(d.znacka)+'</b><span>'+esc(d.co)+'</span></div></div>';
-          });
-          html += '</div><div class="pblock"><p>'+esc(o.zaver)+'</p></div>';
-        }
-        else if (key === 'semenareni' && o) {
-          html += '<h1 class="ptitle">'+esc(o.title)+'</h1>' + sectionVideoHTML(o) + '<div class="pintro">'+esc(o.intro)+'</div>' +
-            '<div class="pblock"><h3>'+esc(o.priority.h)+'</h3><ul class="prio-list">'+o.priority.items.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul></div>' +
-            '<div class="sec-h"><h2>Seznam semínek</h2><div class="line"></div></div><div class="pblock"><table class="rec-table">' +
-            o.seznam.map(function(r){ return '<tr><td>'+esc(r.sk)+'</td><td>'+esc(r.v)+'</td></tr>'; }).join('') + '</table></div>' +
-            '<div class="sec-h"><h2>V únoru</h2><div class="line"></div></div>' +
-            '<div class="pblock"><h3>Za oknem doma</h3><ul>'+o.unor.okno.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>' +
-            '<div class="pblock"><h3>Na zahradu</h3><ul>'+o.unor.zahrada.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div>';
-        }
-        else if (key === 'zahrada' && o) {
-          html += '<h1 class="ptitle">'+esc(o.title)+'</h1>' + sectionVideoHTML(o);
-          (o.sezona||[]).forEach(function(s){ html += '<div class="pblock"><h3>'+esc(s.obdobi)+'</h3><p class="longtext">'+linkify(s.text)+'</p></div>'; });
-        }
-        else if (o && o.full !== undefined) {
-          html += '<h1 class="ptitle">'+esc(o.title)+'</h1>' + sectionVideoHTML(o) + '<div class="pblock"><p class="longtext">'+linkify(o.full)+'</p></div>';
-        }
-        else {
-          html += '<h1 class="ptitle">Sekce</h1><div class="pintro">Obsah se připravuje.</div>';
-        }
-
-        html += '<div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
-        app.innerHTML = html;
-        bindTopbar();
-        document.getElementById('back').onclick = function(){ go('dashboard'); };
-        app.querySelectorAll('[data-herb]').forEach(function(h){ h.onclick=function(){ openHerb(h.dataset.herb); }; });
-        app.querySelectorAll('.edu-card[data-modul]').forEach(function(c){ c.onclick=function(){ go('module', c.dataset.modul); }; });
-      }
-
-      function renderModule(key) {
-        var mods = (OBSAH.vzdelavani && OBSAH.vzdelavani.moduly) || [];
-        var m = mods.find(function(x){ return x.key===key; });
-        if (!m) { go('section','vzdelavani'); return; }
-        var idx = mods.indexOf(m);
-        var prev = mods[idx-1], next = mods[idx+1];
-        var paras = (m.full||'').split(/\n\n+/).map(function(p){
-          p = p.trim(); if (!p) return '';
-          // mezinadpis: krátký řádek velkými písmeny (SVĚTLO, ÚSKALÍ DNEŠNÍ DOBY)
-          if (p.length < 45 && p === p.toUpperCase() && /[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]/.test(p) && p.indexOf('\n')===-1) {
-            return '<h3 class="mod-h">'+esc(p)+'</h3>';
-          }
-          // podnadpis "Problém č. 1: ..." nebo "Ranní rutina" na samostatném řádku
-          if (/^(Problém č\.|Ranní|Večerní|Denní|TIP|Pozn)/.test(p) && p.length < 80 && p.indexOf('\n')===-1) {
-            return '<h4 class="mod-sh">'+esc(p)+'</h4>';
-          }
-          // odrážky (řádky s − • -)
-          if (/\n\s*[−•]/.test('\n'+p) || /^[−•]/.test(p)) {
-            var items = p.split(/\n/).map(function(l){ return l.replace(/^\s*[−•\-]\s*/,'').trim(); }).filter(Boolean);
-            return '<ul>'+items.map(function(i){ return '<li>'+esc(i)+'</li>'; }).join('')+'</ul>';
-          }
+      // ---------- MODUL ----------
+      function renderModule(key){
+        var m=moduly.find(function(x){return x.key===key});
+        if(!m){go('home');return}
+        var idx=moduly.indexOf(m),prev=moduly[idx-1],next=moduly[idx+1];
+        var paras=(m.full||'').split(/\n\n+/).map(function(p){
+          p=p.trim();if(!p)return '';
+          if(p.length<45&&p===p.toUpperCase()&&/[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]/.test(p)&&p.indexOf('\n')===-1)return '<h3 class="mod-h">'+esc(p)+'</h3>';
+          if(/^(Problém č\.|Ranní|Večerní|Denní|Pozn)/.test(p)&&p.length<80&&p.indexOf('\n')===-1)return '<h4 class="mod-sh">'+esc(p)+'</h4>';
+          if(/\n\s*[−•]/.test('\n'+p)||/^[−•]/.test(p)){var items=p.split(/\n/).map(function(l){return l.replace(/^\s*[−•\-]\s*/,'').trim()}).filter(Boolean);return '<ul>'+items.map(function(i){return '<li>'+esc(i)+'</li>'}).join('')+'</ul>'}
           return '<p>'+esc(p)+'</p>';
         }).join('');
-        var html = topbar() + '<div class="wrap page">' +
-          '<button class="back" id="back">← Zpět na minikurz</button>' +
-          '<div class="mod-head"><div class="mod-ico">'+m.ico+'</div>' +
-            '<div><span class="edu-badge">'+esc(m.modul||'')+'</span><h1 class="ptitle">'+esc(m.h)+'</h1></div></div>' +
-          '<div class="mod-quote">„'+esc(m.citace)+'"</div>' +
-          '<div class="pblock mod-body">'+paras+'</div>' +
-          '<div class="mod-nav">' +
-            (prev?'<button data-go-mod="'+esc(prev.key)+'">← '+esc(prev.h)+'</button>':'<span></span>') +
-            (next?'<button data-go-mod="'+esc(next.key)+'">'+esc(next.h)+' →</button>':'<span></span>') +
-          '</div>' +
-          '<div class="foot"></div></div>';
-        app.innerHTML = html;
-        bindTopbar();
-        document.getElementById('back').onclick = function(){ go('section','vzdelavani'); };
-        app.querySelectorAll('[data-go-mod]').forEach(function(b){ b.onclick=function(){ go('module', b.dataset.goMod); }; });
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
+          '<h1 class="ptitle">'+m.ico+' '+esc(m.h)+'</h1>'+
+          (m.citace?'<div class="mod-quote">„'+esc(m.citace)+'"</div>':'')+
+          '<div class="pblock mod-body">'+paras+'</div>'+
+          '<div style="display:flex;justify-content:space-between;gap:12px;margin-top:20px">'+
+            (prev?'<button class="back" data-mod="'+esc(prev.key)+'" style="margin:0">← '+esc(prev.h)+'</button>':'<span></span>')+
+            (next?'<button class="back" data-mod="'+esc(next.key)+'" style="margin:0">'+esc(next.h)+' →</button>':'<span></span>')+
+          '</div><div class="foot"></div></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
+        app.querySelectorAll('[data-mod]').forEach(function(b){b.onclick=function(){go('modul',b.dataset.mod)}});
       }
-
-      function go(name, payload) { view = { name: name, payload: payload }; window.scrollTo(0,0); render(); }
 
       render();
     }
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
-  else boot();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
 </script>
 </body>

@@ -181,6 +181,70 @@
       "img": "byliny/Fialky__podběl__sedmikrásky.png",
       "use": "Vše jedlé i pitelné jako čaj. Podběl: ne v těhotenství. Fialky: jedlé květy, výluh do kakaa. Sedmikráska: jedlý květ, všestranná léčivka — vnitřně kašel/bolesti, vně obklad na rány/akné.",
       "kdy": "jaro"
+    },
+    {
+      "name": "Svízel",
+      "img": "byliny/Svízel__ptačinec.png",
+      "use": "Roste snad všude na louce i zahradě. Mladý chutná jako hrášek — dávám ho např. na vajíčka namísto pažitky. Nebo na bylinkové máslo: svízel najemno nasekat, přidat sůl a máslo, nechat přes noc mimo lednici a smíchat. Tip: hodí se i na čočku na kyselo.",
+      "kdy": "jaro",
+      "recept": {
+        "n": 106,
+        "name": "Čočka na kyselo"
+      }
+    },
+    {
+      "name": "Bršlice (kozí noha)",
+      "img": "byliny/Kopřivy__bršlice.png",
+      "use": "Bylina, kterou můžete použít do salátu, na vajíčka nebo na chleba s máslem. Přidává se i do pesta.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Podběl",
+      "img": "byliny/Fialky__podběl__sedmikrásky.png",
+      "use": "Čaj z čerstvého nebo sušeného je pohlazení. Vhodný na dýchací cesty.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Smrkové výhonky",
+      "img": "byliny/smrkove-vyhonky.jpg",
+      "use": "Obsahují spoustu vitamínů a podporují imunitu. Můžete je jíst jen tak, dávat do salátu nebo naložit do medu.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Česnáček",
+      "img": "byliny/cesnacek.jpg",
+      "use": "Podobný česneku — voní po něm a nese jeho účinky. Kvetoucí rostlinka už má hořké listy, v lesích najdete ještě nevykvetlé. Do salátu nebo na pesto stejně jako medvědí česnek (hodí se přidat i lesní šťovík nebo bršlici).",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Zběhovec plazivý",
+      "img": "byliny/zbehovec.jpg",
+      "use": "Má podobné účinky jako plicník. Suší se celý, je skvělý při zánětech plic/průdušek a při kašlích.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Hluchavka bílá",
+      "img": "byliny/hluchavka-bila.jpg",
+      "use": "Sbírají se bílé květy. Zklidňuje, podporuje spánek — skvělá k doplnění heřmánku či meduňky. I jako jedlé květy.",
+      "kdy": "jaro–léto"
+    },
+    {
+      "name": "Třezalka",
+      "img": "byliny/trezalka.jpg",
+      "use": "Sušte květy — jsou skvělé na zklidnění nervového systému. Skvělá i do mastí na masáže jizev nebo bolavých míst. Pozor na rostlinné oleje, které oxidují; doporučuji základ hovězí lůj / bambucké máslo, případně upravený kokosový olej.",
+      "kdy": "léto"
+    },
+    {
+      "name": "Mladé kopřivy",
+      "img": "byliny/Kopřivy__bršlice.png",
+      "use": "Top na čaj, můžete i sušit. Mladé mají opravdu sílu. Skvělé i k jídlu.",
+      "kdy": "jaro"
+    },
+    {
+      "name": "Sběr aktuálně (jaro)",
+      "img": "byliny/sber-jaro.jpg",
+      "use": "Co sbírat na jaře: fialky (čaj, jedlé květy na dezert), divoká pažitka (do másla, na vajíčka), svízel (stejně jako pažitka), jahodník (na čaj).",
+      "kdy": "jaro"
     }
   ],
   "healing": {
@@ -301,6 +365,134 @@
       "text": "Kompletní 21denní program, který propojuje výživu, tělo a přípravu na zdravé početí. Vše z minikurzu dovedené do uceleného systému.",
       "cta": "Zjistit více",
       "locked": true
+    },
+    "pilire": [
+      {
+        "key": "pristup",
+        "ico": "🍽️",
+        "h": "Strava",
+        "perex": "Jak jíst sezónně a v klidu, bez tlaku a pravidel"
+      },
+      {
+        "key": "pohyb",
+        "ico": "🏃",
+        "h": "Pohyb",
+        "perex": "Zásady zdravého pohybu bez tlaku na výkon"
+      },
+      {
+        "key": "cirkadian",
+        "ico": "🌗",
+        "h": "Cirkadiánní rytmus",
+        "perex": "Světelná hygiena a ranní/večerní návyky"
+      },
+      {
+        "key": "spanek",
+        "ico": "😴",
+        "h": "Spánek",
+        "perex": "Základní spánkové rutiny, i s přerušovaným spánkem"
+      }
+    ]
+  },
+  "pilire": [
+    {
+      "key": "strava",
+      "ico": "🍽️",
+      "h": "Strava",
+      "perex": "Jak jíst sezónně a v klidu, bez tlaku a pravidel",
+      "modul": "pristup"
+    },
+    {
+      "key": "pohyb",
+      "ico": "🏃",
+      "h": "Pohyb",
+      "perex": "Zásady zdravého pohybu bez tlaku na výkon",
+      "modul": "pohyb"
+    },
+    {
+      "key": "cirkadian",
+      "ico": "🌗",
+      "h": "Cirkadiánní rytmus",
+      "perex": "Světelná hygiena a ranní/večerní návyky",
+      "modul": "cirkadian"
+    },
+    {
+      "key": "spanek",
+      "ico": "🌙",
+      "h": "Spánek",
+      "perex": "Základní spánkové rutiny, i s přerušovaným spánkem",
+      "modul": "spanek"
     }
+  ],
+  "pripravujeme": [
+    {
+      "ico": "🧴",
+      "h": "Minikurz: Ekzém",
+      "perex": "celostní přístup · brzy"
+    },
+    {
+      "ico": "🍽️",
+      "h": "Podpora emočního jedení",
+      "perex": "provázení pro ženy · brzy"
+    },
+    {
+      "ico": "🌙",
+      "h": "Energie pro maminky",
+      "perex": "přerušovaný spánek · brzy"
+    }
+  ],
+  "cta_produkt": {
+    "ico": "👶",
+    "h": "Přirozené početí 21. st.",
+    "perex": "Kompletní příprava na početí — pro ženy i muže, jako pár.",
+    "cta": "Zjistit více",
+    "locked": true
+  },
+  "situace": [
+    {
+      "key": "vse",
+      "label": "Vše"
+    },
+    {
+      "key": "miminko",
+      "label": "Připravujeme se na miminko"
+    },
+    {
+      "key": "tehotna",
+      "label": "Těhotná"
+    },
+    {
+      "key": "kojici",
+      "label": "Kojící"
+    },
+    {
+      "key": "ekzem",
+      "label": "Řešíme ekzém"
+    }
+  ],
+  "zpracovani": {
+    "title": "Zpracování surovin",
+    "intro": "Fermenty, nálevy a přípravy, které nejsou klasické recepty, ale postupy zpracování surovin.",
+    "polozky": [
+      {
+        "name": "Podzimní fermentovaná limča",
+        "text": "Na 1 l sklenici (dělám rovnou víc najednou): 2–3 jablka na kostičky. Filtrovanou převařenou vodu, do ní 2 PL třtinového cukru, nechat vystydnout a zalít jablka. Nechat fermentovat."
+      },
+      {
+        "name": "Fermentovaná řepa",
+        "text": "Řepu očistím a nakrájím na kousky. Vytvořím solný roztok: filtrovaná voda + kvalitní sůl v poměru 2 PL soli na 1 l vody. Řepu dám do sklenice a zaliju roztokem. Nechat fermentovat."
+      },
+      {
+        "name": "Kombucha — nový nálev (2 l)",
+        "text": "Uvařím plné sítko sypaného bio černého čaje, rozpustím cca 100 g bio třtinového/kokosového cukru (většinou napůl). Po vychladnutí přendám houbu i s cca 200 ml starého nálevu. Fermentace 5–10 dnů podle tloušťky houby. Od 5. dne ochutnávám (bambusové brčko), když chutná, sliju a část nechám do dalšího nálevu. Používám plast/dřevo, ne kov."
+      },
+      {
+        "name": "Kombucha — jak ji nejjednodušeji získat",
+        "text": "Ověřený proces: odlijte cca 0,5 l kupované (bio) nebo darované kombuchy, přidejte 3 lžíce cukru a nechte v pokojové teplotě, dokud se nahoře neutvoří houba."
+      },
+      {
+        "name": "Čaj z jehněd (lísky)",
+        "text": "Jakékoliv raw byliny zalévám vychladlejší vodou, nebo ji vědomě nepřivedu k varu (okolo 80 °C)."
+      }
+    ]
   }
 }
