@@ -31,7 +31,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 3,
@@ -68,7 +71,10 @@
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 4,
@@ -102,7 +108,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 5,
@@ -143,11 +152,14 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 6,
-      "name": "Borůvková zmrzlina jako výživná svačina i zdroj probiotik",
+      "name": "Borůvková zmrzlina",
       "cat": "dezerty",
       "time": "—",
       "date": "2024-08-05",
@@ -173,7 +185,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 7,
@@ -202,7 +217,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 8,
@@ -231,7 +249,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 9,
@@ -266,7 +287,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 10,
@@ -296,11 +320,14 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 11,
-      "name": "🍎fermentovaná jablíčka ~ druhý tip k udkladnění (GAPS tip, dělám taky už poněkolikáté)",
+      "name": "Fermentovaná jablíčka",
       "cat": "sklad",
       "time": "24 hod",
       "date": "2024-08-10",
@@ -324,7 +351,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 12,
@@ -358,11 +388,14 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 13,
-      "name": "Nákyp jako celoroční sladké jídlo pro zpracování aktuálního ovoce 🔥",
+      "name": "Ovocný nákyp",
       "cat": "dezerty",
       "time": "24 hod",
       "date": "2024-08-14",
@@ -392,11 +425,14 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 14,
-      "name": "Náš velmi častý oběd/večeře v tomto období dýní a rajčat🎃🍅 jednoduchost nade vše",
+      "name": "Dýně s rajčaty (oběd/večeře)",
       "cat": "jidla",
       "time": "7 hod",
       "date": "2024-08-14",
@@ -417,7 +453,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 15,
@@ -444,11 +483,14 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 16,
-      "name": "Stejně tak sezóna cuket 👉 mé nejoblíbenější jídlo z nich jsou cuketové placky",
+      "name": "Cuketové placky",
       "cat": "jidla",
       "time": "—",
       "date": "2024-08-16",
@@ -475,7 +517,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 17,
@@ -505,7 +550,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 18,
@@ -540,7 +588,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 19,
@@ -572,7 +623,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 20,
@@ -604,7 +658,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 21,
@@ -635,7 +692,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 22,
@@ -674,7 +734,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 23,
@@ -703,7 +766,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 24,
@@ -736,7 +802,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 25,
@@ -770,7 +839,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 26,
@@ -804,34 +876,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 27,
-      "name": "“Doplňky” , které pravidelně beru denně a proč",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2024-08-29",
-      "ing": [
-        "perga část na lačno + většinou ještě v rámci snídaně: zdroj antioxidantů, minerálních látek, prospěšný pro imunitu jako celek ~ bio perga",
-        "eelktrolyty ve formě mořské plazmy nebo minerálních kapek z přirozeného zdroje : zdroj pro tělo klíčových minerálů, elektrolytů = energie, hydratace, vitalita na buněčné úrovni, podpora nadledvinek, když pociťuji nekomfort, motání/bolesti hlavy skrze teplo nebo změny tlaku = jdu si pro další dávku, jinak beru především ráno po probuzení",
-        "plazma : těhotné, děti",
-        "koncentrovanější:",
-        "Minerální kapky:"
-      ],
-      "steps": [],
-      "fullText": "28.8. den č 29\n\n👉 perga část na lačno + většinou ještě v rámci snídaně: zdroj antioxidantů, minerálních látek, prospěšný pro imunitu jako celek ~ bio perga\n\n👉 eelktrolyty ve formě mořské plazmy nebo minerálních kapek z přirozeného zdroje : zdroj pro tělo klíčových minerálů, elektrolytů = energie, hydratace, vitalita na buněčné úrovni, podpora nadledvinek, když pociťuji nekomfort, motání/bolesti hlavy skrze teplo nebo změny tlaku = jdu si pro další dávku, jinak beru především ráno po probuzení\nplazma : těhotné, děti\nkoncentrovanější:\n\nMinerální kapky:",
-      "photos": [
-        "photo_38@29-08-2024_22-05-20.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_38@29-08-2024_22-05-20.jpg",
-      "search": "“doplnky” , ktere pravidelne beru denne a proc perga cast na lacno + vetsinou jeste v ramci snidane: zdroj antioxidantu, mineralnich latek, prospesny pro imunitu jako celek ~ bio perga eelktrolyty ve forme morske plazmy nebo mineralnich kapek z prirozeneho zdroje : zdroj pro telo klicovych mineralu, elektrolytu = energie, hydratace, vitalita na bunecne urovni, podpora nadledvinek, kdyz pocituji nekomfort, motani/bolesti hlavy skrze teplo nebo zmeny tlaku = jdu si pro dalsi davku, jinak beru predevsim rano po probuzeni plazma : tehotne, deti koncentrovanejsi: mineralni kapky:  28.8. den c 29\n\n👉 perga cast na lacno + vetsinou jeste v ramci snidane: zdroj antioxidantu, mineralnich latek, prospesny pro imunitu jako celek ~ bio perga\n\n👉 eelktrolyty ve forme morske plazmy nebo mineralnich kapek z prirozeneho zdroje : zdroj pro telo klicovych mineralu, elektrolytu = energie, hydratace, vitalita na bunecne urovni, podpora nadledvinek, kdyz pocituji nekomfort, motani/bolesti hlavy skrze teplo nebo zmeny tlaku = jdu si pro dalsi davku, jinak beru predevsim rano po probuzeni\nplazma : tehotne, deti\nkoncentrovanejsi:\n\nmineralni kapky:",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 28,
@@ -863,35 +911,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 29,
-      "name": "🌿 bylinky trochu jinak aneb vlastní vykuřovací svazečky z lokálních bylin",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2024-08-31",
-      "ing": [
-        "Na omotání tenký provázek. Motejte pevně."
-      ],
-      "steps": [
-        "Na vykuřování se skvěle hodí pelyněk pro očistu na všech úrovních. Teď je jej všude dostatek, je vhodný jako základ svazečku. Dále přidávám řebříček, levanduli, svízel a mateřídoušku.",
-        "Než začnete vykuřovat, nechte alespoň 6 týdnů proschnout."
-      ],
-      "fullText": "30.8. den 31\n\nNa vykuřování se skvěle hodí pelyněk pro očistu na všech úrovních. Teď je jej všude dostatek, je vhodný jako základ svazečku. Dále přidávám řebříček, levanduli, svízel a mateřídoušku.\nNa omotání tenký provázek. Motejte pevně.\n—-\nNež začnete vykuřovat, nechte alespoň 6 týdnů proschnout.",
-      "photos": [
-        "photo_40@31-08-2024_20-15-25.jpg",
-        "photo_41@31-08-2024_20-15-26.jpg",
-        "photo_42@31-08-2024_20-15-26.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_40@31-08-2024_20-15-25.jpg",
-      "search": "🌿 bylinky trochu jinak aneb vlastni vykurovaci svazecky z lokalnich bylin na omotani tenky provazek. motejte pevne. na vykurovani se skvele hodi pelynek pro ocistu na vsech urovnich. ted je jej vsude dostatek, je vhodny jako zaklad svazecku. dale pridavam rebricek, levanduli, svizel a materidousku. nez zacnete vykurovat, nechte alespon 6 tydnu proschnout. 30.8. den 31\n\nna vykurovani se skvele hodi pelynek pro ocistu na vsech urovnich. ted je jej vsude dostatek, je vhodny jako zaklad svazecku. dale pridavam rebricek, levanduli, svizel a materidousku.\nna omotani tenky provazek. motejte pevne.\n—-\nnez zacnete vykurovat, nechte alespon 6 tydnu proschnout.",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 30,
@@ -922,7 +945,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 31,
@@ -951,7 +977,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 32,
@@ -993,7 +1022,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 33,
@@ -1023,30 +1055,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 34,
-      "name": "🥛 co dělat s moc kyselým kefírem? ~ tuhle otázku dostávám poměrně často",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2024-09-08",
-      "ing": [],
-      "steps": [
-        "- já jej používám na fermentaci mouky na lívance/ palačinky nebo na buchtu: na noc smíchám kefír s moukou a ráno tvořím, chuť je kyselejší, takže komu vadí, nechť použije více medu/ cukru, díky fermentaci je mouka stravitelnější - i tak doporučuji volit primárně bezlepek"
-      ],
-      "fullText": "6.9. den 38\n- já jej používám na fermentaci mouky na lívance/ palačinky nebo na buchtu: na noc smíchám kefír s moukou a ráno tvořím, chuť je kyselejší, takže komu vadí, nechť použije více medu/ cukru, díky fermentaci je mouka stravitelnější - i tak doporučuji volit primárně bezlepek",
-      "photos": [
-        "photo_52@08-09-2024_21-22-50.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_52@08-09-2024_21-22-50.jpg",
-      "search": "🥛 co delat s moc kyselym kefirem? ~ tuhle otazku dostavam pomerne casto  - ja jej pouzivam na fermentaci mouky na livance/ palacinky nebo na buchtu: na noc smicham kefir s moukou a rano tvorim, chut je kyselejsi, takze komu vadi, necht pouzije vice medu/ cukru, diky fermentaci je mouka stravitelnejsi - i tak doporucuji volit primarne bezlepek 6.9. den 38\n- ja jej pouzivam na fermentaci mouky na livance/ palacinky nebo na buchtu: na noc smicham kefir s moukou a rano tvorim, chut je kyselejsi, takze komu vadi, necht pouzije vice medu/ cukru, diky fermentaci je mouka stravitelnejsi - i tak doporucuji volit primarne bezlepek",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 35,
@@ -1075,7 +1087,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 36,
@@ -1113,11 +1128,14 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 37,
-      "name": "Další školková sklenička nebo dezert pro návštěvu -čokoládový pudink z tapioky 🍫",
+      "name": "Čokoládový pudink z tapioky",
       "cat": "dezerty",
       "time": "—",
       "date": "2024-09-16",
@@ -1142,7 +1160,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 38,
@@ -1169,7 +1190,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 39,
@@ -1199,7 +1223,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 40,
@@ -1227,7 +1254,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 41,
@@ -1254,7 +1284,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 42,
@@ -1278,33 +1311,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 43,
-      "name": "💜 rychlosnack, který mám vždy v batohu/kabelce pro nás i děti",
-      "cat": "jidla",
-      "time": "—",
-      "date": "2024-09-22",
-      "ing": [
-        "tyčinka masová / sušené maso",
-        "tyčinka raw bez ořechů (jiné než tyto nejíme)"
-      ],
-      "steps": [
-        "Podmínka: čisté složení, biokvalita, nezapomínat ma bílkoviny + tuky (viz.masová tyčka) = zasycení, výživnost"
-      ],
-      "fullText": "18.9. den č 50\n\n👉 tyčinka masová / sušené maso\n\n👉 tyčinka raw bez ořechů (jiné než tyto nejíme)\n\nPodmínka: čisté složení, biokvalita, nezapomínat ma bílkoviny + tuky (viz.masová tyčka) = zasycení, výživnost",
-      "photos": [
-        "photo_66@22-09-2024_08-45-58.jpg"
-      ],
-      "color": "#a8632f",
-      "img": "fotky/photo_66@22-09-2024_08-45-58.jpg",
-      "search": "💜 rychlosnack, ktery mam vzdy v batohu/kabelce pro nas i deti tycinka masova / susene maso tycinka raw bez orechu (jine nez tyto nejime) podminka: ciste slozeni, biokvalita, nezapominat ma bilkoviny + tuky (viz.masova tycka) = zasyceni, vyzivnost 18.9. den c 50\n\n👉 tycinka masova / susene maso\n\n👉 tycinka raw bez orechu (jine nez tyto nejime)\n\npodminka: ciste slozeni, biokvalita, nezapominat ma bilkoviny + tuky (viz.masova tycka) = zasyceni, vyzivnost",
-      "edu": {
-        "modul": "pristup",
-        "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 44,
@@ -1332,32 +1342,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 45,
-      "name": "❤️ sezóna šípků je v plném proudu, urcitě trhejte",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2024-10-01",
-      "ing": [
-        "dál od polí kde se stříkalo, dál od silnic"
-      ],
-      "steps": [
-        "Tip ma uskladnění: suším v troubě na 50st dokud nejsou tvrdé a nedrolí se. Přidávám do bylin na čaje❤️. Ovšem existují tipy jak z šípků raw vytáhnout maximum, ještě posdilim."
-      ],
-      "fullText": "Den č. 52\n- dál od polí kde se stříkalo, dál od silnic\n\nTip ma uskladnění: suším v troubě na 50st dokud nejsou tvrdé a nedrolí se. Přidávám do bylin na čaje❤️. Ovšem existují tipy jak z šípků raw vytáhnout maximum, ještě posdilim.",
-      "photos": [
-        "photo_68@01-10-2024_18-33-15.jpg"
-      ],
-      "color": "#5a7a3f",
-      "img": "fotky/photo_68@01-10-2024_18-33-15.jpg",
-      "search": "❤ sezona sipku je v plnem proudu, urcite trhejte dal od poli kde se strikalo, dal od silnic tip ma uskladneni: susim v troube na 50st dokud nejsou tvrde a nedroli se. pridavam do bylin na caje❤. ovsem existuji tipy jak z sipku raw vytahnout maximum, jeste posdilim. den c. 52\n- dal od poli kde se strikalo, dal od silnic\n\ntip ma uskladneni: susim v troube na 50st dokud nejsou tvrde a nedroli se. pridavam do bylin na caje❤. ovsem existuji tipy jak z sipku raw vytahnout maximum, jeste posdilim.",
-      "edu": {
-        "modul": "sezona",
-        "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 46,
@@ -1382,7 +1370,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 47,
@@ -1407,11 +1398,14 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 48,
-      "name": "Lečo + zpracování zeleniny i na zavaření 🍅",
+      "name": "Lečo",
       "cat": "sklad",
       "time": "—",
       "date": "2024-10-01",
@@ -1440,11 +1434,14 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 49,
-      "name": "Švestkový koláč, přirozeně výživný, plnohodnotný snack i pro děti a zároveň “sladký”",
+      "name": "Švestkový koláč",
       "cat": "dezerty",
       "time": "30 min",
       "date": "2024-10-13",
@@ -1473,7 +1470,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 50,
@@ -1503,11 +1503,14 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 51,
-      "name": "vařím z toho, co mám k dispozici a je to nejlepší:",
+      "name": "Jáhly s trhaným hovězím",
       "cat": "jidla",
       "time": "12 hod",
       "date": "2024-10-13",
@@ -1531,7 +1534,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 52,
@@ -1591,7 +1597,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 53,
@@ -1621,7 +1630,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 54,
@@ -1652,7 +1664,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 55,
@@ -1683,7 +1698,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 56,
@@ -1709,7 +1727,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 57,
@@ -1740,7 +1761,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 58,
@@ -1771,7 +1795,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 59,
@@ -1798,7 +1825,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 61,
@@ -1830,7 +1860,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 62,
@@ -1857,11 +1890,14 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 64,
-      "name": "Divočák do zásob - vývary, pečené/ trhané maso",
+      "name": "Divočák do zásob",
       "cat": "sklad",
       "time": "—",
       "date": "2024-12-19",
@@ -1883,7 +1919,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 68,
@@ -1939,7 +1978,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 72,
@@ -1975,11 +2017,14 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 73,
-      "name": "Medvědí česnek - roste v lesích, kde je slunce a vlhko )u potoka)..",
+      "name": "Medvědí česnek",
       "cat": "jidla",
       "time": "—",
       "date": "2025-04-11",
@@ -2004,7 +2049,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 74,
@@ -2046,7 +2094,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 75,
@@ -2074,7 +2125,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 78,
@@ -2110,7 +2164,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 79,
@@ -2143,7 +2200,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 80,
@@ -2178,7 +2238,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 81,
@@ -2208,7 +2271,10 @@
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 82,
@@ -2239,7 +2305,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 83,
@@ -2274,7 +2343,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 84,
@@ -2304,7 +2376,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 85,
@@ -2334,7 +2409,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 86,
@@ -2362,7 +2440,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 87,
@@ -2392,37 +2473,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 88,
-      "name": "Oblíbený snack dětí a dá se tam ledacos zamaskovat;)",
-      "cat": "dezerty",
-      "time": "—",
-      "date": "2025-06-12",
-      "ing": [
-        "Domácí kefír - máte v receptáři",
-        "+ sezónní ovoce",
-        "(+ žloutek, lyo játra)",
-        "152. bezový cukr"
-      ],
-      "steps": [
-        "151. Oblíbený snack dětí a dá se tam ledacos zamaskovat;)",
-        "- když uklízíte usušený bez, pod ním zůstane kvítka a pyl, smíchám do sklenice se třtinovým cukrem a dáváme si třeba na kaši/ sladká jídla ❤️"
-      ],
-      "fullText": "Domácí kefír - máte v receptáři\n+ sezónní ovoce\n(+ žloutek, lyo játra)\n152. bezový cukr\n- když uklízíte usušený bez, pod ním zůstane kvítka a pyl, smíchám do sklenice se třtinovým cukrem a dáváme si třeba na kaši/ sladká jídla ❤️",
-      "photos": [
-        "photo_180@12-06-2025_13-21-46.jpg",
-        "photo_181@12-06-2025_13-23-08.jpg"
-      ],
-      "color": "#b5462f",
-      "img": "fotky/photo_180@12-06-2025_13-21-46.jpg",
-      "search": "oblibeny snack deti a da se tam ledacos zamaskovat;) domaci kefir - mate v receptari + sezonni ovoce (+ zloutek, lyo jatra) 152. bezovy cukr 151. oblibeny snack deti a da se tam ledacos zamaskovat;) - kdyz uklizite ususeny bez, pod nim zustane kvitka a pyl, smicham do sklenice se trtinovym cukrem a davame si treba na kasi/ sladka jidla ❤ domaci kefir - mate v receptari\n+ sezonni ovoce\n(+ zloutek, lyo jatra)\n152. bezovy cukr\n- kdyz uklizite ususeny bez, pod nim zustane kvitka a pyl, smicham do sklenice se trtinovym cukrem a davame si treba na kasi/ sladka jidla ❤",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 90,
@@ -2450,7 +2504,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 92,
@@ -2477,7 +2534,10 @@
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 93,
@@ -2508,7 +2568,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 94,
@@ -2536,7 +2599,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 96,
@@ -2576,7 +2642,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 97,
@@ -2603,11 +2672,14 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 98,
-      "name": "Na žádosti občas zasdílím denní jídelníček. Stále jednoduchost a sezónnost❤️",
+      "name": "Ukázkový denní jídelníček",
       "cat": "dezerty",
       "time": "—",
       "date": "2025-07-21",
@@ -2632,7 +2704,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "jidelnicek",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 99,
@@ -2671,7 +2746,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 101,
@@ -2699,7 +2777,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 102,
@@ -2737,7 +2818,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 103,
@@ -2781,7 +2865,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 104,
@@ -2817,7 +2904,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 105,
@@ -2846,7 +2936,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 107,
@@ -2876,7 +2969,10 @@
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 108,
@@ -2903,7 +2999,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 110,
@@ -2936,7 +3035,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 111,
@@ -2967,7 +3069,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 112,
@@ -2996,7 +3101,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 113,
@@ -3039,7 +3147,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 115,
@@ -3069,7 +3180,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 117,
@@ -3676,7 +3790,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": false
     },
     {
       "n": 141,
@@ -3702,7 +3819,10 @@
         "modul": "pristup",
         "citace": "Kvalitní živočišná strava jako základ talíře — víc v „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 142,
@@ -3741,7 +3861,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 143,
@@ -3777,7 +3900,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 144,
@@ -3811,7 +3937,10 @@
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 145,
@@ -3850,38 +3979,10 @@
         "modul": "streva",
         "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
       },
-      "kind": "recept"
-    },
-    {
-      "n": 147,
-      "name": "Můj seznam semínek a co se skutečně vyplatí pěstovat:",
-      "cat": "sklad",
-      "time": "—",
-      "date": "2026-02-03",
-      "ing": [
-        "rozhodně kořenovka, která se dá využít při uskladnění i celou zimu: mrkev, petržel, pastiňák, celer, řepa",
-        "saláty, ředkvičky, kedluby - za čerstva v sezóně není nic lepšího! Ředkvičky v receptáři umíte i fermentovat, a to je mňamka na celou zimu!",
-        "zimní zelenina, která vydrží v záhonech i mrazy: všechny druhy kapusty a pórek",
-        "dýně (dají se uskladnit až do jara)",
-        "brambory",
-        "rajčata, papriky, okurky, pokud máte dost místa",
-        "hrášek: ten je boží na zobačku když roste, ale vyloupat pytlík do mrazáku trvá snad věčnost!"
-      ],
-      "steps": [
-        "+ Úkol pro vás: udělejte si vlastní seznam a objednejte/ sežeňte si semínka - volte původní odrůdy, ne hybridy či GMO",
-        "- zelí, kdo má rád svoje pickles, super v mixu s řepou",
-        "Pokud začínáte, šla bych dle priorit: mrkev, cibule (top i na zimu), mrazuvzdorná zelenina + ředkvičky v sezóně (ty můžte vysévat stále a mít konzistentní přísun), dýně, brambory - dobré uskladnění"
-      ],
-      "fullText": "+ Úkol pro vás: udělejte si vlastní seznam a objednejte/ sežeňte si semínka - volte původní odrůdy, ne hybridy či GMO\n\n- rozhodně kořenovka, která se dá využít při uskladnění i celou zimu: mrkev, petržel, pastiňák, celer, řepa\n- saláty, ředkvičky, kedluby - za čerstva v sezóně není nic lepšího! Ředkvičky v receptáři umíte i fermentovat, a to je mňamka na celou zimu!\n- zelí, kdo má rád svoje pickles, super v mixu s řepou\n- zimní zelenina, která vydrží v záhonech i mrazy: všechny druhy kapusty a pórek\n- dýně (dají se uskladnit až do jara)\n- brambory\n- rajčata, papriky, okurky, pokud máte dost místa\n- hrášek: ten je boží na zobačku když roste, ale vyloupat pytlík do mrazáku trvá snad věčnost!\n\nPokud začínáte, šla bych dle priorit: mrkev, cibule (top i na zimu), mrazuvzdorná zelenina + ředkvičky v sezóně (ty můžte vysévat stále a mít konzistentní přísun), dýně, brambory - dobré uskladnění",
-      "photos": [],
-      "color": "#5a7a3f",
-      "img": "",
-      "search": "muj seznam seminek a co se skutecne vyplati pestovat: rozhodne korenovka, ktera se da vyuzit pri uskladneni i celou zimu: mrkev, petrzel, pastinak, celer, repa salaty, redkvicky, kedluby - za cerstva v sezone neni nic lepsiho! redkvicky v receptari umite i fermentovat, a to je mnamka na celou zimu! zimni zelenina, ktera vydrzi v zahonech i mrazy: vsechny druhy kapusty a porek dyne (daji se uskladnit az do jara) brambory rajcata, papriky, okurky, pokud mate dost mista hrasek: ten je bozi na zobacku kdyz roste, ale vyloupat pytlik do mrazaku trva snad vecnost! + ukol pro vas: udelejte si vlastni seznam a objednejte/ sezente si seminka - volte puvodni odrudy, ne hybridy ci gmo - zeli, kdo ma rad svoje pickles, super v mixu s repou pokud zacinate, sla bych dle priorit: mrkev, cibule (top i na zimu), mrazuvzdorna zelenina + redkvicky v sezone (ty muzte vysevat stale a mit konzistentni prisun), dyne, brambory - dobre uskladneni + ukol pro vas: udelejte si vlastni seznam a objednejte/ sezente si seminka - volte puvodni odrudy, ne hybridy ci gmo\n\n- rozhodne korenovka, ktera se da vyuzit pri uskladneni i celou zimu: mrkev, petrzel, pastinak, celer, repa\n- salaty, redkvicky, kedluby - za cerstva v sezone neni nic lepsiho! redkvicky v receptari umite i fermentovat, a to je mnamka na celou zimu!\n- zeli, kdo ma rad svoje pickles, super v mixu s repou\n- zimni zelenina, ktera vydrzi v zahonech i mrazy: vsechny druhy kapusty a porek\n- dyne (daji se uskladnit az do jara)\n- brambory\n- rajcata, papriky, okurky, pokud mate dost mista\n- hrasek: ten je bozi na zobacku kdyz roste, ale vyloupat pytlik do mrazaku trva snad vecnost!\n\npokud zacinate, sla bych dle priorit: mrkev, cibule (top i na zimu), mrazuvzdorna zelenina + redkvicky v sezone (ty muzte vysevat stale a mit konzistentni prisun), dyne, brambory - dobre uskladneni",
-      "edu": {
-        "modul": "streva",
-        "citace": "Fermentované potraviny jsou strážci tvého mikrobiomu — přečti si proč ve „Zdravá střeva\"."
-      },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 150,
@@ -3912,7 +4013,10 @@
         "modul": "pristup",
         "citace": "Vše souvisí se vším — začni modulem „Přístup ke stravování\"."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 151,
@@ -3947,7 +4051,10 @@
         "modul": "cirkstrava",
         "citace": "Načasování sacharidů má význam — přečti si o cirkadiánním stravování."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     },
     {
       "n": 152,
@@ -3979,7 +4086,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 153,
@@ -4007,7 +4117,10 @@
         "modul": "sezona",
         "citace": "Vaříš ze sezónních surovin — víc o síle sezónního stravování najdeš v modulu."
       },
-      "kind": "recept"
+      "kind": "recept",
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 155,
@@ -4033,7 +4146,10 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
-      }
+      },
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": false
     },
     {
       "n": 157,
@@ -4065,7 +4181,10 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
-      }
+      },
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 158,
@@ -4093,7 +4212,10 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
-      }
+      },
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 160,
@@ -4121,7 +4243,10 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
-      }
+      },
+      "chut": "slane",
+      "meal": "savory",
+      "tehotne": true
     },
     {
       "n": 161,
@@ -4155,7 +4280,10 @@
       "edu": {
         "modul": "pristup",
         "citace": "Kvalitní domácí strava jako základ — víc v „Přístup ke stravování\"."
-      }
+      },
+      "chut": "sladke",
+      "meal": "sweet",
+      "tehotne": true
     }
   ],
   "tips": [

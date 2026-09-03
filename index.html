@@ -9,115 +9,127 @@
 <title>Transformace stravování</title>
 </head>
 <body style="margin:0;background:#f4efe6;">
-<!-- =====================================================================
-     TRANSFORMACE STRAVOVÁNÍ — členská aplikace
-     Data: recepty.json + obsah.json.  Fotky: fotky/  Byliny: byliny/
-     Spouštět přes web/server (GitHub Pages), ne dvojklikem z disku.
-     ===================================================================== -->
-<div id="app">
-  <div id="loading" style="text-align:center;padding:60px 20px;font-family:sans-serif;color:#6b5d4c">Načítám…</div>
-</div>
-
+<div id="app"><div id="loading" style="text-align:center;padding:60px 20px;font-family:sans-serif;color:#6b5d4c">Načítám…</div></div>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Albert+Sans:wght@400;500;600;700&display=swap');
   #app{
-    --bg:#f4efe6; --bg2:#efe7d9; --panel:#fffdf8; --ink:#2c2117; --ink-soft:#6b5d4c;
-    --line:#e2d7c5; --accent:#b5462f; --accent2:#5a7a3f; --accent3:#c98a1e;
-    --dark:#2c2117; --shadow:0 2px 14px rgba(60,40,20,.08); --shadow-lg:0 14px 36px rgba(60,40,20,.14);
-    --radius:20px; font-family:'Albert Sans',sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; min-height:100vh;
+    --bg:#f4efe6;--bg2:#efe7d9;--panel:#fffdf8;--ink:#2c2117;--ink-soft:#6b5d4c;
+    --line:#e2d7c5;--accent:#b5462f;--accent2:#5a7a3f;--accent3:#c98a1e;--dark:#2c2117;
+    --shadow:0 2px 14px rgba(60,40,20,.08);--shadow-lg:0 14px 36px rgba(60,40,20,.14);--radius:20px;
+    font-family:'Albert Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;min-height:100vh;
   }
   #app *,#app *::before,#app *::after{box-sizing:border-box}
   #app h1,#app h2,#app h3,#app h4{font-family:'Fraunces',serif;font-weight:600;margin:0;line-height:1.15}
   #app a{color:var(--accent)}
   #app .wrap{max-width:1180px;margin:0 auto;padding:0 20px 70px}
 
-  /* topbar */
-  #app .topbar{background:var(--dark);color:#f4efe6;font-size:14px;display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
-  #app .topbar .member{display:flex;align-items:center;gap:10px}
+  /* topbar - velký nadpis */
+  #app .topbar{background:var(--dark);color:#f4efe6;padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+  #app .topbar .member{display:flex;align-items:center;gap:10px;font-size:14px}
   #app .topbar .avatar{width:28px;height:28px;border-radius:50%;background:var(--accent2);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
-  #app .topbar .brand{font-weight:600;color:#e6dccb;font-size:13.5px}
+  #app .bignav{text-align:center;padding:26px 20px 8px}
+  #app .bignav h1{font-size:clamp(30px,5vw,48px);color:var(--ink);letter-spacing:-.5px}
+  #app .bignav h1 em{color:var(--accent);font-style:italic}
+  #app .welcome{text-align:center;color:var(--ink-soft);font-size:16px;margin-top:8px}
+  #app .welcome b{color:var(--accent2)}
 
-  /* hero */
-  #app .hello{padding:30px 0 18px}
-  #app .hello .eyebrow{color:var(--accent2);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
-  #app .hello h1{font-size:clamp(30px,4.5vw,42px);margin-top:6px}
-  #app .hello h1 em{color:var(--accent);font-style:italic}
-
-  /* layout dvousloupec */
-  #app .cols{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start}
+  #app .cols{display:grid;grid-template-columns:1fr 330px;gap:22px;align-items:start;margin-top:24px}
   @media(max-width:960px){#app .cols{grid-template-columns:1fr}}
 
-  /* velký panel Výživení */
-  #app .bigpanel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 26px}
-  #app .bp-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
-  #app .bp-head .bp-ico{width:48px;height:48px;border-radius:14px;background:var(--bg2);display:grid;place-items:center;font-size:24px;flex:0 0 auto}
-  #app .bp-head h2{font-size:23px}
-  #app .bp-head p{margin:2px 0 0;color:var(--ink-soft);font-size:14px}
-  #app .bp-expand{margin-left:auto;background:var(--bg2);border:1px solid var(--line);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:15px;color:var(--ink-soft)}
+  /* denní poselství (malý panel Výživení) */
+  #app .daily{background:linear-gradient(135deg,#eef3e8,#e3ebda);border:1px solid #d5e2c5;border-radius:var(--radius);padding:18px 22px;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s,box-shadow .15s}
+  #app .daily:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  #app .daily .dl-lead{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent2);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+  #app .daily .dl-quote{font-family:'Fraunces';font-style:italic;font-size:19px;color:var(--ink);line-height:1.4}
+  #app .daily .dl-mod{margin-top:10px;font-size:13px;font-weight:600;color:var(--accent)}
 
-  /* 4 pilíře */
-  #app .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-  @media(max-width:720px){#app .pillars{grid-template-columns:repeat(2,1fr)}}
-  #app .pillar{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:14px 15px;cursor:pointer;transition:transform .15s,box-shadow .15s}
-  #app .pillar:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-  #app .pillar .p-ico{width:34px;height:34px;border-radius:9px;background:#fff;display:grid;place-items:center;font-size:17px;margin-bottom:9px}
-  #app .pillar h3{font-size:16px}
-  #app .pillar p{margin:5px 0 0;font-size:12px;color:var(--ink-soft);line-height:1.4}
+  /* dnešní jídla */
+  #app .sec-t{font-size:22px;margin:26px 0 14px}
+  #app .meals{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:720px){#app .meals{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:440px){#app .meals{grid-template-columns:1fr}}
+  #app .meal{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  #app .meal .mtag{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#fff;background:rgba(44,33,23,.85);padding:3px 9px;border-radius:999px;position:absolute;top:9px;left:9px}
+  #app .meal .mimg{aspect-ratio:4/3;background-size:cover;background-position:center;position:relative;cursor:pointer}
+  #app .meal .mbody{padding:11px 12px 12px;flex:1;display:flex;flex-direction:column}
+  #app .meal .mbody h3{font-size:15px;cursor:pointer;line-height:1.2}
+  #app .meal .mbody h3:hover{color:var(--accent)}
+  #app .meal .mmeta{font-size:11.5px;color:var(--ink-soft);margin-top:3px}
+  #app .meal .mchange{margin-top:auto;padding-top:9px}
+  #app .meal .mchange button{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--ink-soft);border-radius:8px;padding:7px;font-family:'Albert Sans';font-size:12px;font-weight:600;cursor:pointer}
+  #app .meal .mchange button:hover{border-color:var(--accent);color:var(--accent)}
 
-  /* receptář sekce */
-  #app .recept-sec{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
-  #app .recept-sec h2{font-size:22px;margin-bottom:14px}
-  #app .flabel{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);margin:12px 0 8px}
-  #app .chips{display:flex;flex-wrap:wrap;gap:8px}
-  #app .chip{border:1px solid var(--line);background:var(--panel);padding:8px 15px;border-radius:999px;cursor:pointer;font-family:'Albert Sans';font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:all .15s}
+  /* receptář soupis + hledání */
+  #app .rsearch{margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+  #app .rsearch .searchbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  #app .rsearch input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-family:'Albert Sans';font-size:15px}
+  #app .rsearch input:focus{outline:2px solid var(--accent);border-color:transparent}
+  #app .chip{border:1px solid var(--line);background:var(--panel);padding:9px 16px;border-radius:999px;cursor:pointer;font-family:'Albert Sans';font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:all .15s}
   #app .chip:hover{border-color:var(--accent)}
-  #app .chip.active{background:var(--accent3);color:#2c2117;border-color:var(--accent3)}
-  #app .chip.active.situ{background:var(--accent);color:#fff;border-color:var(--accent)}
-
-  #app .zamer{background:var(--bg2);border-radius:14px;padding:14px 16px;margin:16px 0}
-  #app .zamer .zh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--ink-soft);margin-bottom:6px}
-  #app .zamer p{margin:0;font-size:13.5px}
-
-  /* recept řádky */
-  #app .rlist{display:flex;flex-direction:column;gap:12px}
-  #app .rrow{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px 15px;display:flex;gap:14px;cursor:pointer;transition:transform .15s,box-shadow .15s}
-  #app .rrow:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-  #app .rrow .rthumb{width:56px;height:56px;border-radius:11px;background-size:cover;background-position:center;flex:0 0 auto}
-  #app .rrow .rinfo{min-width:0;flex:1}
-  #app .rrow .rinfo h3{font-size:16px}
-  #app .rrow .rmeta{font-size:12px;color:var(--ink-soft);margin:3px 0}
-  #app .rrow .rcit{font-size:12.5px;color:var(--ink-soft);display:flex;gap:6px;align-items:flex-start;margin-top:4px}
-  #app .rrow .rcit b{color:var(--accent3)}
-
-  #app .rmore{text-align:right;margin-top:16px}
-  #app .rmore button{background:none;border:none;color:var(--accent);font-family:'Albert Sans';font-weight:700;font-size:14px;cursor:pointer}
-  #app .filter-note{color:var(--ink-soft);font-size:12.5px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+  #app .chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  #app .grid-cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  /* seznam receptů (řádky) */
+  #app .rlist{display:flex;flex-direction:column;gap:8px}
+  #app .rrow{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 14px;display:flex;gap:13px;align-items:center;cursor:pointer;transition:transform .12s,box-shadow .12s}
+  #app .rrow:hover{transform:translateX(3px);box-shadow:var(--shadow)}
+  #app .rrow .rthumb{width:52px;height:52px;border-radius:10px;background-size:cover;background-position:center;flex:0 0 auto}
+  #app .rrow .rinfo{flex:1;min-width:0}
+  #app .rrow .rinfo h3{font-size:16px;line-height:1.2}
+  #app .rrow .rmeta{font-size:12px;color:var(--ink-soft);margin-top:2px}
+  #app .rrow .rmeta .rtag{color:var(--accent2);font-weight:700;text-transform:uppercase;font-size:10.5px;letter-spacing:.4px;margin-left:8px}
+  #app .rrow .rfav{flex:0 0 auto;background:none;border:none;font-size:22px;cursor:pointer;padding:6px;line-height:1;color:var(--line);transition:transform .12s}
+  #app .rrow .rfav:hover{transform:scale(1.2)}
+  #app .rrow .rfav.on{color:var(--accent)}
+  #app .rcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+  #app .rcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+  #app .rcard .rimg{aspect-ratio:4/3;background-size:cover;background-position:center;position:relative}
+  #app .rcard .rnum{position:absolute;top:9px;left:9px;background:rgba(44,33,23,.82);color:#fff;font-weight:700;font-size:11px;padding:3px 8px;border-radius:999px}
+  #app .rcard .rb{padding:12px 14px 15px} #app .rcard .rb h3{font-size:16px} #app .rcard .rmeta{font-size:12px;color:var(--ink-soft);margin-top:5px}
+  #app .rcard .rtag{display:inline-block;margin-top:8px;font-size:10.5px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px}
 
   /* pravý sloupec */
-  #app .cta-panel{background:var(--dark);color:#f4efe6;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-lg)}
-  #app .cta-panel .cta-ico{font-size:26px}
-  #app .cta-panel h3{color:#fff;font-size:20px;margin:8px 0}
-  #app .cta-panel p{color:#d9cdb9;font-size:13.5px;margin:0 0 16px}
-  #app .cta-panel .cta-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:11px;padding:12px;font-family:'Albert Sans';font-weight:700;font-size:14.5px;cursor:pointer}
+  #app .cta-panel{background:var(--dark);color:#f4efe6;border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-lg)}
+  #app .cta-panel .cta-ico{font-size:30px}
+  #app .cta-panel h3{color:#fff;font-size:24px;margin:10px 0}
+  #app .cta-panel p{color:#e0d5c2;font-size:15px;margin:0 0 12px;line-height:1.5}
+  #app .cta-panel .price{font-family:'Fraunces';font-size:28px;color:var(--accent3);font-weight:600;margin:6px 0 16px}
+  #app .cta-panel .cta-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:12px;padding:13px;font-family:'Albert Sans';font-weight:700;font-size:15px;cursor:pointer}
   #app .cta-panel .cta-btn:hover{filter:brightness(1.08)}
-  #app .cta-lock{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a99e8b;text-align:center;margin-top:10px}
+  #app .cta-lock{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a99e8b;text-align:center;margin-top:11px}
 
-  #app .soon-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-top:18px;box-shadow:var(--shadow)}
-  #app .soon-panel .sh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--ink-soft);margin-bottom:12px}
-  #app .soon-item{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)}
-  #app .soon-item:last-child{border-bottom:none}
-  #app .soon-item .si-ico{width:30px;height:30px;border-radius:8px;background:var(--bg2);display:grid;place-items:center;font-size:15px;flex:0 0 auto;opacity:.7}
-  #app .soon-item h4{font-family:'Fraunces';font-size:14.5px;color:var(--ink-soft)}
-  #app .soon-item p{margin:1px 0 0;font-size:11.5px;color:#a99e8b}
+  /* minikurz blok v pravém sloupci */
+  #app .side-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-top:18px;box-shadow:var(--shadow)}
+  #app .side-panel .sp-h{font-family:'Fraunces';font-size:18px;color:var(--ink);margin-bottom:4px}
+  #app .side-panel .sp-sub{font-size:12.5px;color:var(--ink-soft);margin-bottom:12px}
+  #app .mk-item{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);cursor:pointer}
+  #app .mk-item:last-child{border-bottom:none}
+  #app .mk-item:hover h4{color:var(--accent)}
+  #app .mk-item .mk-ico{width:28px;height:28px;border-radius:7px;background:var(--bg2);display:grid;place-items:center;font-size:14px;flex:0 0 auto}
+  #app .mk-item h4{font-family:'Fraunces';font-size:14px;color:var(--ink);font-weight:500}
+  #app .mk-item .mk-num{font-size:10px;color:var(--ink-soft)}
 
-  /* modal + stránky (sdílené) */
+  /* objevuj blok */
+  #app .disc-item{display:flex;gap:11px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+  #app .disc-item:last-child{border-bottom:none}
+  #app .disc-item:hover h4{color:var(--accent)}
+  #app .disc-item .di-ico{width:32px;height:32px;border-radius:8px;background:var(--bg2);display:grid;place-items:center;font-size:16px;flex:0 0 auto}
+  #app .disc-item h4{font-family:'Fraunces';font-size:15px;color:var(--ink)}
+  #app .disc-item p{margin:1px 0 0;font-size:11.5px;color:var(--ink-soft)}
+
+  /* připravujeme - zašedlé, menší, níž */
+  #app .soon-faint{margin-top:18px;padding:14px 18px;background:var(--bg2);border-radius:16px;opacity:.75}
+  #app .soon-faint .sf-h{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#a99e8b;margin-bottom:9px}
+  #app .soon-faint .sf-item{display:flex;gap:8px;align-items:center;padding:5px 0;font-size:12px;color:#a99e8b}
+  #app .soon-faint .sf-item .sf-ico{opacity:.6;font-size:13px}
+
+  /* modal + stránky */
   #app .modal-bg{position:fixed;inset:0;background:rgba(30,20,10,.55);display:none;align-items:flex-start;justify-content:center;padding:28px 16px;z-index:200;overflow-y:auto;backdrop-filter:blur(3px)}
   #app .modal-bg.open{display:flex}
   #app .modal{background:var(--panel);border-radius:20px;max-width:660px;width:100%;box-shadow:0 30px 60px rgba(0,0,0,.3);animation:pop .28s ease;overflow:hidden;position:relative}
   @keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}
   #app .modal .hero-img{aspect-ratio:16/9;background-size:cover;background-position:center}
-  #app .modal .inner{padding:24px 26px 30px}
-  #app .modal h2{font-size:25px} #app .modal .sub{color:var(--ink-soft);margin:8px 0 16px;font-size:14px}
+  #app .modal .inner{padding:24px 26px 30px} #app .modal h2{font-size:25px}
+  #app .modal .sub{color:var(--ink-soft);margin:8px 0 16px;font-size:14px}
   #app .modal h4{font-family:'Fraunces';font-size:18px;margin:20px 0 8px;color:var(--accent)}
   #app .modal ul,#app .modal ol{margin:0;padding-left:20px} #app .modal li{margin-bottom:6px}
   #app .modal .label-row{display:block;font-weight:700;margin:4px 0 2px;list-style:none}
@@ -131,7 +143,6 @@
   #app .essence .ess-quote{font-family:'Fraunces';font-style:italic;font-size:15.5px;color:var(--ink);line-height:1.4}
   #app .essence .ess-link{margin-top:11px;background:var(--accent2);color:#fff;border:none;border-radius:9px;padding:9px 14px;font-family:'Albert Sans';font-weight:600;font-size:13px;cursor:pointer}
 
-  /* full page */
   #app .page{animation:fade .3s ease}
   @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
   #app .back{background:none;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-family:'Albert Sans';font-weight:600;font-size:14px;cursor:pointer;color:var(--ink-soft);margin:22px 0 8px}
@@ -146,65 +157,56 @@
   #app .mod-body ul{margin:0 0 14px;padding-left:22px} #app .mod-body li{margin-bottom:7px;font-size:15px}
   #app .mod-body .mod-h{font-family:'Fraunces';font-size:21px;color:var(--accent);margin:24px 0 12px;padding-top:6px;border-top:1px solid var(--line)}
   #app .mod-body .mod-sh{font-family:'Fraunces';font-size:17px;color:var(--accent2);margin:18px 0 8px}
-  #app .grid-cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
   #app .herb{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;border-top:4px solid var(--accent2);transition:transform .15s,box-shadow .15s}
   #app .herb:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
   #app .herb .himg{aspect-ratio:1/1;background-size:cover;background-position:center}
   #app .herb .hb{padding:11px 13px 13px} #app .herb .hb h3{font-size:16px} #app .herb .hmore{font-size:12.5px;color:var(--accent);font-weight:600;margin-top:4px}
-  #app .rcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
-  #app .rcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-  #app .rcard .rimg{aspect-ratio:4/3;background-size:cover;background-position:center;position:relative}
-  #app .rcard .rnum{position:absolute;top:10px;left:10px;background:rgba(44,33,23,.82);color:#fff;font-weight:700;font-size:12px;padding:3px 9px;border-radius:999px}
-  #app .rcard .rb{padding:13px 15px 16px} #app .rcard .rb h3{font-size:17px} #app .rcard .rmeta{font-size:12.5px;color:var(--ink-soft);margin-top:5px}
-  #app .rcard .rtag{display:inline-block;margin-top:9px;font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px}
 
-  #app .sec-h{display:flex;align-items:baseline;gap:12px;margin:32px 0 16px}
-  #app .sec-h h2{font-size:25px} #app .sec-h .line{flex:1;height:1px;background:var(--line)}
   #app .foot{text-align:center;color:var(--ink-soft);font-size:12.5px;margin-top:50px;opacity:.8}
   #app .err{background:#fff;border:1px solid var(--accent);color:var(--accent);padding:18px;border-radius:12px;margin:24px;font-size:14px}
   #app .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 20px;border-radius:999px;font-size:14px;z-index:999;box-shadow:var(--shadow-lg)}
 </style>
-
 <script>
 (function(){
   function boot(){
-    var app=document.getElementById('app');
-    if(!app) return;
-    var bust = '?v=' + Date.now();
+    var app=document.getElementById('app');if(!app)return;
+    var bust='?v='+Date.now();
     Promise.all([
       fetch('recepty.json'+bust).then(function(r){if(!r.ok)throw new Error('recepty.json '+r.status);return r.json()}),
       fetch('obsah.json'+bust).then(function(r){if(!r.ok)throw new Error('obsah.json '+r.status);return r.json()})
     ]).then(function(res){init(res[0],res[1])}).catch(function(e){
-      app.innerHTML='<div class="err"><b>Nepodařilo se načíst data</b><br>Zkontroluj recepty.json a obsah.json vedle stránky, a spouštěj přes web (ne dvojklikem).<br><small>'+e.message+'</small></div>';
+      app.innerHTML='<div class="err"><b>Nepodařilo se načíst data</b><br>Zkontroluj recepty.json a obsah.json vedle stránky, spouštěj přes web.<br><small>'+e.message+'</small></div>';
     });
 
     function init(DATA,OBSAH){
       var recipes=DATA.recipes||[];
       var byliny=OBSAH.byliny||[];
-      var pilire=OBSAH.pilire||[];
-      var situace=OBSAH.situace||[];
       var moduly=(OBSAH.vzdelavani&&OBSAH.vzdelavani.moduly)||[];
-      var member={name:'Petra',email:''};
-
-      // rozdělení receptů dle 'kind'
+      var member={name:'Petra'};
       var onlyRecipes=recipes.filter(function(r){return (r.kind||'recept')==='recept'});
       var jidelnicky=recipes.filter(function(r){return r.kind==='jidelnicek'});
-
+      var sweet=onlyRecipes.filter(function(r){return r.chut==='sladke'});
+      var savory=onlyRecipes.filter(function(r){return r.chut==='slane'});
       var catLabels={jidla:'Běžné jídlo',dezerty:'Dezert',sklad:'Skladování'};
-      var months=['ledna','února','března','dubna','května','června','července','srpna','září','října','listopadu','prosince'];
 
       function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
       function normDia(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
       function encPath(p){return p?p.split('/').map(encodeURIComponent).join('/'):''}
       function ph(c){return 'data:image/svg+xml;utf8,'+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='400' height='300' fill='"+(c||'#5a7a3f')+"'/></svg>")}
       function imgOf(o){return (o&&o.img&&o.img.trim())?encPath(o.img):ph(o&&o.color)}
-      function linkify(t){return esc(t).replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
+      function dayIndex(){var n=new Date();return Math.floor(Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())/86400000)}
 
       var view={name:'home'};
-      var sezona='podzim', situ='vse', rSearch='', rCat='vse';
+      var rSearch='',rChut='vse';
+      var swap={breakfast:0,lunch:0,dinner:0,dessert:0};
+      // oblíbené recepty - ukládají se v prohlížeči
+      var favs={};
+      try{ favs=JSON.parse(localStorage.getItem('ts_favs')||'{}'); }catch(e){ favs={}; }
+      function saveFavs(){ try{ localStorage.setItem('ts_favs',JSON.stringify(favs)); }catch(e){} }
+      function isFav(n){ return !!favs[n]; }
+      function toggleFav(n){ if(favs[n])delete favs[n];else favs[n]=1;saveFavs(); }
 
       function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;app.appendChild(t);setTimeout(function(){t.remove()},1800)}
-
       function render(){
         if(view.name==='home')return renderHome();
         if(view.name==='recepty')return renderAllRecipes();
@@ -213,132 +215,150 @@
         if(view.name==='zpracovani')return renderZpracovani();
         if(view.name==='minikurz')return renderMinikurz();
         if(view.name==='modul')return renderModule(view.payload);
-        if(view.name==='pilir')return renderPilir(view.payload);
       }
       function go(n,p){view={name:n,payload:p};window.scrollTo(0,0);render()}
 
       function topbar(){
-        var ini=member.name.trim().charAt(0).toUpperCase()||'Č';
-        return '<div class="topbar"><div class="member"><span class="avatar">'+esc(ini)+'</span><span>'+esc(member.name)+'</span></div>'+
-          '<span class="brand">Transformace stravování</span></div>';
+        var ini=member.name.trim().charAt(0).toUpperCase();
+        return '<div class="topbar"><div class="member"><span class="avatar">'+esc(ini)+'</span><span>'+esc(member.name)+'</span></div></div>';
       }
 
+      // ---- dnešní jídla (smysluplné: snídaně=sladké, oběd/večeře=slané, dezert=sladké) ----
+      function pick(arr,off){return arr.length?arr[(dayIndex()+off)%arr.length]:null}
+      function todayMeals(){
+        return {
+          breakfast: pick(sweet, 0+swap.breakfast),
+          lunch: pick(savory, 0+swap.lunch),
+          dinner: pick(savory, 1+swap.dinner),
+          dessert: pick(sweet, 3+swap.dessert)
+        };
+      }
+
+      // ---- denní poselství z modulu (střídá se) ----
+      function dailyModule(){return moduly.length?moduly[dayIndex()%moduly.length]:null}
+
       function renderHome(){
-        var html=topbar()+'<div class="wrap">'+
-          '<div class="hello"><div class="eyebrow">Členská sekce</div><h1>Vítejte zpět, <em>'+esc(member.name)+'</em></h1></div>'+
-          '<div class="cols"><div>'+bigPanel()+'</div><div>'+rightCol()+'</div></div>'+
+        var html=topbar()+
+          '<div class="bignav"><h1>Transformace <em>stravování</em></h1>'+
+          '<div class="welcome">Petro, vítejte zpět v <b>členské sekci</b></div></div>'+
+          '<div class="wrap"><div class="cols"><div>'+leftCol()+'</div><div>'+rightCol()+'</div></div>'+
           '<div class="foot">Transformace stravování · '+onlyRecipes.length+' receptů · '+byliny.length+' bylin · minikurz o '+moduly.length+' modulech</div>'+
           '</div><div class="modal-bg" id="modalbg"></div>';
         app.innerHTML=html;
         bindHome();
       }
 
-      function bigPanel(){
-        var pil=pilire.map(function(p){
-          return '<div class="pillar" data-pilir="'+p.key+'"><div class="p-ico">'+p.ico+'</div><h3>'+esc(p.h)+'</h3><p>'+esc(p.perex)+'</p></div>';
-        }).join('');
-        return '<div class="bigpanel">'+
-          '<div class="bp-head"><div class="bp-ico">🍵</div><div><h2>Výživení</h2><p>Základní návyky z programu Daruj si zdraví + receptář</p></div>'+
-            '<button class="bp-expand" data-go="recepty" title="Otevřít celý receptář">⤢</button></div>'+
-          '<div class="pillars">'+pil+'</div>'+
-          receptSec()+
-        '</div>';
+      function leftCol(){
+        var m=todayMeals();
+        var dm=dailyModule();
+        var daily = dm?('<div class="daily" data-modul="'+esc(dm.key)+'">'+
+          '<div class="dl-lead">💡 Dnešní myšlenka z minikurzu</div>'+
+          '<div class="dl-quote">„'+esc(dm.citace||dm.h)+'"</div>'+
+          '<div class="dl-mod">'+dm.ico+' '+esc(dm.h)+' — číst →</div></div>'):'';
+        return daily+
+          '<h2 class="sec-t">Dnešní jídelníček</h2>'+
+          '<div class="meals">'+
+            mealCard('Snídaně','breakfast',m.breakfast)+
+            mealCard('Oběd','lunch',m.lunch)+
+            mealCard('Večeře','dinner',m.dinner)+
+            mealCard('Dezert','dessert',m.dessert)+
+          '</div>'+
+          recipeFinder();
       }
 
-      function receptSec(){
-        var seas=[['jaro','Jaro'],['leto','Léto'],['podzim','Podzim'],['zima','Zima']];
-        var seasChips=seas.map(function(s){return '<button class="chip '+(sezona===s[0]?'active':'')+'" data-sez="'+s[0]+'">'+s[1]+'</button>'}).join('');
-        var situChips=situace.map(function(s){return '<button class="chip situ '+(situ===s.key?'active':'')+'" data-situ="'+s.key+'">'+esc(s.label)+'</button>'}).join('');
-        return '<div class="recept-sec"><h2>Receptář</h2>'+
-          '<div class="flabel">Sezóna</div><div class="chips">'+seasChips+'</div>'+
-          '<div class="flabel">Vaše situace</div><div class="chips">'+situChips+'</div>'+
-          '<div class="zamer"><div class="zh">Na co se zaměřit</div><p id="zamerText">'+zamerText()+'</p></div>'+
-          '<div class="rlist" id="rlist">'+recipeRows()+'</div>'+
-          (situ==='ekzem'?'<div class="filter-note">💡 Filtr „Řešíme ekzém" upřednostní recepty bez lepku — brzy propojíme s minikurzem Ekzém.</div>':'')+
-          '<div class="rmore"><button data-go="recepty">Zobrazit celý receptář →</button></div>'+
-        '</div>';
+      function mealCard(label,key,r){
+        if(!r)return '<div class="meal"><div class="mbody"><h3>—</h3></div></div>';
+        return '<div class="meal"><div class="mimg" style="background-image:url(\''+imgOf(r)+'\')" data-open="'+r.n+'"><span class="mtag">'+label+'</span></div>'+
+          '<div class="mbody"><h3 data-open="'+r.n+'">'+esc(r.name)+'</h3>'+
+          '<div class="mmeta">'+(r.time&&r.time!=='—'?r.time:(catLabels[r.cat]||''))+'</div>'+
+          '<div class="mchange"><button data-swap="'+key+'">↻ Změnit</button></div></div></div>';
       }
 
-      function zamerText(){
-        var map={
-          vse:'Zkuste zařadit vejce a masokostní vývar téměř denně a vnitřnosti alespoň 3× týdně — patří mezi nejvýživnější potraviny, na které se teď můžete zaměřit.',
-          miminko:'Základ pro plodnost: kvalitní tuky, vnitřnosti (železo, cholin) a fermentované potraviny pro mikrobiom. Vejce od šťastných slepic denně.',
-          tehotna:'Vývar, vnitřnosti a dostatek kvalitních tuků. Sezónní zelenina a ovoce, fermenty pro trávení. Poslouchejte chutě těla.',
-          kojici:'Výživné a hřejivé pokrmy — vývary, dušené maso, kaše. Dostatek tekutin a kvalitních tuků pro tvorbu mléka.',
-          ekzem:'Zaměřte se na střevo: fermentované potraviny, vývar (kolagen), vyřaďte lepek a průmyslové oleje. Sledujte reakce těla.'
-        };
-        return map[situ]||map.vse;
+      function recipeFinder(){
+        var chips=[['vse','Vše'],['sladke','Sladké'],['slane','Slané'],['tehotne','Pro těhotné'],['oblibene','❤ Oblíbené']];
+        return '<div class="rsearch"><h2 class="sec-t" style="margin-top:0">Všechny recepty</h2>'+
+          '<div class="searchbar"><input id="rs" placeholder="🔍 Zadej surovinu, např. vejce, dýně, kefír…" value="'+esc(rSearch)+'">'+
+          chips.map(function(c){return '<button class="chip '+(rChut===c[0]?'active':'')+'" data-chut="'+c[0]+'">'+c[1]+'</button>'}).join('')+
+          '</div><div class="rlist" id="rgrid"></div></div>';
       }
 
-      function filteredHomeRecipes(){
-        // vyber 3 recepty relevantní k sezóně (dle rotace) - jednoduše první 3 z receptů
-        var list=onlyRecipes.slice();
-        // preferovat ty s fotkou
-        list.sort(function(a,b){return (b.img?1:0)-(a.img?1:0)});
-        return list.slice(0,3);
+      function paintRecipes(){
+        var grid=document.getElementById('rgrid');if(!grid)return;
+        var q=normDia(rSearch);
+        var list=onlyRecipes.filter(function(r){
+          var okChut;
+          if(rChut==='vse')okChut=true;
+          else if(rChut==='tehotne')okChut=r.tehotne;
+          else if(rChut==='oblibene')okChut=isFav(r.n);
+          else okChut=r.chut===rChut;
+          var hay=r.search||normDia(r.name+' '+(r.ing||[]).join(' '));
+          return okChut && hay.indexOf(q)!==-1;
+        });
+        grid.innerHTML=list.length?list.map(rrow).join(''):'<div class="pintro">'+(rChut==='oblibene'?'Zatím žádné oblíbené — klikni na ❤ u receptu.':'Nic nenalezeno 🍂')+'</div>';
+        grid.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+        grid.querySelectorAll('.rfav').forEach(function(el){el.onclick=function(e){e.stopPropagation();toggleFav(+el.dataset.fav);el.classList.toggle('on');if(rChut==='oblibene')paintRecipes()}});
       }
-
-      function recipeRows(){
-        var list=filteredHomeRecipes();
-        return list.map(function(r){
-          var cit=r.edu?('<div class="rcit">💡 <span><b>Zajímavost:</b> '+esc(r.edu.citace)+'</span></div>'):'';
-          return '<div class="rrow" data-open="'+r.n+'">'+
-            '<div class="rthumb" style="background-image:url(\''+imgOf(r)+'\')"></div>'+
-            '<div class="rinfo"><h3>'+esc(r.name)+'</h3>'+
-            '<div class="rmeta">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+esc(r.time):'')+'</div>'+cit+'</div></div>';
-        }).join('');
+      function rrow(r){
+        return '<div class="rrow"><div class="rthumb" style="background-image:url(\''+imgOf(r)+'\')" data-open="'+r.n+'"></div>'+
+          '<div class="rinfo" data-open="'+r.n+'"><h3>'+esc(r.name)+'</h3>'+
+          '<div class="rmeta">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+r.time:'')+'<span class="rtag">'+(r.chut==='sladke'?'Sladké':'Slané')+'</span></div></div>'+
+          '<button class="rfav '+(isFav(r.n)?'on':'')+'" data-fav="'+r.n+'" title="Oblíbené">'+(isFav(r.n)?'♥':'♡')+'</button></div>';
       }
 
       function rightCol(){
         var cta=OBSAH.cta_produkt||{};
+        // minikurz - všechny moduly vypsané
+        var mk=moduly.map(function(m,i){
+          return '<div class="mk-item" data-modul="'+esc(m.key)+'"><div class="mk-ico">'+m.ico+'</div><div><h4>'+esc(m.h)+'</h4><div class="mk-num">Modul '+(i+1)+'</div></div></div>';
+        }).join('');
+        // připravujeme - zašedlé
         var soon=(OBSAH.pripravujeme||[]).map(function(s){
-          return '<div class="soon-item"><div class="si-ico">'+s.ico+'</div><div><h4>'+esc(s.h)+'</h4><p>'+esc(s.perex)+'</p></div></div>';
+          return '<div class="sf-item"><span class="sf-ico">'+s.ico+'</span><span>'+esc(s.h)+' · '+esc(s.perex)+'</span></div>';
         }).join('');
         return '<div class="cta-panel"><div class="cta-ico">'+cta.ico+'</div>'+
-            '<h3>'+esc(cta.h||'')+'</h3><p>'+esc(cta.perex||'')+'</p>'+
+            '<h3>'+esc(cta.h||'Přirozené početí 21. st.')+'</h3>'+
+            '<p>'+esc(cta.perex||'')+'</p>'+
+            '<div class="price">3 896 Kč</div>'+
             '<button class="cta-btn" data-cta="1">'+esc(cta.cta||'Zjistit více')+' →</button>'+
             '<div class="cta-lock">🔒 Brzy dostupné</div></div>'+
-          '<div class="soon-panel"><div class="sh">Připravujeme</div>'+soon+'</div>'+
-          '<div class="soon-panel"><div class="sh">Objevuj dál</div>'+
-            '<div class="soon-item" data-go="minikurz" style="cursor:pointer"><div class="si-ico" style="opacity:1;background:#f5dfd7">📚</div><div><h4 style="color:var(--ink)">Minikurz</h4><p>10 modulů — celá teorie zdravého stravování</p></div></div>'+
-            '<div class="soon-item" data-go="byliny" style="cursor:pointer"><div class="si-ico" style="opacity:1">🌿</div><div><h4 style="color:var(--ink)">Bylinář</h4><p>Sezónní jedlé a léčivé byliny</p></div></div>'+
-            '<div class="soon-item" data-go="jidelnicky" style="cursor:pointer"><div class="si-ico" style="opacity:1">📋</div><div><h4 style="color:var(--ink)">Ukázkové jídelníčky</h4><p>Jak jíme za den — osobní inspirace</p></div></div>'+
-            '<div class="soon-item" data-go="zpracovani" style="cursor:pointer"><div class="si-ico" style="opacity:1">🫙</div><div><h4 style="color:var(--ink)">Zpracování surovin</h4><p>Fermenty, nálevy, kombucha, limča</p></div></div>'+
-          '</div>';
+          '<div class="side-panel"><div class="sp-h">📚 Minikurz</div><div class="sp-sub">'+moduly.length+' modulů — celá teorie zdravého stravování</div>'+mk+'</div>'+
+          '<div class="side-panel"><div class="sp-h">Objevuj dál</div>'+
+            '<div class="disc-item" data-go="byliny"><div class="di-ico">🌿</div><div><h4>Bylinář</h4><p>Sezónní jedlé a léčivé byliny</p></div></div>'+
+            '<div class="disc-item" data-go="zpracovani"><div class="di-ico">🫙</div><div><h4>Zpracování surovin</h4><p>Fermenty, nálevy, kombucha, limča</p></div></div>'+
+            '<div class="disc-item" data-go="jidelnicky"><div class="di-ico">📋</div><div><h4>Osobní denní jídelníčky</h4><p>Jak jíme za den — inspirace autorky</p></div></div>'+
+          '</div>'+
+          '<div class="soon-faint"><div class="sf-h">Připravujeme</div>'+soon+'</div>';
       }
 
       function bindHome(){
-        app.querySelectorAll('[data-pilir]').forEach(function(el){el.onclick=function(){go('pilir',el.dataset.pilir)}});
+        app.querySelectorAll('[data-modul]').forEach(function(el){el.onclick=function(){go('modul',el.dataset.modul)}});
         app.querySelectorAll('[data-go]').forEach(function(el){el.onclick=function(){go(el.dataset.go)}});
-        app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
-        app.querySelectorAll('[data-sez]').forEach(function(el){el.onclick=function(){sezona=el.dataset.sez;refreshRecept()}});
-        app.querySelectorAll('[data-situ]').forEach(function(el){el.onclick=function(){situ=el.dataset.situ;refreshRecept()}});
+        app.querySelectorAll('.meal [data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+        app.querySelectorAll('.meal [data-swap]').forEach(function(b){b.onclick=function(){swap[b.dataset.swap]++;refreshMeals()}});
         var cta=app.querySelector('[data-cta]');if(cta)cta.onclick=function(){toast('Přirozené početí 21. st. — brzy dostupné 🔒')};
+        var rs=document.getElementById('rs');if(rs)rs.oninput=function(e){rSearch=e.target.value;paintRecipes()};
+        app.querySelectorAll('.chip[data-chut]').forEach(function(c){c.onclick=function(){rChut=c.dataset.chut;app.querySelectorAll('.chip[data-chut]').forEach(function(x){x.classList.toggle('active',x.dataset.chut===rChut)});paintRecipes()}});
+        paintRecipes();
       }
-      function refreshRecept(){
-        // překreslit jen recept sekci
-        var sec=app.querySelector('.recept-sec');
-        if(sec){sec.outerHTML=receptSec();}
-        // rebind
-        app.querySelectorAll('[data-sez]').forEach(function(el){el.onclick=function(){sezona=el.dataset.sez;refreshRecept()}});
-        app.querySelectorAll('[data-situ]').forEach(function(el){el.onclick=function(){situ=el.dataset.situ;refreshRecept()}});
-        app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
-        app.querySelectorAll('.rmore [data-go]').forEach(function(el){el.onclick=function(){go(el.dataset.go)}});
+      function refreshMeals(){
+        var cont=app.querySelector('.meals');if(!cont)return;
+        var m=todayMeals();
+        cont.innerHTML=mealCard('Snídaně','breakfast',m.breakfast)+mealCard('Oběd','lunch',m.lunch)+mealCard('Večeře','dinner',m.dinner)+mealCard('Dezert','dessert',m.dessert);
+        cont.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
+        cont.querySelectorAll('[data-swap]').forEach(function(b){b.onclick=function(){swap[b.dataset.swap]++;refreshMeals()}});
       }
 
-      // ---------- RECEPT MODAL ----------
+      // ---- RECEPT MODAL ----
       function openRecipe(n){
         var r=recipes.find(function(x){return x.n===n});if(!r)return;
         var mb=document.getElementById('modalbg');if(!mb)return;
         var ingHTML=(r.ing||[]).map(function(i){return /:\s*$/.test(i)?'<li class="label-row">'+esc(i)+'</li>':'<li>'+esc(i)+'</li>'}).join('');
         var stepsHTML=(r.steps||[]).map(function(s){return '<li>'+esc(s)+'</li>'}).join('');
-        var essHTML='';
-        if(r.edu){essHTML='<div class="essence"><div class="ess-lead">💡 Z minikurzu Transformace stravování</div><div class="ess-quote">„'+esc(r.edu.citace)+'"</div><button class="ess-link" data-modul="'+esc(r.edu.modul)+'">📖 Otevřít modul →</button></div>'}
+        var essHTML=r.edu?'<div class="essence"><div class="ess-lead">💡 Z minikurzu</div><div class="ess-quote">„'+esc(r.edu.citace)+'"</div><button class="ess-link" data-modul="'+esc(r.edu.modul)+'">📖 Otevřít modul →</button></div>':'';
         mb.innerHTML='<div class="modal"><button class="close" id="cls">×</button>'+
           '<div class="hero-img" style="background-image:url(\''+imgOf(r)+'\')"></div>'+
           '<div class="inner"><h2>'+esc(r.name)+'</h2>'+
-          '<div class="sub">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+esc(r.time):'')+'</div>'+
-          essHTML+
+          '<div class="sub">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+r.time:'')+'</div>'+essHTML+
           (ingHTML?'<h4>Ingredience</h4><ul>'+ingHTML+'</ul>':'')+
           (stepsHTML?'<h4>Postup</h4><ol>'+stepsHTML+'</ol>':'')+
           '<button class="orig-toggle" id="origbtn">📄 Zobrazit původní znění</button>'+
@@ -350,46 +370,14 @@
         mb.querySelectorAll('.ess-link[data-modul]').forEach(function(el){el.onclick=function(){mb.classList.remove('open');go('modul',el.dataset.modul)}});
       }
 
-      // ---------- ALL RECIPES ----------
-      function renderAllRecipes(){
-        var html=topbar()+'<div class="wrap"><button class="back" id="back">← Zpět</button>'+
-          '<h1 class="ptitle">Receptář</h1><div class="pintro">'+onlyRecipes.length+' receptů. Byliny a jídelníčky mají vlastní sekce.</div>';
-        var cats=[['vse','Vše'],['jidla','Běžná jídla'],['dezerty','Dezerty'],['sklad','Skladování']];
-        html+='<div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;align-items:center">'+
-          '<input id="rs" placeholder="🔍 Hledat recept nebo surovinu…" style="flex:1;min-width:200px;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-family:Albert Sans;font-size:15px" value="'+esc(rSearch)+'">'+
-          cats.map(function(c){return '<button class="chip '+(rCat===c[0]?'active':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'}).join('')+
-          '</div><div class="grid-cards" id="allGrid"></div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
-        app.innerHTML=html;
-        document.getElementById('back').onclick=function(){go('home')};
-        var grid=document.getElementById('allGrid');
-        function paint(){
-          var q=normDia(rSearch);
-          var list=onlyRecipes.filter(function(r){
-            var inCat=rCat==='vse'||r.cat===rCat;
-            var hay=r.search||normDia(r.name+' '+(r.ing||[]).join(' '));
-            return inCat&&hay.indexOf(q)!==-1;
-          });
-          grid.innerHTML=list.length?list.map(rcard).join(''):'<div class="pintro">Nic nenalezeno 🍂</div>';
-          grid.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
-        }
-        var rs=document.getElementById('rs');rs.oninput=function(e){rSearch=e.target.value;paint()};
-        app.querySelectorAll('.chip[data-cat]').forEach(function(c){c.onclick=function(){rCat=c.dataset.cat;renderAllRecipes()}});
-        paint();
-      }
-      function rcard(r){
-        return '<div class="rcard" data-open="'+r.n+'"><div class="rimg" style="background-image:url(\''+imgOf(r)+'\')"><span class="rnum">#'+r.n+'</span></div>'+
-          '<div class="rb"><h3>'+esc(r.name)+'</h3><div class="rmeta">'+(catLabels[r.cat]||'')+(r.time&&r.time!=='—'?' · '+esc(r.time):'')+'</div>'+
-          '<span class="rtag">'+(catLabels[r.cat]||'')+'</span></div></div>';
-      }
+      // ---- ALL RECIPES (celý receptář) ----
+      function renderAllRecipes(){ go('home'); } // soupis je teď na home
 
-      // ---------- BYLINY ----------
+      // ---- BYLINY ----
       function renderByliny(){
-        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
-          '<h1 class="ptitle">🌿 Bylinář</h1><div class="pintro">Sezónní jedlé a léčivé byliny. Klikni pro detail.</div>'+
-          '<div class="grid-cards">'+byliny.map(function(b){
-            var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');
-            return '<div class="herb" data-herb="'+esc(b.name)+'"><div class="himg" style="background-image:url(\''+img+'\')"></div><div class="hb"><h3>'+esc(b.name)+'</h3><div class="hmore">Zjistit více →</div></div></div>';
-          }).join('')+'</div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button><h1 class="ptitle">🌿 Bylinář</h1><div class="pintro">Sezónní jedlé a léčivé byliny. Klikni pro detail.</div><div class="grid-cards">'+
+          byliny.map(function(b){var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');return '<div class="herb" data-herb="'+esc(b.name)+'"><div class="himg" style="background-image:url(\''+img+'\')"></div><div class="hb"><h3>'+esc(b.name)+'</h3><div class="hmore">Zjistit více →</div></div></div>'}).join('')+
+          '</div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
         app.innerHTML=html;
         document.getElementById('back').onclick=function(){go('home')};
         app.querySelectorAll('[data-herb]').forEach(function(h){h.onclick=function(){openHerb(h.dataset.herb)}});
@@ -398,7 +386,7 @@
         var b=byliny.find(function(x){return x.name===name});if(!b)return;
         var mb=document.getElementById('modalbg');if(!mb)return;
         var img=(b.img&&b.img.trim())?encPath(b.img):ph('#5a7a3f');
-        var receptBtn = b.recept ? '<button class="ess-link" style="margin-top:14px;background:var(--accent)" data-recept="'+b.recept.n+'">🍽️ Recept: '+esc(b.recept.name)+' →</button>' : '';
+        var receptBtn=b.recept?'<button class="ess-link" style="margin-top:14px;background:var(--accent)" data-recept="'+b.recept.n+'">🍽️ Recept: '+esc(b.recept.name)+' →</button>':'';
         mb.innerHTML='<div class="modal"><button class="close" id="cls">×</button><div class="hero-img" style="background-image:url(\''+img+'\')"></div><div class="inner"><h2>🌿 '+esc(b.name)+'</h2>'+(b.kdy?'<div class="sub">Sezóna: '+esc(b.kdy)+'</div>':'')+'<p class="longtext">'+esc(b.use)+'</p>'+receptBtn+'</div></div>';
         mb.classList.add('open');
         document.getElementById('cls').onclick=function(){mb.classList.remove('open')};
@@ -406,59 +394,39 @@
         mb.querySelectorAll('[data-recept]').forEach(function(el){el.onclick=function(){mb.classList.remove('open');openRecipe(+el.dataset.recept)}});
       }
 
-      // ---------- JÍDELNÍČKY ----------
+      // ---- JÍDELNÍČKY ----
       function renderJidelnicky(){
-        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
-          '<h1 class="ptitle">📋 Ukázkové jídelníčky</h1><div class="pintro">Osobní inspirace autorky — jak jednoduše poskládat den. Ne přesné recepty, ale reálná každodennost.</div>'+
-          '<div class="rlist">'+jidelnicky.map(function(r){
-            return '<div class="rrow" data-open="'+r.n+'"><div class="rthumb" style="background-image:url(\''+imgOf(r)+'\')"></div><div class="rinfo"><h3>'+esc(r.name)+'</h3><div class="rmeta">'+esc((r.fullText||'').replace(/\n/g,' ').slice(0,90))+'…</div></div></div>';
-          }).join('')+'</div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button><h1 class="ptitle">📋 Osobní denní jídelníčky</h1><div class="pintro">Osobní inspirace autorky — jak jednoduše poskládat den. Ne přesné recepty, ale reálná každodennost.</div><div class="grid-cards">'+
+          jidelnicky.map(function(r){return '<div class="rcard" data-open="'+r.n+'"><div class="rimg" style="background-image:url(\''+imgOf(r)+'\')"></div><div class="rb"><h3>'+esc(r.name)+'</h3><div class="rmeta">'+esc((r.fullText||'').replace(/\n/g,' ').slice(0,60))+'…</div></div></div>'}).join('')+
+          '</div><div class="foot"></div></div><div class="modal-bg" id="modalbg"></div>';
         app.innerHTML=html;
         document.getElementById('back').onclick=function(){go('home')};
         app.querySelectorAll('[data-open]').forEach(function(el){el.onclick=function(){openRecipe(+el.dataset.open)}});
       }
 
-      // ---------- MINIKURZ (přehled všech modulů) ----------
-      function renderMinikurz(){
-        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
-          '<h1 class="ptitle">📚 Minikurz: Transformace stravování</h1>'+
-          '<div class="pintro">Ucelený vzdělávací základ — '+moduly.length+' modulů ze série „Daruji si zdraví". Projdi je popořadě, nebo vyber téma, které tě zajímá.</div>'+
-          '<div class="grid-cards" style="margin-top:20px">'+
-          moduly.map(function(m,i){
-            return '<div class="rcard" data-modul="'+esc(m.key)+'" style="border-top:4px solid var(--accent2)">'+
-              '<div class="rb"><div style="font-size:30px;margin-bottom:6px">'+m.ico+'</div>'+
-              '<div style="font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Modul '+(i+1)+'</div>'+
-              '<h3>'+esc(m.h)+'</h3>'+
-              (m.citace?'<div style="font-family:Fraunces;font-style:italic;font-size:13px;color:var(--accent);margin:6px 0">„'+esc(m.citace)+'"</div>':'')+
-              '<div class="rtag">Číst modul →</div></div></div>';
-          }).join('')+'</div><div class="foot"></div></div>';
-        app.innerHTML=html;
-        document.getElementById('back').onclick=function(){go('home')};
-        app.querySelectorAll('[data-modul]').forEach(function(el){el.onclick=function(){go('modul',el.dataset.modul)}});
-      }
-
-      // ---------- ZPRACOVÁNÍ SUROVIN ----------
+      // ---- ZPRACOVÁNÍ SUROVIN ----
       function renderZpracovani(){
         var z=OBSAH.zpracovani||{polozky:[]};
-        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
-          '<h1 class="ptitle">🫙 '+esc(z.title||'Zpracování surovin')+'</h1><div class="pintro">'+esc(z.intro||'')+'</div>'+
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button><h1 class="ptitle">🫙 '+esc(z.title||'Zpracování surovin')+'</h1><div class="pintro">'+esc(z.intro||'')+'</div>'+
           (z.polozky||[]).map(function(p){return '<div class="pblock"><h3>'+esc(p.name)+'</h3><p class="longtext">'+esc(p.text)+'</p></div>'}).join('')+
           '<div class="foot"></div></div>';
         app.innerHTML=html;
         document.getElementById('back').onclick=function(){go('home')};
       }
 
-      // ---------- PILÍŘ (odkaz na modul) ----------
-      function renderPilir(key){
-        var p=pilire.find(function(x){return x.key===key});
-        if(p&&p.modul){go('modul',p.modul);return}
-        go('home');
+      // ---- MINIKURZ ----
+      function renderMinikurz(){
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button><h1 class="ptitle">📚 Minikurz: Transformace stravování</h1><div class="pintro">Ucelený vzdělávací základ — '+moduly.length+' modulů. Projdi je popořadě, nebo vyber téma.</div><div class="grid-cards" style="margin-top:20px">'+
+          moduly.map(function(m,i){return '<div class="rcard" data-modul="'+esc(m.key)+'" style="border-top:4px solid var(--accent2)"><div class="rb"><div style="font-size:28px;margin-bottom:6px">'+m.ico+'</div><div style="font-size:11px;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Modul '+(i+1)+'</div><h3>'+esc(m.h)+'</h3>'+(m.citace?'<div style="font-family:Fraunces;font-style:italic;font-size:12.5px;color:var(--accent);margin:6px 0">„'+esc(m.citace)+'"</div>':'')+'<div class="rtag">Číst →</div></div></div>'}).join('')+
+          '</div><div class="foot"></div></div>';
+        app.innerHTML=html;
+        document.getElementById('back').onclick=function(){go('home')};
+        app.querySelectorAll('[data-modul]').forEach(function(el){el.onclick=function(){go('modul',el.dataset.modul)}});
       }
 
-      // ---------- MODUL ----------
+      // ---- MODUL ----
       function renderModule(key){
-        var m=moduly.find(function(x){return x.key===key});
-        if(!m){go('home');return}
+        var m=moduly.find(function(x){return x.key===key});if(!m){go('home');return}
         var idx=moduly.indexOf(m),prev=moduly[idx-1],next=moduly[idx+1];
         var paras=(m.full||'').split(/\n\n+/).map(function(p){
           p=p.trim();if(!p)return '';
@@ -467,8 +435,7 @@
           if(/\n\s*[−•]/.test('\n'+p)||/^[−•]/.test(p)){var items=p.split(/\n/).map(function(l){return l.replace(/^\s*[−•\-]\s*/,'').trim()}).filter(Boolean);return '<ul>'+items.map(function(i){return '<li>'+esc(i)+'</li>'}).join('')+'</ul>'}
           return '<p>'+esc(p)+'</p>';
         }).join('');
-        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět</button>'+
-          '<h1 class="ptitle">'+m.ico+' '+esc(m.h)+'</h1>'+
+        var html=topbar()+'<div class="wrap page"><button class="back" id="back">← Zpět na minikurz</button><h1 class="ptitle">'+m.ico+' '+esc(m.h)+'</h1>'+
           (m.citace?'<div class="mod-quote">„'+esc(m.citace)+'"</div>':'')+
           '<div class="pblock mod-body">'+paras+'</div>'+
           '<div style="display:flex;justify-content:space-between;gap:12px;margin-top:20px">'+
@@ -476,7 +443,7 @@
             (next?'<button class="back" data-mod="'+esc(next.key)+'" style="margin:0">'+esc(next.h)+' →</button>':'<span></span>')+
           '</div><div class="foot"></div></div>';
         app.innerHTML=html;
-        document.getElementById('back').onclick=function(){go('home')};
+        document.getElementById('back').onclick=function(){go('minikurz')};
         app.querySelectorAll('[data-mod]').forEach(function(b){b.onclick=function(){go('modul',b.dataset.mod)}});
       }
 
